@@ -164,6 +164,10 @@ section { padding: 108px clamp(24px, 6vw, 86px); }
 .services-grid, .testimonials-grid { max-width: var(--max-w); margin: 0 auto; display: grid; grid-template-columns: repeat(3, 1fr); gap: 20px; }
 .services-grid.grid-4 { grid-template-columns: repeat(auto-fit, minmax(238px, 1fr)); gap: 18px; }
 .service-icon svg { width: 26px; height: 26px; }
+.section-alt { background: var(--stone); }
+.service-card .coverage { display: inline-flex; align-items: center; gap: 6px; margin-top: 16px; padding: 6px 12px; border-radius: 999px; background: var(--primary-pale); color: var(--accent-dark); font: 700 11.5px Lato, sans-serif; letter-spacing: .2px; }
+.service-card .coverage::before { content: '✓'; color: var(--primary); font-weight: 800; }
+.service-card .coverage + a { margin-top: 18px; }
 .service-card, .testimonial-card, .step, .contact-form, .contact-item, .faq-item { border: 1px solid var(--border); border-radius: var(--radius); background: var(--white); box-shadow: 0 1px 0 rgba(255,255,255,.6) inset; }
 .service-card { position: relative; overflow: hidden; min-height: 285px; padding: 34px 30px 30px; transition: transform .35s ease, box-shadow .35s ease, border-color .35s ease; }
 .service-card::before { content: ''; position: absolute; inset: 0 0 auto; height: 3px; background: linear-gradient(90deg, var(--primary), var(--accent)); transform: scaleX(0); transform-origin: left; transition: transform .35s ease; }
