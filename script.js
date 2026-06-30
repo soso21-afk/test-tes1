@@ -29,6 +29,37 @@ document.addEventListener('keydown', (event) => {
   if (event.key === 'Escape') closeMenu();
 });
 
+// Menus déroulants de la navigation (Bien-être / Médical / Thérapies)
+const navTriggers = [...document.querySelectorAll('.nav-trigger')];
+
+const closeMenus = (except) => {
+  navTriggers.forEach((trigger) => {
+    const menu = trigger.nextElementSibling;
+    if (menu === except) return;
+    menu?.classList.remove('open');
+    trigger.setAttribute('aria-expanded', 'false');
+  });
+};
+
+navTriggers.forEach((trigger) => {
+  trigger.addEventListener('click', () => {
+    const menu = trigger.nextElementSibling;
+    const isOpen = menu.classList.toggle('open');
+    trigger.setAttribute('aria-expanded', String(isOpen));
+    closeMenus(menu);
+  });
+});
+
+document.addEventListener('click', (event) => {
+  if (!event.target.closest('.nav-item')) closeMenus();
+});
+
+document.addEventListener('keydown', (event) => {
+  if (event.key === 'Escape') closeMenus();
+});
+
+navLinks?.querySelectorAll('.nav-menu a').forEach((link) => link.addEventListener('click', closeMenus));
+
 document.querySelectorAll('a[href^="#"]').forEach((anchor) => {
   anchor.addEventListener('click', (event) => {
     const selector = anchor.getAttribute('href');
