@@ -218,9 +218,10 @@ section { padding: 108px clamp(24px, 6vw, 86px); }
 .featured span { color: rgba(255,255,255,.56); }
 .partners { padding-block: 70px; text-align: center; }
 .partners h3 { color: var(--text-light); text-transform: uppercase; letter-spacing: 1.8px; font: 700 12px Lato, sans-serif; }
-.partners-row { display: flex; flex-wrap: wrap; align-items: center; justify-content: center; gap: 16px 22px; max-width: 920px; margin: 28px auto 0; }
-.partner-logo { display: inline-flex; align-items: center; padding: 13px 24px; border: 1px solid var(--border); border-radius: 999px; color: var(--primary-dark); font: 700 16px Nunito, sans-serif; letter-spacing: .5px; background: var(--white); box-shadow: var(--shadow-sm); }
-.partner-logo small { margin-left: 8px; color: var(--text-light); font: 400 12px Lato, sans-serif; letter-spacing: 0; }
+.partners-row { display: flex; flex-wrap: wrap; align-items: center; justify-content: center; gap: 26px 48px; max-width: 920px; margin: 30px auto 0; }
+.partner-logo { display: inline-flex; align-items: center; }
+.partner-logo img { height: 56px; width: auto; max-width: 180px; object-fit: contain; opacity: .9; transition: opacity .3s ease, transform .3s ease; }
+.partner-logo:hover img { opacity: 1; transform: translateY(-2px); }
 .faq { display: grid; grid-template-columns: .8fr 1.3fr; gap: 66px; max-width: var(--max-w); margin: 0 auto; }
 .faq-right { display: grid; gap: 10px; }
 .faq-cat { margin: 22px 0 2px; color: var(--accent-dark); text-transform: uppercase; letter-spacing: 1.4px; font-size: 12px; font-weight: 700; }
