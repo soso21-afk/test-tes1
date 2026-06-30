@@ -1,0 +1,17 @@
+{
+  "permissions": {
+    "allow": [
+      "mcp__visualize__read_me",
+      "mcp__visualize__show_widget",
+      "WebFetch(domain:www.regeneratium.ch)",
+      "PowerShell($ProgressPreference='SilentlyContinue'; $out='C:\\\\Users\\\\alexi\\\\AppData\\\\Local\\\\Temp\\\\claude\\\\C--Users-alexi-OneDrive-Bureau-code-Site-site-Mom-regeneratium\\\\1b065637-a58f-44ba-9e06-35057c67ce67\\\\scratchpad\\\\regen.html'; try { Invoke-WebRequest -Uri 'https://www.regeneratium.ch/' -UseBasicParsing -TimeoutSec 40 -Headers @{'User-Agent'='Mozilla/5.0 \\(Windows NT 10.0; Win64; x64\\) AppleWebKit/537.36 \\(KHTML, like Gecko\\) Chrome/124 Safari/537.36'} -OutFile $out; \\(Get-Item $out\\).Length } catch { \"ERR: $\\($_.Exception.Message\\)\" })",
+      "Bash(curl -sL -A \"Mozilla/5.0 \\(Windows NT 10.0; Win64; x64\\) AppleWebKit/537.36 Chrome/124 Safari/537.36\" \"https://www.regeneratium.ch/\" -o regen.html --max-time 45)",
+      "Bash(curl -sL -A \"Mozilla/5.0\" \"https://cdn.prod.website-files.com/6696146bcb2f1968569a1aab/css/regeneratium.webflow.shared.639b3654f.css\" -o regen.css --max-time 45)",
+      "Bash(grep -oiE '#[0-9a-f]{3,8}\\\\b' regen.css)",
+      "Bash(grep -iE '#[0-9a-f]{3,8}|rgb')",
+      "Bash(git init *)",
+      "Bash(git add *)",
+      "Bash(git -c user.name=\"Regeneratium Dev\" -c user.email=\"alexisjaccard3@gmail.com\" commit -q -m \"Baseline: état initial \\(React scrollytelling + vanilla orphelin\\)\")"
+    ]
+  }
+}
