@@ -1,0 +1,11 @@
+{
+  "version": "0.0.1",
+  "configurations": [
+    {
+      "name": "static",
+      "runtimeExecutable": "node",
+      "runtimeArgs": ["C:\\Users\\alexi\\AppData\\Local\\Temp\\claude\\C--Users-alexi-OneDrive-Bureau-code-Site-site-Mom-regeneratium\\1b065637-a58f-44ba-9e06-35057c67ce67\\scratchpad\\serve.mjs"],
+      "port": 5173
+    }
+  ]
+}

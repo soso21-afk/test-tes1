@@ -11,7 +11,12 @@
       "Bash(grep -iE '#[0-9a-f]{3,8}|rgb')",
       "Bash(git init *)",
       "Bash(git add *)",
-      "Bash(git -c user.name=\"Regeneratium Dev\" -c user.email=\"alexisjaccard3@gmail.com\" commit -q -m \"Baseline: état initial \\(React scrollytelling + vanilla orphelin\\)\")"
+      "Bash(git -c user.name=\"Regeneratium Dev\" -c user.email=\"alexisjaccard3@gmail.com\" commit -q -m \"Baseline: état initial \\(React scrollytelling + vanilla orphelin\\)\")",
+      "Bash(rm -f src/main.jsx src/styles.css package.json package-lock.json)",
+      "Bash(rmdir src *)",
+      "Bash(grep -vE '^\\(node_modules|\\\\.git\\)$')",
+      "mcp__Claude_Preview__preview_start",
+      "Bash(git -c 'user.name=Regeneratium Dev' -c user.email=alexisjaccard3@gmail.com commit -q -m ' *)"
     ]
   }
 }

@@ -3,14 +3,85 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Regeneratium - Thérapie & Bien-être</title>
-  <meta name="description" content="Centre de thérapie et bien-être à Rolle, dédié aux soins médicaux, aux thérapies et à la récupération." />
+  <title>Regeneratium — Thérapie & Bien-être · entre Genève et Lausanne</title>
+  <meta name="description" content="Centre de thérapie et bien-être à Rolle, entre Genève et Lausanne. Soins médicaux, thérapies douces et expériences bien-être pour soutenir l'auto-régénération du corps et de l'esprit." />
+  <meta name="theme-color" content="#0a677b" />
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700;800&family=Lato:wght@400;700&family=Lora:ital,wght@0,400;0,500;1,400&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css" />
 </head>
 <body>
-  <div id="root"></div>
-  <script type="module" src="/src/main.jsx"></script>
+  <!-- ===================== NAVIGATION ===================== -->
+  <nav id="navbar">
+    <a href="#" class="logo" aria-label="Regeneratium — accueil">
+      <span class="logo-mark">R</span>
+      Regeneratium
+    </a>
+
+    <div class="nav-links" id="navLinks">
+      <a href="#soins">Nos soins</a>
+      <a href="#centre">Le centre</a>
+      <a href="#avis">Avis</a>
+      <a href="#faq">FAQ</a>
+      <a href="#contact" class="nav-cta">Prendre rendez-vous</a>
+    </div>
+
+    <button class="nav-toggle" id="navToggle" aria-label="Ouvrir le menu" aria-expanded="false">
+      <span></span><span></span><span></span>
+    </button>
+  </nav>
+
+  <!-- ===================== HERO ===================== -->
+  <header class="hero">
+    <span class="ambient ambient-one" aria-hidden="true"></span>
+    <span class="ambient ambient-two" aria-hidden="true"></span>
+
+    <div class="hero-content">
+      <span class="hero-badge reveal">Centre de thérapie &amp; bien-être · Rolle</span>
+      <h1 class="reveal">Thérapie &amp;<br><em>Bien&#8209;être</em></h1>
+      <p class="hero-text reveal">
+        Un lieu dédié à l'équilibre, à la récupération et à l'auto-régénération naturelle
+        du corps et de l'esprit — niché à Rolle, entre Genève et Lausanne.
+      </p>
+      <div class="hero-buttons reveal">
+        <a href="#contact" class="btn-primary">Prendre rendez-vous</a>
+        <a href="#soins" class="btn-ghost">Découvrir nos soins</a>
+      </div>
+      <div class="hero-stats reveal">
+        <div class="stat">
+          <strong>3</strong>
+          <span>Pôles · médical, thérapies, bien-être</span>
+        </div>
+        <div class="stat">
+          <strong>12+</strong>
+          <span>Soins &amp; spécialités</span>
+        </div>
+        <div class="stat">
+          <strong>Rolle</strong>
+          <span>Entre Genève &amp; Lausanne</span>
+        </div>
+      </div>
+    </div>
+
+    <div class="hero-visual reveal">
+      <img src="assets/regeneratium-hero.png" alt="Espace de soin apaisant du centre Regeneratium" />
+      <div class="hero-card card-top">
+        <span>Flottaison</span>
+        <strong>Relaxation profonde</strong>
+      </div>
+      <div class="hero-card card-bottom">
+        <span>Cryothérapie</span>
+        <strong>Récupération active</strong>
+      </div>
+    </div>
+
+    <a href="#soins" class="scroll-hint">Découvrir <span></span></a>
+  </header>
+
+  <!-- Les sections (soins, centre, avis, FAQ, contact) sont ajoutées étape par étape -->
+  <main></main>
+
+  <script src="script.js"></script>
 </body>
 </html>
