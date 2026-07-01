@@ -1,11 +1,15 @@
 // Générateur des pages de soins individuelles (Node, zéro dépendance).
 // Usage : node scripts/gen-soins.mjs  -> écrit les fichiers dans soins/
-import { mkdir, writeFile } from 'node:fs/promises';
+import { mkdir, writeFile, readFile } from 'node:fs/promises';
 import { fileURLToPath } from 'node:url';
 import { dirname, join } from 'node:path';
 
 const root = join(dirname(fileURLToPath(import.meta.url)), '..');
 const outDir = join(root, 'soins');
+
+// Contenu réel (intro « qu'est-ce que » + FAQ) extrait du site officiel
+let content = {};
+try { content = JSON.parse(await readFile(join(root, 'scripts', 'soins-content.json'), 'utf8')); } catch {}
 
 const esc = (s) => String(s)
   .replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;');
@@ -150,15 +154,23 @@ const page = (s) => {
             <small>${esc(r.lead)}</small>
           </a>`).join('');
 
-  const savoir = [
-    ['Déroulement de la séance', `Chaque prise en charge est adaptée à votre situation. Le ou la spécialiste vous explique le déroulé et adapte le soin à votre besoin lors du rendez-vous.`],
-    ['Indications', `Ce soin s’adresse notamment à : ${s.benefits.map((b) => b.toLowerCase()).join(', ')}. En cas de doute, notre équipe vous oriente vers la prise en charge la plus adaptée.`],
-    ['Remboursement', `${esc(s.coverage)}. Nous vous remettons un justificatif conforme pour votre assurance lorsque le soin est éligible.`],
-  ].map(([q, a], i) => `
+  const c = content[s.slug] || {};
+  const faqItems = (c.faq && c.faq.length) ? c.faq : [
+    { q: 'Déroulement de la séance', a: `Chaque prise en charge est adaptée à votre situation. Le ou la spécialiste vous explique le déroulé et adapte le soin à votre besoin lors du rendez-vous.` },
+    { q: 'Indications', a: `Ce soin s’adresse notamment à : ${s.benefits.map((b) => b.toLowerCase()).join(', ')}. En cas de doute, notre équipe vous oriente vers la prise en charge la plus adaptée.` },
+    { q: 'Remboursement', a: `${s.coverage}. Nous vous remettons un justificatif conforme pour votre assurance lorsque le soin est éligible.` },
+  ];
+  const faqHtml = faqItems.map((it, i) => `
           <details class="faq-item"${i === 0 ? ' open' : ''}>
-            <summary>${esc(q)}</summary>
-            <p>${a}</p>
+            <summary>${esc(it.q)}</summary>
+            <p>${esc(it.a)}</p>
           </details>`).join('');
+  const introHtml = c.intro ? `
+    <section class="soin-intro">
+      <span class="section-tag">Le soin</span>
+      <h2>${esc(s.title)}, qu’est-ce que c’est&nbsp;?</h2>
+      <p>${esc(c.intro)}</p>
+    </section>` : '';
 
   return `<!DOCTYPE html>
 <html lang="fr">
@@ -195,7 +207,7 @@ ${navHtml()}
         <p>${esc(s.coverage)}</p>
       </aside>
     </section>
-
+${introHtml}
     <section class="soin-body">
       <div class="soin-block">
         <span class="section-tag">Applications &amp; bienfaits</span>
@@ -204,9 +216,9 @@ ${navHtml()}
         </div>
       </div>
       <div class="soin-block">
-        <span class="section-tag">À savoir</span>
-        <h2>Avant votre séance</h2>
-        <div class="soin-faq">${savoir}
+        <span class="section-tag">Questions fréquentes</span>
+        <h2>Bon à savoir</h2>
+        <div class="soin-faq">${faqHtml}
         </div>
       </div>
     </section>

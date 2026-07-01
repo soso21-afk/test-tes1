@@ -286,7 +286,10 @@ body.subpage nav:not(.scrolled) .nav-toggle span { background: var(--dark); }
 .price-kicker { color: var(--accent-light); text-transform: uppercase; letter-spacing: 1.6px; font-size: 11px; font-weight: 700; }
 .price-card strong { display: block; margin: 8px 0 12px; font: 700 clamp(26px, 3vw, 34px) Nunito, sans-serif; line-height: 1.1; }
 .price-card p { color: rgba(255, 255, 255, .8); font-size: 13.5px; line-height: 1.55; }
-.soin-body { max-width: var(--max-w); margin: 0 auto; padding: 30px clamp(24px, 6vw, 86px) 40px; display: grid; grid-template-columns: 1fr 1fr; gap: clamp(28px, 4vw, 56px); }
+.soin-intro { max-width: var(--max-w); margin: 0 auto; padding: 12px clamp(24px, 6vw, 86px) 8px; }
+.soin-intro h2 { margin: 12px 0 0; font-size: clamp(26px, 3vw, 40px); }
+.soin-intro p { max-width: 780px; margin: 18px 0 0; color: var(--text); font-size: clamp(16px, 1.3vw, 18px); line-height: 1.75; }
+.soin-body { max-width: var(--max-w); margin: 0 auto; padding: 24px clamp(24px, 6vw, 86px) 40px; display: grid; grid-template-columns: 1fr 1fr; gap: clamp(28px, 4vw, 56px); align-items: start; }
 .soin-block h2 { margin-top: 12px; font-size: clamp(26px, 3vw, 38px); }
 .soin-benefits { display: grid; grid-template-columns: 1fr 1fr; gap: 12px; margin-top: 22px; }
 .soin-benefit { display: flex; align-items: center; gap: 10px; padding: 16px 18px; border: 1px solid var(--border); border-radius: var(--radius-sm); background: var(--white); box-shadow: var(--shadow-sm); }
