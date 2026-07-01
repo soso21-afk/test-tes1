@@ -69,10 +69,13 @@
     </section>
 
     <section class="booking" id="book">
-      <div class="booking-grid">
+      <div class="booking-panel">
+        <h2>Réservez en ligne</h2>
+        <p class="booking-sub">Trouvez votre soin, puis choisissez la prestation et le créneau
+          qui vous conviennent directement dans notre agenda.</p>
+
         <!-- Sélecteur : barre de recherche + catégories déroulantes -->
-        <aside class="booking-picker">
-          <h2>Trouvez votre soin</h2>
+        <div class="booking-picker">
           <div class="search-box">
             <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" aria-hidden="true"><circle cx="11" cy="11" r="7"/><path d="m20 20-3.2-3.2"/></svg>
             <input type="search" id="soinSearch" placeholder="Rechercher un soin…" aria-label="Rechercher un soin" autocomplete="off" />
@@ -127,12 +130,10 @@
 
             <p class="soin-noresult" hidden>Aucun soin ne correspond à votre recherche.</p>
           </div>
-        </aside>
+        </div>
 
         <!-- Réservation en ligne (widget OneDoc, identique au site) -->
         <div class="booking-widget">
-          <h2>Réservez en ligne</h2>
-          <p>Sélectionnez la prestation et le créneau qui vous conviennent dans notre agenda.</p>
           <div class="od-embed">
             <iframe class="od-widget" id="od-widget-8b7824506ca4883b5b1b63758da9866169bf94a9f6790aa344fbd192a2ff65fd" src="about:blank" data-src="https://www.onedoc.ch/fr/widget/8b7824506ca4883b5b1b63758da9866169bf94a9f6790aa344fbd192a2ff65fd" frameborder="0" title="Prise de rendez-vous en ligne — Regeneratium (OneDoc)"></iframe>
           </div>
