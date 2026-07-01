@@ -1,0 +1,235 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Prendre rendez-vous — Regeneratium · Rolle</title>
+  <meta name="description" content="Réservez votre soin en ligne chez Regeneratium à Rolle, entre Genève et Lausanne. Choisissez votre soin et prenez rendez-vous via notre agenda OneDoc." />
+  <meta name="theme-color" content="#0a677b" />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700;800&family=Lato:wght@400;700&family=Lora:ital,wght@0,400;0,500;1,400&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body class="subpage">
+  <nav id="navbar">
+    <a href="index.html" class="logo" aria-label="Regeneratium — accueil">
+      <img class="logo-img logo-light" src="assets/logo-regeneratium.svg" alt="Regeneratium" />
+      <img class="logo-img logo-dark" src="assets/logo-regeneratium-dark.svg" alt="" aria-hidden="true" />
+    </a>
+    <div class="nav-links" id="navLinks">
+      <div class="nav-item">
+        <button class="nav-trigger" aria-expanded="false" aria-haspopup="true">Bien-être
+          <svg viewBox="0 0 12 12" aria-hidden="true"><path d="M2.5 4.5 6 8l3.5-3.5" stroke="currentColor" stroke-width="1.6" fill="none" stroke-linecap="round" stroke-linejoin="round"/></svg>
+        </button>
+        <div class="nav-menu" role="menu" aria-label="Soins bien-être">
+          <a href="soins/massage.html" role="menuitem">Massage</a>
+          <a href="soins/flottaison.html" role="menuitem">Flottaison</a>
+          <a href="soins/cryotherapie.html" role="menuitem">Cryothérapie</a>
+          <a href="soins/chambre-de-sel.html" role="menuitem">Chambre de sel</a>
+        </div>
+      </div>
+      <div class="nav-item">
+        <button class="nav-trigger" aria-expanded="false" aria-haspopup="true">Médical
+          <svg viewBox="0 0 12 12" aria-hidden="true"><path d="M2.5 4.5 6 8l3.5-3.5" stroke="currentColor" stroke-width="1.6" fill="none" stroke-linecap="round" stroke-linejoin="round"/></svg>
+        </button>
+        <div class="nav-menu" role="menu" aria-label="Soins médicaux">
+          <a href="soins/psychologie.html" role="menuitem">Psys</a>
+          <a href="soins/dietetique.html" role="menuitem">Diététique</a>
+        </div>
+      </div>
+      <div class="nav-item">
+        <button class="nav-trigger" aria-expanded="false" aria-haspopup="true">Thérapies
+          <svg viewBox="0 0 12 12" aria-hidden="true"><path d="M2.5 4.5 6 8l3.5-3.5" stroke="currentColor" stroke-width="1.6" fill="none" stroke-linecap="round" stroke-linejoin="round"/></svg>
+        </button>
+        <div class="nav-menu" role="menu" aria-label="Soins thérapeutiques">
+          <a href="soins/osteopathie.html" role="menuitem">Ostéopathie</a>
+          <a href="soins/acupuncture.html" role="menuitem">Acupuncture</a>
+          <a href="soins/therapie-cranio-sacree.html" role="menuitem">Cranio-sacrée</a>
+          <a href="soins/hypnose.html" role="menuitem">Hypnothérapie</a>
+        </div>
+      </div>
+      <a href="index.html#centre">Le centre</a>
+      <a href="index.html#faq">FAQ</a>
+      <a href="#book" class="nav-cta">Prendre rendez-vous</a>
+    </div>
+    <button class="nav-toggle" id="navToggle" aria-label="Ouvrir le menu" aria-expanded="false">
+      <span></span><span></span><span></span>
+    </button>
+  </nav>
+
+  <main class="soin-page">
+    <section class="booking-intro">
+      <div class="section-header">
+        <span class="section-tag">Rendez-vous</span>
+        <h1>Prendre rendez-vous</h1>
+        <p>Choisissez votre soin, puis réservez votre créneau en ligne — directement dans
+          notre agenda OneDoc, comme en cabinet.</p>
+      </div>
+    </section>
+
+    <section class="booking" id="book">
+      <div class="booking-grid">
+        <!-- Sélecteur : barre de recherche + catégories déroulantes -->
+        <aside class="booking-picker">
+          <h2>Trouvez votre soin</h2>
+          <div class="search-box">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" aria-hidden="true"><circle cx="11" cy="11" r="7"/><path d="m20 20-3.2-3.2"/></svg>
+            <input type="search" id="soinSearch" placeholder="Rechercher un soin…" aria-label="Rechercher un soin" autocomplete="off" />
+          </div>
+
+          <div class="soin-accordion" id="soinAccordion">
+            <div class="soin-cat">
+              <button class="soin-cat-head" aria-expanded="false">Bien-être &amp; Santé
+                <svg viewBox="0 0 12 12" aria-hidden="true"><path d="M2.5 4.5 6 8l3.5-3.5" stroke="currentColor" stroke-width="1.6" fill="none" stroke-linecap="round" stroke-linejoin="round"/></svg>
+              </button>
+              <div class="soin-cat-list">
+                <a href="soins/massage.html">Massage</a>
+                <a href="soins/flottaison.html">Flottaison</a>
+                <a href="soins/cryotherapie.html">Cryothérapie</a>
+                <a href="soins/chambre-de-sel.html">Chambre de sel</a>
+              </div>
+            </div>
+
+            <div class="soin-cat">
+              <button class="soin-cat-head" aria-expanded="false">Médical
+                <svg viewBox="0 0 12 12" aria-hidden="true"><path d="M2.5 4.5 6 8l3.5-3.5" stroke="currentColor" stroke-width="1.6" fill="none" stroke-linecap="round" stroke-linejoin="round"/></svg>
+              </button>
+              <div class="soin-cat-list">
+                <a href="soins/psychologie.html">Psychologie</a>
+                <a href="soins/psychotherapie.html">Psychothérapie</a>
+                <a href="soins/dietetique.html">Diététique</a>
+              </div>
+            </div>
+
+            <div class="soin-cat">
+              <button class="soin-cat-head" aria-expanded="false">Thérapies
+                <svg viewBox="0 0 12 12" aria-hidden="true"><path d="M2.5 4.5 6 8l3.5-3.5" stroke="currentColor" stroke-width="1.6" fill="none" stroke-linecap="round" stroke-linejoin="round"/></svg>
+              </button>
+              <div class="soin-cat-list">
+                <a href="soins/osteopathie.html">Ostéopathie</a>
+                <a href="soins/acupuncture.html">Acupuncture</a>
+                <a href="soins/ventouse-cupping.html">Ventouse / Cupping</a>
+                <a href="soins/therapie-cranio-sacree.html">Cranio-sacrée</a>
+                <a href="soins/naturopathie-micro-nutrition.html">Naturopathie &amp; micro-nutrition</a>
+                <a href="soins/hypnose.html">Hypnothérapie</a>
+              </div>
+            </div>
+
+            <div class="soin-cat">
+              <button class="soin-cat-head" aria-expanded="false">Programme
+                <svg viewBox="0 0 12 12" aria-hidden="true"><path d="M2.5 4.5 6 8l3.5-3.5" stroke="currentColor" stroke-width="1.6" fill="none" stroke-linecap="round" stroke-linejoin="round"/></svg>
+              </button>
+              <div class="soin-cat-list">
+                <a href="soins/prise-en-charge-du-stress.html">Prise en charge du stress</a>
+              </div>
+            </div>
+
+            <p class="soin-noresult" hidden>Aucun soin ne correspond à votre recherche.</p>
+          </div>
+        </aside>
+
+        <!-- Réservation en ligne (widget OneDoc, identique au site) -->
+        <div class="booking-widget">
+          <h2>Réservez en ligne</h2>
+          <p>Sélectionnez la prestation et le créneau qui vous conviennent dans notre agenda.</p>
+          <div class="od-embed">
+            <iframe class="od-widget" id="od-widget-8b7824506ca4883b5b1b63758da9866169bf94a9f6790aa344fbd192a2ff65fd" src="about:blank" data-src="https://www.onedoc.ch/fr/widget/8b7824506ca4883b5b1b63758da9866169bf94a9f6790aa344fbd192a2ff65fd" frameborder="0" title="Prise de rendez-vous en ligne — Regeneratium (OneDoc)"></iframe>
+          </div>
+          <a class="od-fallback" href="https://www.onedoc.ch/fr/widget/8b7824506ca4883b5b1b63758da9866169bf94a9f6790aa344fbd192a2ff65fd" target="_blank" rel="noopener">Ouvrir la réservation dans un nouvel onglet ↗</a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <div class="footer-top">
+      <div>
+        <a href="index.html" class="logo footer-logo" aria-label="Regeneratium">
+          <img class="logo-img" src="assets/logo-regeneratium.svg" alt="Regeneratium" />
+        </a>
+        <p>Centre de thérapie &amp; bien-être à Rolle, entre Genève et Lausanne. Soins
+          médicaux, thérapies douces et expériences de récupération.</p>
+      </div>
+      <div>
+        <h3>Nos soins</h3>
+        <a href="index.html#bien-etre">Bien-être &amp; Santé</a>
+        <a href="index.html#medical">Médical</a>
+        <a href="index.html#therapies">Thérapies</a>
+      </div>
+      <div>
+        <h3>Le centre</h3>
+        <a href="index.html#centre">Nos espaces</a>
+        <a href="index.html#avis">Avis</a>
+        <a href="index.html#faq">FAQ</a>
+      </div>
+      <div>
+        <h3>Boutique &amp; contact</h3>
+        <a href="https://regeneratium.sumupstore.com" target="_blank" rel="noopener">Bons cadeaux</a>
+        <a href="#book">Prendre rendez-vous</a>
+        <a href="tel:+41218260088">+41 21 826 00 88</a>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <span>© 2026 Regeneratium — Rte de la Vallée 7, 1180 Rolle, Suisse</span>
+      <div>
+        <a href="index.html">Mentions légales</a>
+        <a href="index.html">Confidentialité</a>
+      </div>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+  <script>
+    // Widget OneDoc : activation + auto-hauteur (protocole postMessage du site officiel)
+    (function () {
+      var ID = '8b7824506ca4883b5b1b63758da9866169bf94a9f6790aa344fbd192a2ff65fd';
+      var f = document.getElementById('od-widget-' + ID);
+      if (f && f.dataset.src) f.src = f.dataset.src;
+      window.addEventListener('message', function (e) {
+        if (!e.data || e.data['od-widget-id'] !== ID) return;
+        if (e.data['od-widget-height']) f.style.height = e.data['od-widget-height'] + 'px';
+      });
+    })();
+
+    // Sélecteur de soin : catégories déroulantes + recherche
+    (function () {
+      var cats = [].slice.call(document.querySelectorAll('.soin-cat'));
+      cats.forEach(function (cat) {
+        var head = cat.querySelector('.soin-cat-head');
+        head.addEventListener('click', function () {
+          var open = cat.classList.toggle('open');
+          head.setAttribute('aria-expanded', String(open));
+        });
+      });
+
+      var input = document.getElementById('soinSearch');
+      var noResult = document.querySelector('.soin-noresult');
+      input.addEventListener('input', function () {
+        var q = this.value.trim().toLowerCase();
+        var anyGlobal = false;
+        cats.forEach(function (cat) {
+          var head = cat.querySelector('.soin-cat-head');
+          var matches = 0;
+          [].slice.call(cat.querySelectorAll('.soin-cat-list a')).forEach(function (a) {
+            var hit = !q || a.textContent.toLowerCase().indexOf(q) !== -1;
+            a.hidden = !hit;
+            if (hit && q) matches++;
+          });
+          if (q) {
+            cat.hidden = matches === 0;
+            cat.classList.toggle('open', matches > 0);
+            head.setAttribute('aria-expanded', String(matches > 0));
+            if (matches > 0) anyGlobal = true;
+          } else {
+            cat.hidden = false;
+            cat.classList.remove('open');
+            head.setAttribute('aria-expanded', 'false');
+          }
+        });
+        if (noResult) noResult.hidden = !q || anyGlobal;
+      });
+    })();
+  </script>
+</body>
+</html>

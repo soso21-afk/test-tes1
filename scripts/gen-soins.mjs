@@ -94,7 +94,7 @@ const navHtml = () => `
       </div>
       <a href="../index.html#centre">Le centre</a>
       <a href="../index.html#faq">FAQ</a>
-      <a href="../index.html#contact" class="nav-cta">Prendre rendez-vous</a>
+      <a href="../rendez-vous.html" class="nav-cta">Prendre rendez-vous</a>
     </div>
     <button class="nav-toggle" id="navToggle" aria-label="Ouvrir le menu" aria-expanded="false">
       <span></span><span></span><span></span>
@@ -126,7 +126,7 @@ const footerHtml = () => `
       <div>
         <h3>Boutique &amp; contact</h3>
         <a href="https://regeneratium.sumupstore.com" target="_blank" rel="noopener">Bons cadeaux</a>
-        <a href="../index.html#contact">Prendre rendez-vous</a>
+        <a href="../rendez-vous.html">Prendre rendez-vous</a>
         <a href="tel:+41218260088">+41 21 826 00 88</a>
       </div>
     </div>
@@ -196,7 +196,7 @@ ${navHtml()}
         <p class="soin-loc">Entre Genève et Lausanne</p>
         <p class="soin-lead">${esc(s.lead)}</p>
         <div class="soin-actions">
-          <a class="btn-primary" href="../index.html#contact">Prendre rendez-vous</a>
+          <a class="btn-primary" href="../rendez-vous.html">Prendre rendez-vous</a>
           <a class="btn-outline" href="../index.html#${section}">Voir tous les soins</a>
         </div>
       </div>

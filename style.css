@@ -306,9 +306,37 @@ body.subpage nav:not(.scrolled) .nav-toggle span { background: var(--dark); }
 .soin-mini-icon svg { width: 22px; height: 22px; }
 .related-card strong { display: block; margin: 16px 0 8px; color: var(--dark); font: 700 20px Nunito, sans-serif; }
 .related-card small { color: var(--text-light); font-size: 13px; line-height: 1.5; }
+/* ── Page Prendre rendez-vous ── */
+.booking-intro { padding: 8px clamp(24px, 6vw, 86px) 0; }
+.booking-intro .section-header { margin-bottom: 30px; }
+.booking-intro h1 { font-family: Nunito, sans-serif; font-weight: 700; letter-spacing: -.01em; color: var(--dark); font-size: clamp(38px, 5vw, 60px); line-height: 1.05; }
+.booking-intro .section-header p { margin-top: 16px; color: var(--text-light); font-size: 16px; }
+.booking { max-width: var(--max-w); margin: 0 auto; padding: 0 clamp(24px, 6vw, 86px) 80px; }
+.booking-grid { display: grid; grid-template-columns: minmax(0, 380px) minmax(0, 1fr); gap: clamp(24px, 4vw, 48px); align-items: start; }
+.booking h2 { font-size: clamp(23px, 2.4vw, 30px); margin-bottom: 16px; }
+.search-box { position: relative; margin-bottom: 18px; }
+.search-box svg { position: absolute; left: 15px; top: 50%; transform: translateY(-50%); width: 18px; height: 18px; color: var(--text-light); pointer-events: none; }
+.search-box input { width: 100%; height: 50px; padding: 0 16px 0 44px; border: 1.5px solid var(--border); border-radius: 999px; background: var(--white); color: var(--text); font: 400 15px Lato, sans-serif; box-shadow: var(--shadow-sm); }
+.search-box input:focus { outline: 0; border-color: var(--primary); box-shadow: 0 0 0 4px rgba(10, 103, 123, .1); }
+.soin-cat { border: 1px solid var(--border); border-radius: var(--radius-sm); background: var(--white); margin-bottom: 10px; overflow: hidden; box-shadow: var(--shadow-sm); }
+.soin-cat-head { width: 100%; display: flex; align-items: center; justify-content: space-between; gap: 12px; padding: 16px 18px; border: 0; background: none; cursor: pointer; color: var(--dark); font: 700 15px Nunito, sans-serif; text-align: left; }
+.soin-cat-head svg { flex: none; width: 13px; height: 13px; color: var(--primary); transition: transform .25s ease; }
+.soin-cat.open .soin-cat-head svg { transform: rotate(180deg); }
+.soin-cat-list { display: none; padding: 0 8px 8px; }
+.soin-cat.open .soin-cat-list { display: block; }
+.soin-cat-list a { display: block; padding: 11px 14px; border-radius: 8px; color: var(--text); text-decoration: none; font-size: 14.5px; transition: background .2s ease, color .2s ease; }
+.soin-cat-list a[hidden] { display: none; }
+.soin-cat-list a:hover { background: var(--primary-pale); color: var(--primary-dark); }
+.soin-noresult { padding: 12px 4px; color: var(--text-light); font-size: 14px; }
+.booking-widget p { color: var(--text-light); margin-bottom: 16px; }
+.od-embed { border: 1px solid var(--border); border-radius: var(--radius); overflow: hidden; background: var(--white); box-shadow: var(--shadow-sm); min-height: 620px; }
+.od-widget { display: block; width: 100%; min-height: 620px; border: 0; }
+.od-fallback { display: inline-block; margin-top: 14px; color: var(--primary); font-weight: 700; text-decoration: none; font-size: 14px; }
+.od-fallback:hover { color: var(--primary-light); }
 @media (max-width: 880px) {
   .soin-hero, .soin-body { grid-template-columns: 1fr; }
   .soin-benefits { grid-template-columns: 1fr; }
+  .booking-grid { grid-template-columns: 1fr; }
 }
 .reveal { opacity: 0; transform: translateY(28px); transition: opacity .7s ease, transform .7s ease; }
 .reveal.visible { opacity: 1; transform: translateY(0); }
