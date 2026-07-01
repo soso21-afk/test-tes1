@@ -314,8 +314,8 @@ body.subpage nav:not(.scrolled) .nav-toggle span { background: var(--dark); }
 .booking { max-width: var(--max-w); margin: 0 auto; padding: 0 clamp(24px, 6vw, 86px) 80px; }
 .booking-panel { max-width: 1024px; margin: 0 auto; }
 .booking-sub { max-width: 640px; margin-bottom: 24px; color: var(--text-light); }
-.booking-picker { margin-bottom: 30px; }
-.soin-accordion { display: grid; grid-template-columns: repeat(2, 1fr); gap: 10px; align-items: start; }
+.booking-picker { max-width: 560px; margin: 0 auto 30px; }
+.soin-accordion { display: grid; grid-template-columns: 1fr; gap: 10px; }
 .soin-noresult { grid-column: 1 / -1; }
 .booking h2 { font-size: clamp(24px, 2.6vw, 32px); margin-bottom: 12px; }
 .search-box { position: relative; margin-bottom: 18px; }
