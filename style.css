@@ -181,6 +181,8 @@ section { padding: 108px clamp(24px, 6vw, 86px); }
 .service-icon { display: grid; place-items: center; width: 52px; height: 52px; margin-bottom: 22px; border-radius: 50%; color: var(--primary); background: var(--primary-pale); font: 500 28px Nunito, sans-serif; }
 .service-card small { color: var(--accent-dark); text-transform: uppercase; letter-spacing: 1.5px; font-size: 11px; font-weight: 700; }
 .service-card h3 { margin: 8px 0 10px; font-size: 27px; }
+.service-card h3 a { color: inherit; text-decoration: none; }
+.service-card h3 a:hover { color: var(--primary); }
 .service-card p { color: var(--text-light); font-size: 14.5px; }
 .service-card a { display: inline-flex; margin-top: 20px; color: var(--primary); text-decoration: none; font-weight: 700; font-size: 13px; }
 .service-card a::after { content: '→'; margin-left: 8px; transition: transform .25s ease; }
@@ -260,6 +262,51 @@ footer { padding: 70px clamp(24px, 6vw, 86px) 34px; background: var(--dark); col
 .footer-bottom { max-width: var(--max-w); margin: 0 auto; padding-top: 28px; border-top: 1px solid rgba(255,255,255,.08); display: flex; justify-content: space-between; gap: 20px; font-size: 13px; }
 .footer-bottom div { display: flex; gap: 20px; }
 .footer-bottom a { color: rgba(255,255,255,.38); text-decoration: none; }
+/* ───────── Pages de soins (détail) ───────── */
+.soin-page { padding-top: 92px; }
+body.subpage nav { background: rgba(249, 250, 251, .95); backdrop-filter: blur(22px); box-shadow: 0 1px 0 var(--border), 0 12px 30px rgba(15, 34, 41, .08); padding-block: 13px; }
+body.subpage .logo-light { display: none; }
+body.subpage .logo-dark { display: block; }
+body.subpage nav:not(.scrolled) > .nav-links > a:not(.nav-cta),
+body.subpage nav:not(.scrolled) .nav-trigger { color: var(--text); }
+body.subpage nav:not(.scrolled) .nav-toggle { background: rgba(16, 24, 40, .06); }
+body.subpage nav:not(.scrolled) .nav-toggle span { background: var(--dark); }
+.soin-hero { max-width: var(--max-w); margin: 0 auto; padding: 40px clamp(24px, 6vw, 86px) 30px; display: grid; grid-template-columns: minmax(0, 1fr) minmax(280px, 360px); gap: clamp(28px, 5vw, 64px); align-items: center; }
+.soin-back { display: inline-flex; align-items: center; gap: 6px; margin-bottom: 18px; color: var(--primary); text-decoration: none; font-weight: 700; font-size: 12px; text-transform: uppercase; letter-spacing: 1px; }
+.soin-back:hover { color: var(--primary-light); }
+.soin-hero-text h1 { font-size: clamp(40px, 6vw, 70px); }
+.soin-loc { margin: 12px 0 0; color: var(--accent-dark); font-weight: 700; text-transform: uppercase; letter-spacing: 1.5px; font-size: 12px; }
+.soin-lead { max-width: 560px; margin: 18px 0 0; color: var(--text-light); font-size: clamp(16px, 1.4vw, 18px); }
+.soin-actions { display: flex; flex-wrap: wrap; gap: 14px; margin-top: 30px; }
+.btn-outline { display: inline-flex; align-items: center; justify-content: center; padding: 14px 25px; border-radius: 999px; border: 1.5px solid var(--border); color: var(--primary); background: transparent; text-decoration: none; font: 600 14px Lato, sans-serif; transition: border-color .25s ease, background .25s ease; }
+.btn-outline:hover { border-color: var(--primary); background: var(--primary-pale); }
+.price-card { position: relative; overflow: hidden; padding: 32px 30px; border-radius: var(--radius); color: var(--white); background: linear-gradient(150deg, var(--primary-dark), var(--primary)); box-shadow: var(--shadow-md); }
+.price-card .soin-icon { display: grid; place-items: center; width: 52px; height: 52px; margin-bottom: 20px; border-radius: 50%; color: var(--white); background: rgba(255, 255, 255, .14); }
+.price-card .soin-icon svg { width: 26px; height: 26px; }
+.price-kicker { color: var(--accent-light); text-transform: uppercase; letter-spacing: 1.6px; font-size: 11px; font-weight: 700; }
+.price-card strong { display: block; margin: 8px 0 12px; font: 700 clamp(26px, 3vw, 34px) Nunito, sans-serif; line-height: 1.1; }
+.price-card p { color: rgba(255, 255, 255, .8); font-size: 13.5px; line-height: 1.55; }
+.soin-body { max-width: var(--max-w); margin: 0 auto; padding: 30px clamp(24px, 6vw, 86px) 40px; display: grid; grid-template-columns: 1fr 1fr; gap: clamp(28px, 4vw, 56px); }
+.soin-block h2 { margin-top: 12px; font-size: clamp(26px, 3vw, 38px); }
+.soin-benefits { display: grid; grid-template-columns: 1fr 1fr; gap: 12px; margin-top: 22px; }
+.soin-benefit { display: flex; align-items: center; gap: 10px; padding: 16px 18px; border: 1px solid var(--border); border-radius: var(--radius-sm); background: var(--white); box-shadow: var(--shadow-sm); }
+.soin-benefit span { color: var(--primary); font-weight: 800; }
+.soin-benefit strong { color: var(--dark); font-size: 14.5px; }
+.soin-faq { margin-top: 16px; }
+.soin-faq .faq-item { background: var(--white); margin-bottom: 10px; }
+.soin-related { max-width: var(--max-w); margin: 0 auto; padding: 6px clamp(24px, 6vw, 86px) 80px; }
+.soin-related h2 { margin: 10px 0 0; font-size: clamp(26px, 3vw, 38px); }
+.related-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); gap: 16px; margin-top: 26px; }
+.related-card { display: block; padding: 24px; border: 1px solid var(--border); border-radius: var(--radius); background: var(--white); text-decoration: none; box-shadow: var(--shadow-sm); transition: transform .25s ease, box-shadow .25s ease; }
+.related-card:hover { transform: translateY(-5px); box-shadow: var(--shadow-md); }
+.soin-mini-icon { display: grid; place-items: center; width: 44px; height: 44px; border-radius: 50%; color: var(--primary); background: var(--primary-pale); }
+.soin-mini-icon svg { width: 22px; height: 22px; }
+.related-card strong { display: block; margin: 16px 0 8px; color: var(--dark); font: 700 20px Nunito, sans-serif; }
+.related-card small { color: var(--text-light); font-size: 13px; line-height: 1.5; }
+@media (max-width: 880px) {
+  .soin-hero, .soin-body { grid-template-columns: 1fr; }
+  .soin-benefits { grid-template-columns: 1fr; }
+}
 .reveal { opacity: 0; transform: translateY(28px); transition: opacity .7s ease, transform .7s ease; }
 .reveal.visible { opacity: 1; transform: translateY(0); }
 .service-card.visible, .testimonial-card.visible, .step.visible { transition-delay: var(--delay, 0ms); }
