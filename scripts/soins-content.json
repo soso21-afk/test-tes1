@@ -383,5 +383,9 @@
         "a": "L'halothérapie est souvent considérée comme une thérapie de bien-être plutôt que comme un traitement médical, et elle n'est généralement pas couverte par les assurances de base. Toutefois, certaines assurances complémentaires peuvent couvrir une partie des frais, en particulier si elle est recommandée par un professionnel de la santé."
       }
     ]
+  },
+  "sophrologie": {
+    "intro": "La sophrologie est une méthode douce qui associe respiration, relaxation et visualisation positive pour retrouver un équilibre entre le corps et le mental. Elle aide à réduire le stress et l’anxiété, à améliorer le sommeil, à renforcer la confiance en soi et à mieux gérer ses émotions. Nos praticiens vous accompagnent dans un cadre apaisant, à votre rythme.",
+    "faq": []
   }
 }
