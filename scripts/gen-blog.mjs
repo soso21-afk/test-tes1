@@ -46,7 +46,7 @@ const nav = (b) => `
           <a href="${b}soins/hypnose.html" role="menuitem">Hypnothérapie</a>
         </div>
       </div>
-      <a href="${b}index.html#centre">Le centre</a>
+      <a href="${b}a-propos.html">À propos</a>
       <a href="${b}blog.html">Blog</a>
       <a href="${b}rendez-vous.html" class="nav-cta">Prendre rendez-vous</a>
     </div>

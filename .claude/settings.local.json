@@ -41,7 +41,8 @@
       "Bash(grep -viE '^\\(function|window|gtag|var |https?:|\\\\{|\\\\}|/\\\\*|\\\\.[a-z]|googleapis|families|Lato|Kanit|Nunito|Satoshi|widgetConfigs|!function|@media|[0-9]+px|w-|display|MEDICAL|Psys|Diététique|THÉRAPIES|Ostéopathie|Acupuncture|Cranio|Hypno|BIEN|Massage|Flottaison|Cryo|Chambre|RÉSERVATION|CONTACT\\)')",
       "Bash(awk 'length\\($0\\)>2')",
       "Bash(node parse-blog.mjs)",
-      "Bash(node -e 'const c=require\\(\"C:/Users/alexi/OneDrive/Bureau/code/Site/site Mom/regeneratium/scripts/blog-content.json\"\\); const a=c[\"introduction-a-la-psychologie\"]; console.log\\(\"TITRE:\",a.title\\); console.log\\(\"SOUS:\",a.subtitle\\); console.log\\(\"EXCERPT:\",a.excerpt\\); a.blocks.slice\\(0,6\\).forEach\\(b=>console.log\\(`[${b.type}] ${b.text.slice\\(0,90\\)}`\\)\\)')"
+      "Bash(node -e 'const c=require\\(\"C:/Users/alexi/OneDrive/Bureau/code/Site/site Mom/regeneratium/scripts/blog-content.json\"\\); const a=c[\"introduction-a-la-psychologie\"]; console.log\\(\"TITRE:\",a.title\\); console.log\\(\"SOUS:\",a.subtitle\\); console.log\\(\"EXCERPT:\",a.excerpt\\); a.blocks.slice\\(0,6\\).forEach\\(b=>console.log\\(`[${b.type}] ${b.text.slice\\(0,90\\)}`\\)\\)')",
+      "Bash(node scripts/gen-blog.mjs)"
     ]
   }
 }

@@ -45,7 +45,7 @@ const nav = `
           <a href="soins/hypnose.html" role="menuitem">Hypnothérapie</a>
         </div>
       </div>
-      <a href="index.html#centre">Le centre</a>
+      <a href="a-propos.html">À propos</a>
       <a href="blog.html">Blog</a>
       <a href="rendez-vous.html" class="nav-cta">Prendre rendez-vous</a>
     </div>
