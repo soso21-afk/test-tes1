@@ -16,7 +16,32 @@
       "Bash(rmdir src *)",
       "Bash(grep -vE '^\\(node_modules|\\\\.git\\)$')",
       "mcp__Claude_Preview__preview_start",
-      "Bash(git -c 'user.name=Regeneratium Dev' -c user.email=alexisjaccard3@gmail.com commit -q -m ' *)"
+      "Bash(git -c 'user.name=Regeneratium Dev' -c user.email=alexisjaccard3@gmail.com commit -q -m ' *)",
+      "Bash([ -f \"$f\" ])",
+      "Bash(awk '{print $NF, $5\"o\"}')",
+      "Bash(grep -oiE '\\(avis|témoign|google|étoile|t.moign\\)[^<]{0,40}' home.html)",
+      "Bash(grep -oiE '\\(alt|title\\)=\"[^\"]{3,40}\"' home.html)",
+      "Bash(grep -vE '^\\\\s*$')",
+      "Bash(grep -viE '^\\(function|window|gtag|webfont|var |https?:|\\\\.|\\\\{|\\\\}|/\\\\*|googleapis|G-KY|families|Lato|Kanit|Nunito|Lora|Satoshi\\)')",
+      "Bash(awk '{ if \\(length\\($0\\)>2\\) print }')",
+      "Bash(node scripts/gen-soins.mjs)",
+      "Bash(node parse.mjs)",
+      "Bash(node -e \"const c=require\\('C:/Users/alexi/OneDrive/Bureau/code/Site/site Mom/regeneratium/scripts/soins-content.json'\\); for\\(const [k,v] of Object.entries\\(c\\)\\) console.log\\(k.padEnd\\(30\\), 'intro:'+\\(v.intro?v.intro.length:0\\), 'faq:'+v.faq.length\\)\")",
+      "Bash(curl -sL -A \"Mozilla/5.0\" \"https://www.regeneratium.ch/rendez-vous-onedoc\" -o rdv.html --max-time 45)",
+      "Bash(grep -oiE 'onedoc[^<]{0,120}' rdv.html)",
+      "Bash(node -e ' *)",
+      "Bash(grep -viE '^\\(function|window|gtag|var |https?:|\\\\{|\\\\}|/\\\\*|\\\\.|googleapis|families|Lato|Kanit|Nunito|Satoshi|widgetConfigs|!function|od-|measurement|@media|display:\\)')",
+      "Bash(awk 'length\\($0\\)>1 && length\\($0\\)<120')",
+      "Bash(curl -sL -A \"Mozilla/5.0\" \"https://www.regeneratium.ch/sitemap.xml\" --max-time 40)",
+      "Bash(curl -sL -A \"Mozilla/5.0\" \"https://www.regeneratium.ch/\" -o home.html --max-time 40)",
+      "Bash(grep -oiE '\\(Nos soins[^<]{0,40}|Prise en charge[^<]{0,30}|Ils nous font confiance|Avis[^<]{0,20}|Questions fréquentes|Présentation[^<]{0,30}|Notre[^<]{0,30}|bons? cadeaux[^<]{0,20}|newsletter|blog|équipe|team\\)' home.html)",
+      "Bash(node scripts/gen-pages.mjs)",
+      "Bash(awk '{print $NF}')",
+      "Bash(node -e 'let s=\"\";process.stdin.on\\(\"data\",d=>s+=d\\).on\\(\"end\",\\(\\)=>{process.stdout.write\\(s.replace\\(/&#x\\([0-9a-fA-F]+\\);/g,\\(_,h\\)=>String.fromCodePoint\\(parseInt\\(h,16\\)\\)\\).replace\\(/&#\\(\\\\d+\\);/g,\\(_,d\\)=>String.fromCodePoint\\(+d\\)\\).replace\\(/&quot;/g,\"\\\\\"\"\\).replace\\(/&amp;/g,\"&\"\\).replace\\(/&nbsp;/g,\" \"\\)\\)}\\)')",
+      "Bash(grep -viE '^\\(function|window|gtag|var |https?:|\\\\{|\\\\}|/\\\\*|\\\\.[a-z]|googleapis|families|Lato|Kanit|Nunito|Satoshi|widgetConfigs|!function|@media|[0-9]+px|w-|display|MEDICAL|Psys|Diététique|THÉRAPIES|Ostéopathie|Acupuncture|Cranio|Hypno|BIEN|Massage|Flottaison|Cryo|Chambre|RÉSERVATION|CONTACT\\)')",
+      "Bash(awk 'length\\($0\\)>2')",
+      "Bash(node parse-blog.mjs)",
+      "Bash(node -e 'const c=require\\(\"C:/Users/alexi/OneDrive/Bureau/code/Site/site Mom/regeneratium/scripts/blog-content.json\"\\); const a=c[\"introduction-a-la-psychologie\"]; console.log\\(\"TITRE:\",a.title\\); console.log\\(\"SOUS:\",a.subtitle\\); console.log\\(\"EXCERPT:\",a.excerpt\\); a.blocks.slice\\(0,6\\).forEach\\(b=>console.log\\(`[${b.type}] ${b.text.slice\\(0,90\\)}`\\)\\)')"
     ]
   }
 }
