@@ -76,9 +76,16 @@
 
         <!-- Sélecteur : barre de recherche + catégories déroulantes -->
         <div class="booking-picker">
-          <div class="search-box">
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" aria-hidden="true"><circle cx="11" cy="11" r="7"/><path d="m20 20-3.2-3.2"/></svg>
-            <input type="search" id="soinSearch" placeholder="Rechercher un soin…" aria-label="Rechercher un soin" autocomplete="off" />
+          <label class="spec-label" for="specTrigger">Spécialité</label>
+          <div class="spec-select">
+            <button type="button" class="spec-trigger" id="specTrigger" aria-expanded="false" aria-haspopup="true">
+              <span id="specValue">Sélectionnez une spécialité</span>
+              <svg viewBox="0 0 12 12" aria-hidden="true"><path d="M2.5 4.5 6 8l3.5-3.5" stroke="currentColor" stroke-width="1.6" fill="none" stroke-linecap="round" stroke-linejoin="round"/></svg>
+            </button>
+            <div class="spec-panel" id="specPanel" hidden>
+              <div class="search-box">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" aria-hidden="true"><circle cx="11" cy="11" r="7"/><path d="m20 20-3.2-3.2"/></svg>
+                <input type="search" id="soinSearch" placeholder="Rechercher un soin…" aria-label="Rechercher un soin" autocomplete="off" />
           </div>
 
           <div class="soin-accordion" id="soinAccordion">
@@ -117,6 +124,8 @@
             </div>
 
             <p class="soin-noresult" hidden>Aucun soin ne correspond à votre recherche.</p>
+              </div>
+            </div>
           </div>
         </div>
 
@@ -178,6 +187,24 @@
       window.addEventListener('message', function (e) {
         if (!e.data || e.data['od-widget-id'] !== ID) return;
         if (e.data['od-widget-height']) f.style.height = e.data['od-widget-height'] + 'px';
+      });
+    })();
+
+    // Menu « Spécialité » : ouvrir / fermer le panneau
+    (function () {
+      var trigger = document.getElementById('specTrigger');
+      var panel = document.getElementById('specPanel');
+      if (!trigger || !panel) return;
+      trigger.addEventListener('click', function () {
+        var willOpen = panel.hidden;
+        panel.hidden = !willOpen;
+        trigger.setAttribute('aria-expanded', String(willOpen));
+      });
+      document.addEventListener('click', function (e) {
+        if (!e.target.closest('.spec-select')) {
+          panel.hidden = true;
+          trigger.setAttribute('aria-expanded', 'false');
+        }
       });
     })();
 
