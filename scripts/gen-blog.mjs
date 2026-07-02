@@ -48,6 +48,7 @@ const nav = (b) => `
       </div>
       <a href="${b}a-propos.html">À propos</a>
       <a href="${b}blog.html">Blog</a>
+      <a href="${b}contact.html">Contact</a>
       <a href="${b}rendez-vous.html" class="nav-cta">Prendre rendez-vous</a>
     </div>
     <button class="nav-toggle" id="navToggle" aria-label="Ouvrir le menu" aria-expanded="false">
