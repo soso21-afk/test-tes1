@@ -338,6 +338,8 @@ body.subpage nav:not(.scrolled) .nav-toggle span { background: var(--dark); }
 .soin-mini-icon { display: grid; place-items: center; width: 44px; height: 44px; border-radius: 50%; color: var(--primary); background: var(--primary-pale); }
 .soin-mini-icon svg { width: 22px; height: 22px; }
 .related-card strong { display: block; margin: 16px 0 8px; color: var(--dark); font: 700 20px Nunito, sans-serif; }
+.related-cat { display: block; color: var(--accent-dark); text-transform: uppercase; letter-spacing: 1px; font-size: 11px; font-weight: 700; }
+.related-cat + strong { margin-top: 8px; }
 .related-card small { color: var(--text-light); font-size: 13px; line-height: 1.5; }
 /* ── Page Prendre rendez-vous ── */
 .booking-intro { padding: 8px clamp(24px, 6vw, 86px) 0; }

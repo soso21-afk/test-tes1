@@ -66,9 +66,9 @@ const footer = `
       </div>
       <div>
         <h3>Nos soins</h3>
-        <a href="index.html#bien-etre">Bien-être &amp; Santé</a>
-        <a href="index.html#medical">Médical</a>
-        <a href="index.html#therapies">Thérapies</a>
+        <a href="nos-soins-bien-etre.html">Bien-être &amp; Santé</a>
+        <a href="nos-soins-santes.html#medical">Médical</a>
+        <a href="nos-soins-santes.html#therapies">Thérapies</a>
       </div>
       <div>
         <h3>Le centre</h3>
@@ -256,7 +256,62 @@ const legal = doc({
     </section>`,
 });
 
+// ── Pages aperçu « Nos soins » ──
+const soins = [
+  { slug: 'massage', title: 'Massage', group: 'Bien-être', blurb: 'Détente, circulation et récupération.' },
+  { slug: 'flottaison', title: 'Flottaison', group: 'Bien-être', blurb: 'Relaxation profonde en apesanteur.' },
+  { slug: 'cryotherapie', title: 'Cryothérapie', group: 'Bien-être', blurb: 'Froid intense, récupération, anti-inflammation.' },
+  { slug: 'halotherapie', title: 'Halothérapie · Chambre de sel', group: 'Bien-être', blurb: 'Air salin pour la respiration et la peau.' },
+  { slug: 'psychologie', title: 'Psychologie', group: 'Médical', blurb: 'Écoute et évaluation psychologique.' },
+  { slug: 'psychotherapie', title: 'Psychothérapie', group: 'Médical', blurb: 'Accompagnement structuré du bien-être mental.' },
+  { slug: 'dietetique', title: 'Diététique', group: 'Médical', blurb: 'Nutrition personnalisée (remboursée LaMal).' },
+  { slug: 'osteopathie', title: 'Ostéopathie', group: 'Thérapies', blurb: 'Mobilité et soulagement des tensions.' },
+  { slug: 'acupuncture', title: 'Acupuncture', group: 'Thérapies', blurb: 'Équilibre énergétique, douleurs, sommeil.' },
+  { slug: 'ventouse-cupping', title: 'Ventouse / Cupping', group: 'Thérapies', blurb: 'Circulation, tensions, récupération.' },
+  { slug: 'therapie-cranio-sacree', title: 'Cranio-sacrée', group: 'Thérapies', blurb: 'Touchers doux, système nerveux.' },
+  { slug: 'naturopathie-micro-nutrition', title: 'Naturopathie & micro-nutrition', group: 'Thérapies', blurb: 'Approche holistique naturelle.' },
+  { slug: 'hypnose', title: 'Hypnothérapie', group: 'Thérapies', blurb: 'Mobiliser ses ressources intérieures.' },
+  { slug: 'sophrologie', title: 'Sophrologie', group: 'Thérapies', blurb: 'Respiration, relaxation, confiance en soi.' },
+];
+const card = (s) => `<a class="related-card" href="soins/${s.slug}.html"><span class="related-cat">${s.group}</span><strong>${s.title}</strong><small>${s.blurb}</small></a>`;
+const grid = (list) => `<div class="related-grid">${list.map(card).join('')}</div>`;
+
+const bienEtre = doc({
+  title: 'Nos soins Bien-être — Regeneratium · Rolle',
+  desc: 'Tous les soins bien-être de Regeneratium à Rolle : massage, flottaison, cryothérapie, halothérapie.',
+  body: `    <section class="page-head">
+      <span class="section-tag">Nos soins</span>
+      <h1>Bien-être &amp; Santé</h1>
+      <p class="page-loc">À Rolle, entre Genève et Lausanne</p>
+      <p>Des expériences pensées pour relâcher le corps, apaiser le mental et soutenir la récupération.</p>
+    </section>
+    <section class="soin-related">${grid(soins.filter((s) => s.group === 'Bien-être'))}</section>`,
+});
+
+const santes = doc({
+  title: 'Nos soins Santé — Regeneratium · Rolle',
+  desc: 'Tous les soins médicaux et thérapeutiques de Regeneratium à Rolle, entre Genève et Lausanne.',
+  body: `    <section class="page-head">
+      <span class="section-tag">Nos soins</span>
+      <h1>Nos soins Santé</h1>
+      <p class="page-loc">À Rolle, entre Genève et Lausanne</p>
+      <p>Soins médicaux assurés par des professionnels de santé et thérapies douces complémentaires.</p>
+    </section>
+    <section id="medical" class="soin-related">
+      <span class="section-tag">Médical</span>
+      <h2>Soins médicaux</h2>
+      ${grid(soins.filter((s) => s.group === 'Médical'))}
+    </section>
+    <section id="therapies" class="soin-related" style="padding-top:0">
+      <span class="section-tag">Thérapies</span>
+      <h2>Soins thérapeutiques</h2>
+      ${grid(soins.filter((s) => s.group === 'Thérapies'))}
+    </section>`,
+});
+
 await writeFile(join(root, 'a-propos.html'), aPropos, 'utf8');
 await writeFile(join(root, 'contact.html'), contact, 'utf8');
 await writeFile(join(root, 'mentions-legales.html'), legal, 'utf8');
-console.log('Pages générées : a-propos.html, contact.html, mentions-legales.html');
+await writeFile(join(root, 'nos-soins-bien-etre.html'), bienEtre, 'utf8');
+await writeFile(join(root, 'nos-soins-santes.html'), santes, 'utf8');
+console.log('Pages générées : a-propos, contact, mentions-legales, nos-soins-bien-etre, nos-soins-santes');
