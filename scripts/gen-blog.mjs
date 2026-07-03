@@ -80,7 +80,7 @@ const footer = (b) => `
       </div>
       <div>
         <h3>Boutique &amp; contact</h3>
-        <a href="https://regeneratium.sumupstore.com" target="_blank" rel="noopener">Bons cadeaux</a>
+        <a href="${b}bons-cadeaux.html">Bons cadeaux</a>
         <a href="${b}rendez-vous.html">Prendre rendez-vous</a>
         <a href="tel:+41218260088">+41 21 826 00 88</a>
       </div>

@@ -239,6 +239,19 @@ section { padding: 108px clamp(24px, 6vw, 86px); }
 .giftcard-inner { max-width: var(--max-w); margin: 0 auto; display: flex; align-items: center; justify-content: space-between; flex-wrap: wrap; gap: 26px; padding: clamp(28px, 4vw, 46px) clamp(26px, 4vw, 54px); border-radius: 24px; background: var(--stone); border: 1px solid var(--border); }
 .giftcard-inner h2 { font-size: clamp(26px, 3vw, 40px); margin-top: 10px; }
 .giftcard-inner p { max-width: 560px; margin-top: 12px; color: var(--text-light); }
+/* ── Page Bons cadeaux ── */
+.gift-steps { max-width: var(--max-w); margin: 0 auto; padding: 14px clamp(24px, 6vw, 86px) 8px; display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 16px; }
+.gift-step { position: relative; padding: 24px 22px; border: 1px solid var(--border); border-radius: var(--radius); background: var(--white); box-shadow: var(--shadow-sm); }
+.gift-step span { display: inline-grid; place-items: center; width: 38px; height: 38px; border-radius: 50%; background: var(--primary); color: var(--white); font: 700 16px Nunito, sans-serif; }
+.gift-step strong { display: block; margin: 12px 0 6px; color: var(--dark); font: 700 19px Nunito, sans-serif; }
+.gift-step p { color: var(--text-light); font-size: 14px; line-height: 1.6; }
+.gift-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); gap: 16px; margin-top: 26px; }
+.gift-card { display: flex; flex-direction: column; padding: 26px; border: 1px solid var(--border); border-radius: var(--radius); background: var(--white); box-shadow: var(--shadow-sm); transition: transform .25s ease, box-shadow .25s ease; }
+.gift-card:hover { transform: translateY(-5px); box-shadow: var(--shadow-md); }
+.gift-card strong { margin: 16px 0 8px; color: var(--dark); font: 700 20px Nunito, sans-serif; }
+.gift-card p { flex: 1; color: var(--text-light); font-size: 14px; line-height: 1.6; }
+.gift-card a { margin-top: 16px; color: var(--primary); text-decoration: none; font-weight: 700; font-size: 13.5px; }
+.gift-card a:hover { color: var(--primary-light); }
 /* ── Pages institutionnelles (À propos, Contact, Légal) ── */
 .page-head { max-width: var(--max-w); margin: 0 auto; padding: 30px clamp(24px, 6vw, 86px) 22px; }
 .page-head h1 { font-family: Nunito, sans-serif; font-weight: 700; letter-spacing: -.01em; color: var(--dark); font-size: clamp(38px, 5vw, 62px); line-height: 1.05; margin-top: 14px; }

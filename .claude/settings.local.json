@@ -42,7 +42,18 @@
       "Bash(awk 'length\\($0\\)>2')",
       "Bash(node parse-blog.mjs)",
       "Bash(node -e 'const c=require\\(\"C:/Users/alexi/OneDrive/Bureau/code/Site/site Mom/regeneratium/scripts/blog-content.json\"\\); const a=c[\"introduction-a-la-psychologie\"]; console.log\\(\"TITRE:\",a.title\\); console.log\\(\"SOUS:\",a.subtitle\\); console.log\\(\"EXCERPT:\",a.excerpt\\); a.blocks.slice\\(0,6\\).forEach\\(b=>console.log\\(`[${b.type}] ${b.text.slice\\(0,90\\)}`\\)\\)')",
-      "Bash(node scripts/gen-blog.mjs)"
+      "Bash(node scripts/gen-blog.mjs)",
+      "Bash(cd C:/Users/alexi/AppData/Local/Temp/claude/C--Users-alexi-OneDrive-Bureau-code-Site-site-Mom-regeneratium/876a21f0-d32e-420f-a0e9-a7305935f3e6/scratchpad)",
+      "Bash(curl -sL -A \"Mozilla/5.0 \\(Windows NT 10.0; Win64; x64\\) AppleWebKit/537.36 Chrome/124 Safari/537.36\" \"https://regeneratium.sumupstore.com/\" -o sumup.html --max-time 45)",
+      "Bash(wc -c)",
+      "Bash(echo \"size: $\\(wc -c < sumup.html\\)\")",
+      "Bash(echo \"=== titre / meta ===\")",
+      "Bash(grep -oiE '\\(CHF\\\\s*[0-9.,]+|\"name\"\\\\s*:\\\\s*\"[^\"]{3,60}\"\\)' sumup.html)",
+      "Bash(grep -oiE 'src=\"[^\"]+\"|\"apiUrl[^,]{0,80}|store[_-]?id[^,}]{0,60}|merchant[^,}]{0,60}' sumup.html)",
+      "Bash(awk 'length\\($0\\)>2 && length\\($0\\)<100')",
+      "Bash(curl -sL -A \"Mozilla/5.0\" \"https://regeneratium.sumupstore.com/produits\" -o sumup-prod.html --max-time 45)",
+      "Bash(grep -oiE 'href=\"/[^\"]{3,80}\"' sumup-prod.html)",
+      "Bash(grep -oiE '\"\\(title|name\\)\"\\\\s*:\\\\s*\"[^\"]{4,70}\"' sumup-prod.html)"
     ]
   }
 }
