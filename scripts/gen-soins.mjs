@@ -15,7 +15,7 @@ const esc = (s) => String(s)
   .replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;');
 
 // Ancre de la section correspondante sur la page d'accueil
-const sectionOf = { 'Médical': 'medical', 'Thérapies': 'therapies', 'Bien-être': 'bien-etre', 'Programme': 'contact' };
+const sectionOf = { 'Médical': 'medical', 'Thérapies': 'therapies', 'Bien-être': 'bien-etre', 'Programme': 'stress' };
 
 // Icônes SVG (contenu interne, hérite de currentColor)
 const icons = {
