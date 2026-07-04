@@ -7,6 +7,9 @@ import { dirname, join } from 'node:path';
 
 const root = join(dirname(fileURLToPath(import.meta.url)), '..');
 
+const esc = (s) => String(s)
+  .replace(/&(?!#?\w+;)/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;');
+
 const nav = `
   <nav id="navbar">
     <a href="index.html" class="logo" aria-label="Regeneratium — accueil">
@@ -310,49 +313,67 @@ const santes = doc({
     </section>`,
 });
 
-// ── Page Bons cadeaux ──
-const giftIdeas = [
-  { icon: '<path d="M3 9c3-2 5-2 6 0s4 2 6 0 4-2 6 0"/><path d="M3 14c3-2 5-2 6 0s4 2 6 0 4-2 6 0"/><path d="M3 19c3-2 5-2 6 0s4 2 6 0 4-2 6 0"/>', title: 'Séance de flottaison', text: 'Une heure d’apesanteur dans notre bassin de sel d’Epsom — le cadeau détente par excellence.' },
-  { icon: '<path d="M5 20c0-7 5-13 14-14 1 9-5 14-14 14Z"/><path d="M5 20c3-5 7-8 11-9.5"/>', title: 'Massage bien-être', text: 'Un massage sur mesure pour dénouer les tensions et offrir un vrai moment de relâchement.' },
-  { icon: '<path d="M12 3v18M4 8l16 8M20 8 4 16M5.5 5.5 12 9M18.5 5.5 12 9M5.5 18.5 12 15M18.5 18.5 12 15"/>', title: 'Cryothérapie', text: 'L’expérience du froid intense pour la récupération et l’énergie — surprenant et revigorant.' },
-  { icon: '<path d="M12 3l1.9 4.4L18.5 9l-4.6 1.6L12 15l-1.9-4.4L5.5 9l4.6-1.6z"/><circle cx="6" cy="18" r="1"/><circle cx="18" cy="18" r="1"/><circle cx="12" cy="20.5" r="1"/>', title: 'Chambre de sel', text: 'Une parenthèse apaisante dans notre grotte de sel, pour la respiration et la sérénité.' },
-  { icon: '<rect x="3" y="8" width="18" height="13" rx="2"/><path d="M3 12h18M12 8v13M12 8c-2 0-4-1-4-3a2 2 0 0 1 4 0M12 8c2 0 4-1 4-3a2 2 0 0 0-4 0"/>', title: 'Packs découverte', text: 'Plusieurs soins combinés (flottaison, cryo, massage…) pour une expérience complète.' },
-  { icon: '<circle cx="12" cy="12" r="9"/><path d="M8.5 12h7M12 8.5v7"/>', title: 'Montant libre', text: 'Vous hésitez ? Offrez un bon d’une valeur libre — la personne choisit son soin.' },
-];
-const giftCards = giftIdeas.map((g) => `        <div class="gift-card reveal">
-          <span class="soin-mini-icon" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round">${g.icon}</svg></span>
-          <strong>${g.title}</strong>
-          <p>${g.text}</p>
-          <a href="https://regeneratium.sumupstore.com" target="_blank" rel="noopener">Choisir dans la boutique ↗</a>
-        </div>`).join('\n');
+// ── Page Bons cadeaux / Boutique (catalogue réel de la boutique SumUp) ──
+const produits = JSON.parse(await readFile(join(root, 'scripts', 'boutique-produits.json'), 'utf8'))
+  .map((p) => ({ ...p, name: p.name.replace(/&#x27;/g, '’') }));
+
+const catOf = (n) => {
+  const s = n.toLowerCase();
+  if (/^bon/.test(s)) return 'Bons cadeaux';
+  if (/pack|offre|longevity|privatisation|abonnement/.test(s)) return 'Packs & offres';
+  if (/flottaison|floating/.test(s)) return 'Flottaison';
+  if (/massage/.test(s)) return 'Massages';
+  if (/cryo|salt/.test(s)) return 'Cryo & Chambre de sel';
+  return 'Thérapies';
+};
+const catOrder = ['Bons cadeaux', 'Flottaison', 'Massages', 'Cryo & Chambre de sel', 'Thérapies', 'Packs & offres'];
+const priceNum = (p) => parseFloat(String(p).replace(/[^\d,\.]/g, '').replace(',', '.')) || 0;
+const sorted = [...produits].sort((a, b) => catOrder.indexOf(catOf(a.name)) - catOrder.indexOf(catOf(b.name)) || priceNum(a.price) - priceNum(b.price));
+
+const giftSvg = '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="8" width="18" height="4" rx="1"/><path d="M5 12v8a1 1 0 0 0 1 1h12a1 1 0 0 0 1-1v-8M12 8v13M12 8c-2 0-4.5-1-4.5-3A1.9 1.9 0 0 1 12 4.6 1.9 1.9 0 0 1 16.5 5c0 2-2.5 3-4.5 3Z"/></svg>';
+
+const shopCards = sorted.map((p) => {
+  const cat = catOf(p.name);
+  const visual = p.img
+    ? `<img src="${p.img}" alt="" loading="lazy" />`
+    : `<span class="shop-ph" aria-hidden="true">${giftSvg}</span>`;
+  return `        <a class="shop-card reveal" data-cat="${cat}" href="${p.href}" target="_blank" rel="noopener">
+          <div class="shop-visual">${visual}</div>
+          <div class="shop-body">
+            <span class="shop-cat">${cat}</span>
+            <strong>${esc(p.name)}</strong>
+            <div class="shop-foot"><span class="shop-price">${esc(p.price)}</span><span class="shop-buy">Offrir ↗</span></div>
+          </div>
+        </a>`;
+}).join('\n');
+
+const filters = ['Tous', ...catOrder].map((c, i) => `        <button type="button" class="shop-filter${i === 0 ? ' active' : ''}" data-filter="${c}">${c}</button>`).join('\n');
 
 const bonsCadeaux = doc({
-  title: 'Bons cadeaux — Regeneratium · Rolle',
-  desc: 'Offrez un moment de régénération : bons cadeaux flottaison, massage, cryothérapie, chambre de sel ou montant libre, à commander en ligne.',
+  title: 'Bons cadeaux & boutique — Regeneratium · Rolle',
+  desc: 'La boutique Regeneratium : bons cadeaux, flottaison, massages, cryothérapie, chambre de sel, packs et offres — commande en ligne, réception par e-mail.',
   body: `    <section class="page-head">
-      <span class="section-tag">Bons cadeaux</span>
+      <span class="section-tag">Bons cadeaux &amp; boutique</span>
       <h1>Offrez un moment de régénération</h1>
       <p class="page-loc">À Rolle, entre Genève et Lausanne</p>
-      <p>Flottaison, massage, cryothérapie ou montant libre : le bon cadeau Regeneratium
-        s’adapte à la personne à qui vous voulez faire du bien. Commande en ligne,
-        réception immédiate par e-mail.</p>
-      <div class="soin-actions">
-        <a class="btn-primary" href="https://regeneratium.sumupstore.com" target="_blank" rel="noopener">Ouvrir la boutique ↗</a>
-        <a class="btn-outline" href="#idees">Voir les idées cadeaux</a>
-      </div>
+      <p>Bons cadeaux, séances de flottaison, massages, cryothérapie, packs… Choisissez
+        ci-dessous : le paiement se fait en ligne et le bon arrive par e-mail, prêt à offrir.</p>
     </section>
 
     <section class="gift-steps reveal" aria-label="Comment ça marche">
-      <div class="gift-step"><span>1</span><strong>Choisissez</strong><p>Un soin précis ou un montant libre, directement dans la boutique en ligne.</p></div>
+      <div class="gift-step"><span>1</span><strong>Choisissez</strong><p>Un soin précis, un pack ou un bon d’un montant libre, ci-dessous.</p></div>
       <div class="gift-step"><span>2</span><strong>Recevez</strong><p>Le bon cadeau arrive par e-mail, prêt à imprimer ou à transférer.</p></div>
       <div class="gift-step"><span>3</span><strong>Offrez</strong><p>La personne réserve son moment au +41 21 826 00 88 ou en ligne.</p></div>
     </section>
 
-    <section id="idees" class="soin-related" style="padding-top:16px">
-      <span class="section-tag">Idées cadeaux</span>
-      <h2>Que souhaitez-vous offrir&nbsp;?</h2>
-      <div class="gift-grid">
-${giftCards}
+    <section id="boutique" class="soin-related" style="padding-top:16px">
+      <span class="section-tag">Boutique</span>
+      <h2>Nos bons cadeaux &amp; prestations</h2>
+      <div class="shop-filters" role="group" aria-label="Filtrer par catégorie">
+${filters}
+      </div>
+      <div class="shop-grid">
+${shopCards}
       </div>
     </section>
 
@@ -364,7 +385,21 @@ ${giftCards}
         </div>
         <a class="btn-primary btn-light" href="contact.html">Nous contacter</a>
       </div>
-    </section>`,
+    </section>
+
+    <script>
+      (function () {
+        var btns = [].slice.call(document.querySelectorAll('.shop-filter'));
+        var cards = [].slice.call(document.querySelectorAll('.shop-card'));
+        btns.forEach(function (btn) {
+          btn.addEventListener('click', function () {
+            btns.forEach(function (b) { b.classList.toggle('active', b === btn); });
+            var f = btn.dataset.filter;
+            cards.forEach(function (c) { c.hidden = f !== 'Tous' && c.dataset.cat !== f; });
+          });
+        });
+      })();
+    </script>`,
 });
 
 await writeFile(join(root, 'bons-cadeaux.html'), bonsCadeaux, 'utf8');

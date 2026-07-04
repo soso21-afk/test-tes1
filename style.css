@@ -252,6 +252,27 @@ section { padding: 108px clamp(24px, 6vw, 86px); }
 .gift-card p { flex: 1; color: var(--text-light); font-size: 14px; line-height: 1.6; }
 .gift-card a { margin-top: 16px; color: var(--primary); text-decoration: none; font-weight: 700; font-size: 13.5px; }
 .gift-card a:hover { color: var(--primary-light); }
+/* ── Boutique bons cadeaux (catalogue) ── */
+.shop-filters { display: flex; flex-wrap: wrap; gap: 8px; margin-top: 24px; }
+.shop-filter { padding: 10px 17px; border-radius: 999px; border: 1.5px solid var(--border); background: var(--white); color: var(--text); font: 700 13px Lato, sans-serif; cursor: pointer; transition: background .2s ease, color .2s ease, border-color .2s ease; }
+.shop-filter:hover { border-color: var(--primary-light); color: var(--primary); }
+.shop-filter.active { background: var(--primary); border-color: var(--primary); color: var(--white); }
+.shop-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(235px, 1fr)); gap: 18px; margin-top: 26px; }
+.shop-card { display: flex; flex-direction: column; border: 1px solid var(--border); border-radius: var(--radius); background: var(--white); overflow: hidden; box-shadow: var(--shadow-sm); text-decoration: none; transition: transform .25s ease, box-shadow .25s ease; }
+.shop-card:hover { transform: translateY(-5px); box-shadow: var(--shadow-md); }
+.shop-card[hidden] { display: none; }
+.shop-visual { aspect-ratio: 1 / 1; overflow: hidden; background: var(--primary-pale); }
+.shop-visual img { width: 100%; height: 100%; object-fit: cover; transition: transform .5s ease; }
+.shop-card:hover .shop-visual img { transform: scale(1.06); }
+.shop-ph { display: grid; place-items: center; width: 100%; height: 100%; background: linear-gradient(150deg, var(--primary-dark), var(--primary)); color: var(--accent-light); }
+.shop-ph svg { width: 64px; height: 64px; opacity: .9; }
+.shop-body { display: flex; flex-direction: column; flex: 1; padding: 16px 18px 18px; }
+.shop-cat { color: var(--accent-dark); text-transform: uppercase; letter-spacing: 1px; font-size: 10.5px; font-weight: 700; }
+.shop-body strong { margin: 7px 0 12px; color: var(--dark); font: 700 16.5px Nunito, sans-serif; line-height: 1.3; }
+.shop-foot { margin-top: auto; display: flex; align-items: center; justify-content: space-between; gap: 10px; }
+.shop-price { color: var(--primary); font: 700 15.5px Nunito, sans-serif; }
+.shop-buy { color: var(--text-light); font: 700 12.5px Lato, sans-serif; transition: color .2s ease; }
+.shop-card:hover .shop-buy { color: var(--primary); }
 /* ── Pages institutionnelles (À propos, Contact, Légal) ── */
 .page-head { max-width: var(--max-w); margin: 0 auto; padding: 30px clamp(24px, 6vw, 86px) 22px; }
 .page-head h1 { font-family: Nunito, sans-serif; font-weight: 700; letter-spacing: -.01em; color: var(--dark); font-size: clamp(38px, 5vw, 62px); line-height: 1.05; margin-top: 14px; }
