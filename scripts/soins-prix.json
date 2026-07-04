@@ -1,0 +1,202 @@
+{
+  "massage": {
+    "groups": [
+      {
+        "title": "Nos massages — champions suisses*",
+        "subtitle": "Avec nos thérapeutes champions suisses de massage",
+        "items": [
+          { "name": "Swiss champion Regeneratium", "detail": "Séance de 1h", "price": "CHF 140.00" },
+          { "name": "Swiss champion Regeneratium", "detail": "Séance de 1h30", "price": "CHF 180.00" },
+          { "name": "Swiss champion Massage détente", "detail": "Séance de 1h", "price": "CHF 140.00" },
+          { "name": "Swiss champion Massage détente", "detail": "Séance de 1h30", "price": "CHF 180.00" },
+          { "name": "Swiss champion Massage sportif", "detail": "Séance de 1h", "price": "CHF 140.00" },
+          { "name": "Swiss champion Massage sportif", "detail": "Séance de 1h30", "price": "CHF 180.00" }
+        ]
+      },
+      {
+        "title": "Nos massages",
+        "subtitle": "Avec nos thérapeutes non compétiteurs",
+        "items": [
+          { "name": "Massage Regeneratium Signature", "detail": "Séance de 1h", "price": "CHF 120.00" },
+          { "name": "Massage Regeneratium Signature", "detail": "Séance de 1h30", "price": "CHF 160.00" },
+          { "name": "Massage Regeneratium Signature", "detail": "Séance de 2h", "price": "CHF 220.00" },
+          { "name": "Massage sportif", "detail": "Séance de 1h", "price": "CHF 120.00" },
+          { "name": "Massage détente", "detail": "Séance de 1h", "price": "CHF 120.00" },
+          { "name": "Massage détente", "detail": "Séance de 1h30", "price": "CHF 160.00" },
+          { "name": "Lomi-Lomi Hawaïen", "detail": "Séance de 1h15", "price": "CHF 150.00" },
+          { "name": "Pierres chaudes ou pierres froides", "detail": "Séance de 1h30", "price": "CHF 180.00" },
+          { "name": "Ayurvédique des points marmas", "detail": "Séance de 1h30", "price": "CHF 190.00" },
+          { "name": "Anti-cellulite", "detail": "Séance de 1h", "price": "CHF 130.00" }
+        ]
+      }
+    ],
+    "notes": [
+      "ASCA & RME — nos massages sont remboursés selon votre assurance complémentaire.",
+      "Le prix du dimanche est majoré de CHF 30.—",
+      "*Les massages « champions suisses » ne sont pas inclus dans le Beauty pass ni le passeport beauté."
+    ]
+  },
+  "flottaison": {
+    "groups": [
+      {
+        "items": [
+          { "name": "Flottaison", "detail": "Séance de 1h", "price": "CHF 120.00" },
+          { "name": "Flottaison", "detail": "Séance de 1h30", "price": "CHF 150.00" }
+        ]
+      }
+    ],
+    "notes": ["ASCA & RME — remboursées selon votre assurance complémentaire."]
+  },
+  "halotherapie": {
+    "groups": [
+      {
+        "items": [
+          { "name": "Chambre de sel", "detail": "Par séance (pack disponible)", "price": "CHF 65.00" },
+          { "name": "Chambre de sel enfants (−15 ans)", "detail": "Le mercredi après-midi, par séance", "price": "CHF 30.00" }
+        ]
+      }
+    ],
+    "notes": ["ASCA & RME — thérapies remboursées selon votre assurance complémentaire."]
+  },
+  "chambre-de-sel": {
+    "groups": [
+      {
+        "items": [
+          { "name": "Chambre de sel", "detail": "Par séance (pack disponible)", "price": "CHF 65.00" },
+          { "name": "Chambre de sel enfants (−15 ans)", "detail": "Le mercredi après-midi, par séance", "price": "CHF 30.00" }
+        ]
+      }
+    ],
+    "notes": ["ASCA & RME — thérapies remboursées selon votre assurance complémentaire."]
+  },
+  "cryotherapie": {
+    "groups": [
+      {
+        "items": [
+          { "name": "Cryothérapie", "detail": "Par séance", "price": "CHF 65.00" }
+        ]
+      }
+    ],
+    "notes": ["ASCA & RME — thérapies remboursées selon votre assurance complémentaire."]
+  },
+  "osteopathie": {
+    "groups": [
+      {
+        "items": [
+          { "name": "Ostéopathie", "detail": "Par séance", "price": "CHF 130.00" }
+        ]
+      }
+    ],
+    "notes": []
+  },
+  "acupuncture": {
+    "groups": [
+      {
+        "items": [
+          { "name": "Acupuncture", "detail": "Séance de 1h30", "price": "CHF 150.00" }
+        ]
+      }
+    ],
+    "notes": ["ASCA & RME — thérapies remboursées selon votre assurance complémentaire."]
+  },
+  "ventouse-cupping": {
+    "groups": [
+      {
+        "items": [
+          { "name": "Ventouses", "detail": "Séance de 50 min", "price": "CHF 95.00" }
+        ]
+      }
+    ],
+    "notes": [
+      "ASCA & RME — remboursées selon votre assurance complémentaire.",
+      "Le prix du dimanche est majoré de CHF 30.—"
+    ]
+  },
+  "therapie-cranio-sacree": {
+    "groups": [
+      {
+        "items": [
+          { "name": "Cranio-sacrée", "detail": "Séance de 1h30", "price": "CHF 150.00" }
+        ]
+      }
+    ],
+    "notes": ["ASCA & RME — thérapies remboursées selon votre assurance complémentaire."]
+  },
+  "hypnose": {
+    "groups": [
+      {
+        "items": [
+          { "name": "Hypnothérapie", "detail": "Séance de 90 min", "price": "CHF 140.00" }
+        ]
+      }
+    ],
+    "notes": [
+      "ASCA — nos séances sont remboursées selon votre assurance complémentaire.",
+      "Le prix du dimanche est majoré de CHF 30.—"
+    ]
+  },
+  "naturopathie-micro-nutrition": {
+    "groups": [
+      {
+        "items": [
+          { "name": "Naturopathie", "detail": "Par séance", "price": "CHF 120.00" },
+          { "name": "Naturopathie", "detail": "Première séance de 2h", "price": "CHF 160.00" }
+        ]
+      }
+    ],
+    "notes": ["Le prix du dimanche est majoré de CHF 30.—"]
+  },
+  "sophrologie": {
+    "groups": [
+      {
+        "items": [
+          { "name": "Sophrologie", "detail": "Séance de 60 min", "price": "CHF 130.00" }
+        ]
+      }
+    ],
+    "notes": [
+      "ASCA — nos séances sont remboursées selon votre assurance complémentaire.",
+      "Le prix du dimanche est majoré de CHF 30.—"
+    ]
+  },
+  "psychologie": {
+    "groups": [
+      {
+        "items": [
+          { "name": "Psychologie", "detail": "Par séance", "price": "CHF 150.00" }
+        ]
+      }
+    ],
+    "notes": ["ASCA & RME — thérapies remboursées selon votre assurance complémentaire."]
+  },
+  "psychotherapie": {
+    "groups": [
+      {
+        "items": [
+          { "name": "Psychothérapie", "detail": "Par séance", "price": "Selon Tarmed" }
+        ]
+      }
+    ],
+    "notes": ["Prise en charge selon votre assurance (Tarmed / complémentaire)."]
+  },
+  "dietetique": {
+    "groups": [
+      {
+        "items": [
+          { "name": "Diététique", "detail": "Par séance", "price": "Selon Tarmed" }
+        ]
+      }
+    ],
+    "notes": ["Remboursée par l'assurance de base (LaMal)."]
+  },
+  "prise-en-charge-du-stress": {
+    "groups": [
+      {
+        "items": [
+          { "name": "Prise en charge personnalisée", "detail": "Bilan physiologique", "price": "CHF 200.00" }
+        ]
+      }
+    ],
+    "notes": ["Suivi et soins complémentaires selon le programme établi."]
+  }
+}

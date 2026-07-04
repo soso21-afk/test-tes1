@@ -364,6 +364,20 @@ body.subpage nav:not(.scrolled) .nav-toggle span { background: var(--dark); }
 .price-kicker { color: var(--accent-light); text-transform: uppercase; letter-spacing: 1.6px; font-size: 11px; font-weight: 700; }
 .price-card strong { display: block; margin: 8px 0 12px; font: 700 clamp(26px, 3vw, 34px) Nunito, sans-serif; line-height: 1.1; }
 .price-card p { color: rgba(255, 255, 255, .8); font-size: 13.5px; line-height: 1.55; }
+/* Liste des prix (fiche soin) */
+.price-list { max-width: 820px; margin: 0 auto; padding: 22px clamp(24px, 6vw, 86px) 10px; }
+.price-list > h2 { margin-top: 12px; font-size: clamp(26px, 3vw, 40px); }
+.price-group { margin-top: 26px; padding: 22px 26px; border: 1px solid var(--border); border-radius: var(--radius); background: var(--white); box-shadow: var(--shadow-sm); }
+.price-group h3 { color: var(--dark); font-size: 20px; }
+.price-group-sub { margin: 4px 0 4px; color: var(--text-light); font-size: 13.5px; font-style: italic; }
+.price-row { display: flex; align-items: center; justify-content: space-between; gap: 18px; padding: 13px 0; border-bottom: 1px dashed var(--border); }
+.price-rows .price-row:last-child { border-bottom: 0; padding-bottom: 2px; }
+.price-label strong { display: block; color: var(--dark); font: 700 15.5px Nunito, sans-serif; }
+.price-label small { color: var(--text-light); font-size: 13px; }
+.price-amount { flex: none; color: var(--primary); font: 700 16px Nunito, sans-serif; white-space: nowrap; }
+.price-note { margin-top: 14px; color: var(--text-light); font-size: 13.5px; line-height: 1.55; }
+.price-note::before { content: 'ℹ '; color: var(--primary-light); }
+.price-list .btn-primary { margin-top: 22px; }
 .soin-intro { max-width: var(--max-w); margin: 0 auto; padding: 12px clamp(24px, 6vw, 86px) 8px; }
 .soin-intro h2 { margin: 12px 0 0; font-size: clamp(26px, 3vw, 40px); }
 .soin-intro p { max-width: 780px; margin: 18px 0 0; color: var(--text); font-size: clamp(16px, 1.3vw, 18px); line-height: 1.75; }

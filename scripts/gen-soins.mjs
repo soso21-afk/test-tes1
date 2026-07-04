@@ -11,6 +11,10 @@ const outDir = join(root, 'soins');
 let content = {};
 try { content = JSON.parse(await readFile(join(root, 'scripts', 'soins-content.json'), 'utf8')); } catch {}
 
+// Listes de prix réelles (extraites des pages officielles)
+let prix = {};
+try { prix = JSON.parse(await readFile(join(root, 'scripts', 'soins-prix.json'), 'utf8')); } catch {}
+
 const esc = (s) => String(s)
   .replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;');
 
@@ -41,15 +45,15 @@ const services = [
   { slug: 'psychotherapie', group: 'Médical', title: 'Psychothérapie', lead: 'Un accompagnement structuré pour comprendre les pensées, les émotions et les comportements, afin d’améliorer la santé mentale et le bien-être.', price: 'Selon Tarmed', coverage: 'ASCA & RME selon assurance complémentaire', benefits: ['Troubles de l’humeur', 'Troubles anxieux', 'Thérapie de couple', 'Croissance personnelle'] },
   { slug: 'dietetique', group: 'Médical', title: 'Diététique', lead: 'Un accompagnement nutritionnel personnalisé pour changer durablement les habitudes alimentaires et soutenir la santé physique.', price: 'Selon Tarmed', coverage: 'Remboursé par l’assurance de base (LaMal)', benefits: ['Gestion du poids', 'Prévention', 'Troubles digestifs', 'Équilibre alimentaire'] },
   { slug: 'psychologie', group: 'Médical', title: 'Psychologie', lead: 'Une approche d’écoute et d’évaluation pour mieux comprendre les comportements, les émotions et les processus mentaux.', price: 'CHF 150.00', coverage: 'ASCA & RME selon assurance complémentaire', benefits: ['Évaluation psychologique', 'Thérapie de soutien', 'Développement personnel', 'Gestion du stress'] },
-  { slug: 'osteopathie', group: 'Thérapies', title: 'Ostéopathie', lead: 'Une prise en charge manuelle pour améliorer la mobilité, soulager les douleurs et soutenir l’équilibre global du corps.', price: 'Selon prestation', coverage: 'Selon assurance complémentaire', benefits: ['Mobilité', 'Douleurs articulaires', 'Tensions', 'Équilibre corporel'] },
-  { slug: 'acupuncture', group: 'Thérapies', title: 'Acupuncture', lead: 'Une pratique issue de la médecine traditionnelle chinoise visant à soutenir l’équilibre énergétique et les fonctions naturelles.', price: 'Selon prestation', coverage: 'Selon assurance complémentaire', benefits: ['Énergie', 'Douleurs', 'Stress', 'Sommeil'] },
-  { slug: 'ventouse-cupping', group: 'Thérapies', title: 'Ventouse / Cupping', lead: 'Une technique traditionnelle par effet de succion pour favoriser la circulation, libérer les tensions et accompagner la récupération.', price: 'Selon prestation', coverage: 'Selon assurance complémentaire', benefits: ['Circulation', 'Tensions', 'Récupération', 'Drainage'] },
+  { slug: 'osteopathie', group: 'Thérapies', title: 'Ostéopathie', lead: 'Une prise en charge manuelle pour améliorer la mobilité, soulager les douleurs et soutenir l’équilibre global du corps.', price: 'CHF 130.00 · par séance', coverage: 'Selon assurance complémentaire', benefits: ['Mobilité', 'Douleurs articulaires', 'Tensions', 'Équilibre corporel'] },
+  { slug: 'acupuncture', group: 'Thérapies', title: 'Acupuncture', lead: 'Une pratique issue de la médecine traditionnelle chinoise visant à soutenir l’équilibre énergétique et les fonctions naturelles.', price: 'CHF 150.00 · séance de 1h30', coverage: 'ASCA & RME selon assurance complémentaire', benefits: ['Énergie', 'Douleurs', 'Stress', 'Sommeil'] },
+  { slug: 'ventouse-cupping', group: 'Thérapies', title: 'Ventouse / Cupping', lead: 'Une technique traditionnelle par effet de succion pour favoriser la circulation, libérer les tensions et accompagner la récupération.', price: 'CHF 95.00 · séance de 50 min', coverage: 'ASCA & RME selon assurance complémentaire', benefits: ['Circulation', 'Tensions', 'Récupération', 'Drainage'] },
   { slug: 'therapie-cranio-sacree', group: 'Thérapies', title: 'Thérapie Cranio-Sacrée', lead: 'Une approche douce par touchers légers pour libérer les tensions et soutenir le fonctionnement du système nerveux.', price: 'CHF 150.00 · séance de 1h30', coverage: 'ASCA & RME selon assurance complémentaire', benefits: ['Stress', 'Migraines', 'Sommeil', 'Douleurs chroniques'] },
   { slug: 'hypnose', group: 'Thérapies', title: 'Hypnothérapie', lead: 'Un état naturel de conscience modifiée pour mobiliser les ressources intérieures, clarifier les objectifs et accompagner le changement.', price: 'CHF 140.00 · séance de 90 min', coverage: 'ASCA selon assurance complémentaire', benefits: ['Ressources intérieures', 'Objectifs', 'Blocages', 'Changement'] },
   { slug: 'naturopathie-micro-nutrition', group: 'Thérapies', title: 'Naturopathie & Micro-nutrition', lead: 'Une approche holistique qui combine méthodes naturelles, nutrition et micronutriments pour optimiser la santé.', price: 'CHF 120.00 · première séance CHF 160.00', coverage: 'Selon assurance complémentaire', benefits: ['Poids', 'Détoxification', 'Immunité', 'Digestion'] },
   { slug: 'sophrologie', group: 'Thérapies', title: 'Sophrologie', lead: 'Une méthode douce mêlant respiration, relaxation et visualisation positive pour apaiser le mental, mieux dormir et renforcer la confiance en soi.', price: 'CHF 130.00 · séance de 60 min', coverage: 'ASCA selon assurance complémentaire', benefits: ['Réduction du stress', 'Amélioration du sommeil', 'Confiance en soi', 'Gestion des émotions'] },
-  { slug: 'massage', group: 'Bien-être', title: 'Massage', lead: 'Des massages adaptés pour détendre le corps, réduire les tensions, favoriser la circulation et soutenir la récupération.', price: 'Selon soin', coverage: 'Selon assurance complémentaire', benefits: ['Relaxation', 'Tensions', 'Stress', 'Récupération'] },
-  { slug: 'flottaison', group: 'Bien-être', title: 'Flottaison', lead: 'Une immersion en apesanteur dans une eau saturée en sel d’Epsom pour une relaxation profonde du corps et de l’esprit.', price: 'Selon séance', coverage: 'Prestation bien-être', benefits: ['Relaxation', 'Récupération', 'Sommeil', 'Clarté mentale'] },
+  { slug: 'massage', group: 'Bien-être', title: 'Massage', lead: 'Des massages adaptés pour détendre le corps, réduire les tensions, favoriser la circulation et soutenir la récupération.', price: 'Dès CHF 120.00', coverage: 'ASCA & RME selon assurance complémentaire', benefits: ['Relaxation', 'Tensions', 'Stress', 'Récupération'] },
+  { slug: 'flottaison', group: 'Bien-être', title: 'Flottaison', lead: 'Une immersion en apesanteur dans une eau saturée en sel d’Epsom pour une relaxation profonde du corps et de l’esprit.', price: 'CHF 120.00 · séance de 1h', coverage: 'ASCA & RME selon assurance complémentaire', benefits: ['Relaxation', 'Récupération', 'Sommeil', 'Clarté mentale'] },
   { slug: 'cryotherapie', group: 'Bien-être', title: 'Cryothérapie', lead: 'Une exposition courte au froid intense pour aider à réduire l’inflammation, soulager la douleur et stimuler la récupération.', price: 'CHF 65.00', coverage: 'ASCA & RME selon assurance complémentaire', benefits: ['Inflammation', 'Douleurs', 'Sport', 'Métabolisme'] },
   { slug: 'halotherapie', group: 'Bien-être', title: 'Halothérapie', lead: 'Une chambre de sel naturelle pour soutenir la respiration, la peau et offrir un environnement profondément apaisant.', price: 'CHF 65.00 · enfant CHF 30.00', coverage: 'ASCA & RME selon assurance complémentaire', benefits: ['Respiration', 'Allergies', 'Peau', 'Stress'] },
   { slug: 'chambre-de-sel', group: 'Bien-être', title: 'Chambre de sel', lead: 'Une expérience d’halothérapie en chambre de sel, pensée pour soutenir les voies respiratoires, la peau et l’apaisement.', price: 'CHF 65.00 · enfant CHF 30.00', coverage: 'ASCA & RME selon assurance complémentaire', benefits: ['Respiration', 'Peau', 'Relaxation', 'Sel naturel'] },
@@ -175,6 +179,28 @@ const page = (s) => {
       <p>${esc(c.intro)}</p>
     </section>` : '';
 
+  const pl = prix[s.slug];
+  let prixHtml = '';
+  if (pl && pl.groups && pl.groups.length) {
+    const groupsHtml = pl.groups.map((g) => `
+      <div class="price-group">${g.title ? `
+        <h3>${esc(g.title)}</h3>` : ''}${g.subtitle ? `
+        <p class="price-group-sub">${esc(g.subtitle)}</p>` : ''}
+        <div class="price-rows">
+${g.items.map((it) => `          <div class="price-row"><div class="price-label"><strong>${esc(it.name)}</strong><small>${esc(it.detail)}</small></div><span class="price-amount">${esc(it.price)}</span></div>`).join('\n')}
+        </div>
+      </div>`).join('\n');
+    const notes = (pl.notes || []).map((n) => `
+      <p class="price-note">${esc(n)}</p>`).join('');
+    prixHtml = `
+    <section class="price-list">
+      <span class="section-tag">Tarifs</span>
+      <h2>Liste des prix</h2>
+${groupsHtml}${notes}
+      <a class="btn-primary" href="../rendez-vous.html">Prendre rendez-vous</a>
+    </section>`;
+  }
+
   return `<!DOCTYPE html>
 <html lang="fr">
 <head>
@@ -211,6 +237,7 @@ ${navHtml()}
       </aside>
     </section>
 ${introHtml}
+${prixHtml}
     <section class="soin-body">
       <div class="soin-block">
         <span class="section-tag">Applications &amp; bienfaits</span>
