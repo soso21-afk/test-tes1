@@ -96,7 +96,7 @@ const footer = `
     </div>
   </footer>`;
 
-const doc = ({ title, desc, body, subpage = true }) => `<!DOCTYPE html>
+const doc = ({ title, desc, body, subpage = true, extraHead = '' }) => `<!DOCTYPE html>
 <html lang="fr">
 <head>
   <meta charset="UTF-8" />
@@ -104,10 +104,11 @@ const doc = ({ title, desc, body, subpage = true }) => `<!DOCTYPE html>
   <title>${title}</title>
   <meta name="description" content="${desc}" />
   <meta name="theme-color" content="#0a677b" />
+  <link rel="icon" type="image/svg+xml" href="assets/favicon.svg" />
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700;800&family=Lato:wght@400;700&family=Lora:ital,wght@0,400;0,500;1,400&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="style.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;700;800&family=Lato:wght@400;700&family=Lora:ital,wght@1,400&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css" />${extraHead}
 </head>
 <body${subpage ? ' class="subpage"' : ''}>
 ${nav}
@@ -350,6 +351,7 @@ const shopCards = sorted.map((p) => {
 const filters = ['Tous', ...catOrder].map((c, i) => `        <button type="button" class="shop-filter${i === 0 ? ' active' : ''}" data-filter="${c}">${c}</button>`).join('\n');
 
 const bonsCadeaux = doc({
+  extraHead: '\n  <link rel="preconnect" href="https://images.sumup.com" />',
   title: 'Bons cadeaux & boutique — Regeneratium · Rolle',
   desc: 'La boutique Regeneratium : bons cadeaux, flottaison, massages, cryothérapie, chambre de sel, packs et offres — commande en ligne, réception par e-mail.',
   body: `    <section class="page-head">
