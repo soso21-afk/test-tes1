@@ -1,0 +1,304 @@
+{
+  "acupuncture": {
+    "intro": "Acupuncture is a practice from traditional Chinese medicine that involves inserting very fine needles at specific points of the body to balance the flow of energy, or \"Qi\". It is used to treat a wide range of conditions by restoring energetic balance and supporting the healing process.",
+    "faq": [
+      {
+        "q": "What is acupuncture?",
+        "a": "Acupuncture is a practice from traditional Chinese medicine that involves inserting very fine needles at specific points of the body to stimulate and balance the vital energy known as \"Qi\". The technique aims to restore harmony in the body and promote natural healing."
+      },
+      {
+        "q": "What kinds of health issues can acupuncture treat?",
+        "a": "Acupuncture can be used to address a wide variety of health issues, including: chronic pain (back pain, neck pain, arthritis), digestive disorders (irritable bowel syndrome, nausea), sleep disorders (insomnia), anxiety and low mood, headaches and migraines, and respiratory problems (asthma, allergies)."
+      },
+      {
+        "q": "What happens during an acupuncture session?",
+        "a": "An acupuncture session usually starts with a consultation to assess your state of health. Sterile, very fine needles are then inserted at precise points of the body. The number of needles and their placement vary depending on the condition being treated. The needles are generally left in place for around 20 to 30 minutes."
+      },
+      {
+        "q": "Is acupuncture painful?",
+        "a": "Acupuncture is generally painless. The needles used are extremely fine and most patients feel little or no pain when they are inserted. Some people may notice a slight tingling or a feeling of warmth."
+      },
+      {
+        "q": "How many sessions are needed to see results?",
+        "a": "The number of sessions required depends on the nature and severity of the health issue. Some people feel an improvement after one or two sessions, while others may need longer-term treatment for chronic conditions."
+      },
+      {
+        "q": "Is acupuncture safe?",
+        "a": "Acupuncture is generally considered safe when performed by a qualified practitioner. Needles must be sterile and single-use to prevent infection. It is important to see an experienced professional to guarantee safe and effective treatment."
+      }
+    ]
+  },
+  "cryotherapie": {
+    "intro": "Cryotherapy involves exposing the body to extremely low temperatures for a short period. This technique is used to treat various physical conditions and to improve overall well-being.",
+    "faq": [
+      {
+        "q": "What is cryotherapy?",
+        "a": "Cryotherapy is a therapeutic treatment that exposes the body to extremely low temperatures for a short period. It is used to reduce inflammation, relieve pain and improve physical recovery. There are two main forms of cryotherapy: localised cryotherapy and whole-body cryotherapy."
+      },
+      {
+        "q": "What are the benefits of cryotherapy?",
+        "a": "The main benefits of cryotherapy include: reduced inflammation in muscles and joints; pain relief, effective for both chronic and acute pain, including pain from arthritis or sports injuries; faster sports recovery after intense exercise or competition; and firmer skin, as it can help improve skin elasticity and reduce the signs of ageing."
+      },
+      {
+        "q": "What happens during a cryotherapy session?",
+        "a": "During a whole-body cryotherapy session, you enter a specially designed chamber where you are exposed to extremely low temperatures, generally between −110°C and −140°C, for 2 to 3 minutes. For localised cryotherapy, a device is used to apply cold air to specific areas of the body. Patients wear protective items such as gloves, socks and underwear to protect sensitive parts of the body."
+      },
+      {
+        "q": "Is cryotherapy painful?",
+        "a": "Cryotherapy is generally not painful. You may feel an intense cold sensation, but it is usually well tolerated and fades quickly once the session ends."
+      },
+      {
+        "q": "How many cryotherapy sessions are needed to see results?",
+        "a": "The number of sessions depends on each person's goals. Some people feel the benefits after a single session, while others may need regular sessions for lasting results, particularly for chronic pain management or improved sports performance."
+      },
+      {
+        "q": "Is cryotherapy safe?",
+        "a": "Cryotherapy is generally safe for most people when performed under the supervision of a qualified professional. However, it may not be suitable for people with certain medical conditions such as cardiovascular disorders, circulation problems or cold allergies. We recommend consulting a doctor before starting cryotherapy treatment."
+      }
+    ]
+  },
+  "dietetique": {
+    "intro": "Dietetics is a support process built on the relationship between a qualified dietitian and a patient. It aims to change eating habits in order to improve physical health and overall well-being. There are several approaches to dietetics, including weight management, improved digestion, prevention of chronic disease, and many more.",
+    "faq": [
+      {
+        "q": "What is dietetics?",
+        "a": "Dietetics is a therapeutic process involving regular appointments between a patient and a qualified dietitian to address various nutritional and dietary health issues. It helps people understand their eating habits and nutritional needs, and develop strategies to improve their physical well-being and prevent diet-related illness."
+      },
+      {
+        "q": "What happens during a dietetics session?",
+        "a": "A dietetics session is generally a conversation between the dietitian and the patient. The dietitian listens, asks questions and helps you explore your eating habits, nutritional needs and health goals. Sessions may include practical advice, discussion of your medical and dietary history, and the creation of personalised nutrition plans. The length and frequency of sessions vary according to your needs."
+      },
+      {
+        "q": "How long does dietetic support last?",
+        "a": "The duration of dietetic support depends on your goals and the nature of the health issues being addressed. Some people benefit from short-term consultations (a few weeks to a few months) for specific dietary adjustments, while others may need longer-term follow-up (several months to several years) for chronic conditions or long-term health goals."
+      },
+      {
+        "q": "Is dietetics effective?",
+        "a": "Yes — dietetics is an effective way to improve health and overall well-being. It helps manage and prevent various conditions such as diabetes, high blood pressure, cardiovascular disease and digestive disorders. Dietetics can also play a key role in weight management, better digestion and the development of healthy eating habits."
+      },
+      {
+        "q": "Is dietetics confidential?",
+        "a": "Absolutely. Confidentiality is a fundamental part of dietetic care. Information shared between the patient and the dietitian is protected, except where there is an immediate risk to the patient or to others, in which case steps may be taken to ensure safety."
+      },
+      {
+        "q": "Is dietetics covered by insurance?",
+        "a": "In Switzerland, some basic and supplementary insurance policies cover dietetic consultations, especially when they are carried out by accredited dietitians or under the supervision of a doctor. We recommend checking the specific terms of your insurance policy."
+      }
+    ]
+  },
+  "flottaison": {
+    "intro": "Floatation is a deep-relaxation therapy that takes place in a pool filled with water saturated with Epsom salt, allowing the body to float effortlessly. This sensory-isolation experience creates an environment free of gravity, light and sound, making complete relaxation and meditation easier to reach.",
+    "faq": [
+      {
+        "q": "What is floatation?",
+        "a": "Floatation is a deep-relaxation method that takes place in a pool of water saturated with Epsom salt, allowing the body to float effortlessly. The environment creates sensory isolation by removing the sensations of gravity, sound and light, making it easier to reach a state of complete relaxation."
+      },
+      {
+        "q": "What are the benefits of floatation?",
+        "a": "Floatation offers many benefits, including: reduced stress and anxiety, helping to lower cortisol levels and induce deep relaxation; relief from muscle and joint pain thanks to floating in weightlessness; better sleep, making it easier to fall asleep and improving sleep quality; and enhanced creativity and focus, in an environment ideal for reflection and meditation."
+      },
+      {
+        "q": "What happens during a floatation session?",
+        "a": "A floatation session starts with a shower to remove impurities. You then enter a pool of warm water with a high concentration of Epsom salt. The water temperature is set to match your body temperature, removing any sensation of heat or cold. Sessions generally last between 60 and 90 minutes. You can choose to float in complete darkness or with soft lighting, depending on your preference."
+      },
+      {
+        "q": "Is floatation safe?",
+        "a": "Yes, floatation is generally safe for most people. However, it may not be suitable for people with certain skin conditions, recent injuries or severe claustrophobia. We recommend consulting a health professional if you have any particular concerns."
+      },
+      {
+        "q": "Are there any precautions to take before a floatation session?",
+        "a": "It is best not to shave or wax just before a session, as the salt can cause irritation. We also recommend avoiding caffeine or stimulants before the session to make it easier to relax."
+      },
+      {
+        "q": "How many floatation sessions are recommended?",
+        "a": "The recommended number of sessions depends on your personal goals. Some people feel the benefits after a single session, while others benefit from regular sessions for ongoing relaxation and stress management."
+      }
+    ]
+  },
+  "halotherapie": {
+    "intro": "Halotherapy is a natural method that uses an environment saturated with salt micro-particles to improve respiratory and skin health. It is usually practised in a specially designed room known as a salt cave.",
+    "faq": [
+      {
+        "q": "What is halotherapy?",
+        "a": "Halotherapy, or salt therapy, is a natural method that involves breathing air saturated with salt micro-particles. It usually takes place in rooms known as salt caves or salt rooms, where the walls are covered with natural salt and a halogenerator disperses salt particles into the air. The therapy aims to improve respiratory and skin conditions and to provide deep relaxation."
+      },
+      {
+        "q": "What are the benefits of halotherapy?",
+        "a": "Halotherapy offers many potential benefits, including: relief from respiratory problems such as asthma, bronchitis, sinusitis and respiratory allergies; support for skin conditions such as psoriasis and eczema; reduced stress and anxiety, thanks to the calm and soothing environment of the salt cave; and immune-system support, as exposure to salt may stimulate the immune system and improve overall health."
+      },
+      {
+        "q": "What happens during a halotherapy session?",
+        "a": "A halotherapy session takes place in a salt cave or salt room. Participants sit or lie down in a comfortable environment while the halogenerator releases fine salt particles into the air. Sessions generally last between 30 and 60 minutes. You can breathe deeply and relax during the session, sometimes while listening to soft music or meditating."
+      },
+      {
+        "q": "Is halotherapy safe?",
+        "a": "Halotherapy is generally considered safe for most people, including children and the elderly. However, it may not be recommended for people with certain health conditions, such as hyperthyroidism, some kidney diseases or severe lung disorders. We recommend consulting a health professional before starting therapy if you have specific concerns."
+      },
+      {
+        "q": "How many sessions are needed to see results?",
+        "a": "The number of sessions depends on individual needs and the conditions being treated. Some people feel the benefits after a single session, while others benefit from regular sessions for optimal results, especially for chronic conditions."
+      },
+      {
+        "q": "Is halotherapy covered by insurance?",
+        "a": "Halotherapy is usually considered a wellness therapy rather than a medical treatment, and it is generally not covered by basic insurance. However, some supplementary insurance policies may cover part of the cost, particularly when it is recommended by a health professional."
+      }
+    ]
+  },
+  "hypnose": {
+    "intro": "",
+    "faq": []
+  },
+  "massage": {
+    "intro": "Massage is a therapeutic technique involving kneading, rubbing and manipulating the muscles and soft tissues of the body. It is used to relieve muscle tension, improve circulation and promote relaxation.",
+    "faq": [
+      {
+        "q": "What is massage?",
+        "a": "Massage is a therapeutic technique that involves manipulating the body's muscles, tendons and connective tissues to improve circulation, relieve tension and promote relaxation. There are many types of massage, each with its own techniques and goals."
+      },
+      {
+        "q": "What are the most common types of massage?",
+        "a": "Swedish massage uses long, flowing strokes to promote relaxation and improve circulation. Deep-tissue massage targets the deeper layers of muscle and connective tissue to release chronic tension. Sports massage is designed for athletes, helping to prepare the muscles for activity and recover after exertion. Thai massage combines deep pressure and passive stretching to improve flexibility and energy."
+      },
+      {
+        "q": "What are the benefits of massage?",
+        "a": "Massage offers a variety of benefits, including: stress reduction, lowering cortisol levels and inducing deep relaxation; pain relief, effective for muscle and joint pain; improved blood and lymphatic circulation, helping to eliminate toxins and support immune function; improved flexibility, by stretching and releasing tight muscles; and reduced muscle tension, easing spasms and muscular pain."
+      },
+      {
+        "q": "What happens during a massage session?",
+        "a": "During a massage session, you usually lie on a massage table in a calm, comfortable room. The massage therapist uses oils or lotions to help their hands glide over the skin. The pressure and techniques used are adapted to your needs and preferences. A session generally lasts between 30 and 90 minutes."
+      },
+      {
+        "q": "Is massage safe?",
+        "a": "Massage is generally safe for most people, but there may be contraindications for certain medical conditions such as recent injuries, skin conditions or heart problems. It is important to discuss your state of health with the massage therapist before the session."
+      },
+      {
+        "q": "How many massage sessions are needed to see results?",
+        "a": "The number of sessions depends on your individual goals and needs. Some people feel immediate benefits after a single session, while others benefit from regular massages for cumulative effects."
+      }
+    ]
+  },
+  "naturopathie-micro-nutrition": {
+    "intro": "Naturopathy is a holistic approach to health that uses natural methods to support and stimulate the healing process. It includes nutrition, exercise and stress management to prevent and treat illness. Micronutrition focuses on providing vitamins, minerals and other essential nutrients in small amounts to correct deficiencies and optimise health.",
+    "faq": [
+      {
+        "q": "What is naturopathy?",
+        "a": "Naturopathy is a holistic approach to health that uses natural methods to support and stimulate the body's ability to heal itself. It encompasses a variety of practices, including nutrition, exercise, stress management and the use of natural remedies."
+      },
+      {
+        "q": "What is micronutrition?",
+        "a": "Micronutrition focuses on providing essential micronutrients — such as vitamins, minerals and trace elements — in precise amounts to optimise health. It aims to correct nutritional deficiencies and improve cellular metabolism."
+      },
+      {
+        "q": "What issues can naturopathy and micronutrition address?",
+        "a": "These approaches can be used to treat and prevent various health issues, such as: digestive disorders (bloating, constipation, etc.), chronic fatigue and low energy, skin problems (eczema, acne), weight management and obesity, food allergies and intolerances, immune-system support, and hormonal imbalances."
+      },
+      {
+        "q": "What happens during a naturopathy and micronutrition consultation?",
+        "a": "A typical consultation starts with a full assessment of your state of health, including a discussion of your diet, lifestyle, medical history and current symptoms. The naturopath may recommend tests to identify nutritional deficiencies. A personalised plan is then created, including dietary advice, nutritional supplements and lifestyle recommendations."
+      },
+      {
+        "q": "Can naturopathy be combined with other medical treatments?",
+        "a": "Yes, naturopathy can be used alongside conventional medical treatments. It is important to inform both your doctor and your naturopath of all the treatments you are following, to ensure effective coordination and avoid interactions between medicines and supplements."
+      },
+      {
+        "q": "Is naturopathy safe for everyone?",
+        "a": "Naturopathy is generally safe for most people, but as with any health approach, it is important to consult a qualified professional. Some natural remedies can interact with medication or may not be suitable for certain health conditions."
+      }
+    ]
+  },
+  "osteopathie": {
+    "intro": "Osteopathy is a therapeutic discipline based on manual techniques to diagnose, treat and prevent dysfunctions of the body. It focuses on the musculoskeletal structure and its relationship with the body's other systems, including the nervous and circulatory systems. Osteopaths work with the muscles, bones and joints to improve mobility, relieve pain and support overall health.",
+    "faq": []
+  },
+  "therapie-cranio-sacree": {
+    "intro": "Craniosacral therapy is a gentle approach that uses light manipulations to assess and improve the craniosacral system — the membranes and cerebrospinal fluid surrounding the brain and spinal cord. The therapy aims to release tension and support optimal functioning of the nervous system.",
+    "faq": [
+      {
+        "q": "What is craniosacral therapy?",
+        "a": "Craniosacral therapy is a gentle manual technique focused on the craniosacral system, made up of the membranes and cerebrospinal fluid that surround the brain and spinal cord. The therapy aims to release restrictions and improve the function of the central nervous system."
+      },
+      {
+        "q": "What health issues can craniosacral therapy help with?",
+        "a": "Craniosacral therapy can be beneficial for a variety of conditions, including: headaches and migraines, chronic pain (neck, lower back, etc.), sleep disorders, stress and anxiety, temporomandibular disorders (jaw pain), chronic fatigue, and mild neurological issues."
+      },
+      {
+        "q": "What happens during a craniosacral therapy session?",
+        "a": "During a session, you usually lie on a massage table. The practitioner uses light touch to assess and work with the body's tissues, focusing on the head, spine and sacrum. The therapist can detect subtle restrictions and apply release techniques to improve fluid movement and central nervous system function."
+      },
+      {
+        "q": "Is craniosacral therapy painful?",
+        "a": "Craniosacral therapy is an extremely gentle, non-invasive approach. Most patients feel no pain during the session and may even find the treatment relaxing. Some people notice subtle sensations such as warmth or pulsing, but these are generally pleasant."
+      },
+      {
+        "q": "How many sessions are needed to see results?",
+        "a": "The number of sessions depends on the specific condition and how you respond to treatment. Some people feel improvements after a single session, while others may need several sessions to achieve lasting results."
+      },
+      {
+        "q": "Is craniosacral therapy safe?",
+        "a": "Craniosacral therapy is generally considered safe for people of all ages, including infants, pregnant women and the elderly. It is important to see a qualified, experienced practitioner to ensure appropriate treatment."
+      }
+    ]
+  },
+  "ventouse-cupping": {
+    "intro": "Cupping therapy is a traditional practice that involves placing suction cups on the skin to create a vacuum. The technique is used to stimulate blood circulation, relieve pain and promote tissue healing.",
+    "faq": [
+      {
+        "q": "What is cupping?",
+        "a": "Cupping is an ancient therapeutic technique that involves applying suction cups to the skin to create a vacuum. The method is used to improve blood circulation, reduce pain and promote tissue healing."
+      },
+      {
+        "q": "What types of cups are used in cupping?",
+        "a": "There are several types of cups: fire cups, used traditionally, create suction by heating the air inside the cup before placing it on the skin; air cups use a manual pump to create suction without heat; and silicone cups are flexible, easy to adjust and often used for dynamic massage."
+      },
+      {
+        "q": "What health issues can cupping help with?",
+        "a": "Cupping is used to address various health issues, including: muscle and joint pain, muscle tension, respiratory problems (asthma, bronchitis), inflammation, digestive issues, and fatigue and stress."
+      },
+      {
+        "q": "What happens during a cupping session?",
+        "a": "During a cupping session, the practitioner places the cups on specific points of the body, often on the back. The cups stay in place for a few minutes, creating suction that gently lifts the skin and underlying tissues. A session can last from 5 to 20 minutes depending on the treatment and how you respond."
+      },
+      {
+        "q": "Is cupping painful?",
+        "a": "Most people feel a pulling or pressure sensation during the session, but it is generally not painful. Some people may feel slight discomfort or warmth. Temporary circular marks may appear on the skin after the session, but they usually fade within a few days."
+      },
+      {
+        "q": "Are there any side effects or contraindications to cupping?",
+        "a": "Possible side effects include temporary bruising and skin sensitivity. Cupping is generally safe when performed by a qualified professional, but it may not be suitable for people with clotting disorders, sensitive skin or open wounds. We always recommend consulting a practitioner before starting treatment."
+      }
+    ]
+  },
+  "chambre-de-sel": {
+    "intro": "Halotherapy is a natural method that uses an environment saturated with salt micro-particles to improve respiratory and skin health. It is usually practised in a specially designed room known as a salt cave.",
+    "faq": [
+      {
+        "q": "What is halotherapy?",
+        "a": "Halotherapy, or salt therapy, is a natural method that involves breathing air saturated with salt micro-particles. It usually takes place in rooms known as salt caves or salt rooms, where the walls are covered with natural salt and a halogenerator disperses salt particles into the air. The therapy aims to improve respiratory and skin conditions and to provide deep relaxation."
+      },
+      {
+        "q": "What are the benefits of halotherapy?",
+        "a": "Halotherapy offers many potential benefits, including: relief from respiratory problems such as asthma, bronchitis, sinusitis and respiratory allergies; support for skin conditions such as psoriasis and eczema; reduced stress and anxiety, thanks to the calm and soothing environment of the salt cave; and immune-system support, as exposure to salt may stimulate the immune system and improve overall health."
+      },
+      {
+        "q": "What happens during a halotherapy session?",
+        "a": "A halotherapy session takes place in a salt cave or salt room. Participants sit or lie down in a comfortable environment while the halogenerator releases fine salt particles into the air. Sessions generally last between 30 and 60 minutes. You can breathe deeply and relax during the session, sometimes while listening to soft music or meditating."
+      },
+      {
+        "q": "Is halotherapy safe?",
+        "a": "Halotherapy is generally considered safe for most people, including children and the elderly. However, it may not be recommended for people with certain health conditions, such as hyperthyroidism, some kidney diseases or severe lung disorders. We recommend consulting a health professional before starting therapy if you have specific concerns."
+      },
+      {
+        "q": "How many sessions are needed to see results?",
+        "a": "The number of sessions depends on individual needs and the conditions being treated. Some people feel the benefits after a single session, while others benefit from regular sessions for optimal results, especially for chronic conditions."
+      },
+      {
+        "q": "Is halotherapy covered by insurance?",
+        "a": "Halotherapy is usually considered a wellness therapy rather than a medical treatment, and it is generally not covered by basic insurance. However, some supplementary insurance policies may cover part of the cost, particularly when it is recommended by a health professional."
+      }
+    ]
+  },
+  "sophrologie": {
+    "intro": "Sophrology is a gentle method that combines breathing, relaxation and positive visualisation to restore balance between body and mind. It helps reduce stress and anxiety, improve sleep, build self-confidence and better manage emotions. Our practitioners guide you at your own pace, in a soothing setting.",
+    "faq": []
+  }
+}

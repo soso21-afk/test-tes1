@@ -10,7 +10,7 @@ const root = join(dirname(fileURLToPath(import.meta.url)), '..');
 const esc = (s) => String(s)
   .replace(/&(?!#?\w+;)/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;');
 
-const nav = `
+const nav = (enFile) => `
   <nav id="navbar">
     <a href="index.html" class="logo" aria-label="Regeneratium — accueil">
       <img class="logo-img logo-light" src="assets/logo-regeneratium.svg" alt="Regeneratium" />
@@ -33,7 +33,6 @@ const nav = `
           <svg viewBox="0 0 12 12" aria-hidden="true"><path d="M2.5 4.5 6 8l3.5-3.5" stroke="currentColor" stroke-width="1.6" fill="none" stroke-linecap="round" stroke-linejoin="round"/></svg>
         </button>
         <div class="nav-menu" role="menu" aria-label="Soins médicaux">
-          <a href="soins/psychologie.html" role="menuitem">Psys</a>
           <a href="soins/dietetique.html" role="menuitem">Diététique</a>
         </div>
       </div>
@@ -52,6 +51,7 @@ const nav = `
       <a href="blog.html">Blog</a>
       <a href="contact.html">Contact</a>
       <a href="rendez-vous.html" class="nav-cta">Prendre rendez-vous</a>
+      <div class="lang-switch" aria-label="Langue / Language"><span class="lang-active">FR</span><a href="en/${enFile}" lang="en" hreflang="en">EN</a></div>
     </div>
     <button class="nav-toggle" id="navToggle" aria-label="Ouvrir le menu" aria-expanded="false">
       <span></span><span></span><span></span>
@@ -71,8 +71,8 @@ const footer = `
       <div>
         <h3>Nos soins</h3>
         <a href="nos-soins-bien-etre.html">Bien-être &amp; Santé</a>
-        <a href="nos-soins-santes.html#medical">Médical</a>
-        <a href="nos-soins-santes.html#therapies">Thérapies</a>
+        <a href="nos-soins-medical.html">Médical</a>
+        <a href="nos-soins-therapies.html">Thérapies</a>
       </div>
       <div>
         <h3>Le centre</h3>
@@ -96,22 +96,22 @@ const footer = `
     </div>
   </footer>`;
 
-const doc = ({ title, desc, body, subpage = true, extraHead = '' }) => `<!DOCTYPE html>
+const doc = ({ title, desc, body, subpage = true, extraHead = '', enFile = 'index.html' }) => `<!DOCTYPE html>
 <html lang="fr">
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>${title}</title>
   <meta name="description" content="${desc}" />
-  <meta name="theme-color" content="#0a677b" />
+  <meta name="theme-color" content="#3B6979" />
   <link rel="icon" type="image/svg+xml" href="assets/favicon.svg" />
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;700;800&family=Lato:wght@400;700&family=Lora:ital,wght@1,400&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Kanit:ital,wght@0,500;0,600;0,700;0,800;1,600;1,700&family=Nunito:ital,wght@0,400;0,600;0,700;0,800;1,400&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="style.css" />${extraHead}
 </head>
 <body${subpage ? ' class="subpage"' : ''}>
-${nav}
+${nav(enFile)}
 
   <main class="soin-page">
 ${body}
@@ -130,12 +130,10 @@ const team = [
   ['Sarah', 'Thérapeute massage (ASCA)'],
   ['Karen', 'Thérapeute massage (ASCA, RME)'],
   ['Osvaldo', 'Cranio-sacrée & ostéopathie (ASCA)'],
-  ['Sophie', 'Psychologue (LaMal)'],
-  ['Benjamin', 'Psychologue (LaMal)'],
-  ['Andy', 'Psychologue (LaMal)'],
 ];
 
 const aPropos = doc({
+  enFile: 'a-propos.html',
   title: 'À propos — Regeneratium · Rolle',
   desc: 'Regeneratium, centre de thérapie et bien-être à Rolle entre Genève et Lausanne. Notre philosophie, notre approche de l’auto-régénération et notre équipe.',
   body: `    <section class="page-head">
@@ -153,9 +151,8 @@ const aPropos = doc({
         scientifique, Regeneratium a été pensé comme un « lab » réunissant des soins
         innovants (cryothérapie, halothérapie, flottaison) et des thérapies telles que
         l’ostéopathie, la naturopathie &amp; micro-nutrition, l’acupuncture, la thérapie
-        cranio-sacrée ou le cupping. Nous proposons également des services médicaux en
-        psychologie et psychothérapie, des soins de bien-être comme les massages, ainsi
-        que des programmes de prise en charge du stress.</p>
+        cranio-sacrée ou le cupping. Nous proposons également des soins de bien-être
+        comme les massages.</p>
       <blockquote class="about-quote">« Chez Regeneratium, nous vous proposons un
         cheminement, une expérience qui vous guide sur le chemin de l’apaisement et du
         bien-être. Notre mission est de permettre à chacun d’exploiter son capital
@@ -185,6 +182,7 @@ ${team.map(([n, r]) => `        <div class="team-card"><div class="team-avatar" 
 });
 
 const contact = doc({
+  enFile: 'contact.html',
   title: 'Contact — Regeneratium · Rolle',
   desc: 'Contactez Regeneratium à Rolle : téléphone +41 21 826 00 88, e-mail info@regeneratium.ch, Rte de la Vallée 7, 1180 Rolle, Suisse.',
   body: `    <section class="page-head">
@@ -217,6 +215,7 @@ const contact = doc({
 });
 
 const legal = doc({
+  enFile: 'mentions-legales.html',
   title: 'Mentions légales — Regeneratium',
   desc: 'Mentions légales et politique de confidentialité du site Regeneratium, Rolle, Suisse.',
   body: `    <section class="page-head">
@@ -267,8 +266,6 @@ const soins = [
   { slug: 'flottaison', title: 'Flottaison', group: 'Bien-être', blurb: 'Relaxation profonde en apesanteur.' },
   { slug: 'cryotherapie', title: 'Cryothérapie', group: 'Bien-être', blurb: 'Froid intense, récupération, anti-inflammation.' },
   { slug: 'halotherapie', title: 'Halothérapie · Chambre de sel', group: 'Bien-être', blurb: 'Air salin pour la respiration et la peau.' },
-  { slug: 'psychologie', title: 'Psychologie', group: 'Médical', blurb: 'Écoute et évaluation psychologique.' },
-  { slug: 'psychotherapie', title: 'Psychothérapie', group: 'Médical', blurb: 'Accompagnement structuré du bien-être mental.' },
   { slug: 'dietetique', title: 'Diététique', group: 'Médical', blurb: 'Nutrition personnalisée (remboursée LaMal).' },
   { slug: 'osteopathie', title: 'Ostéopathie', group: 'Thérapies', blurb: 'Mobilité et soulagement des tensions.' },
   { slug: 'acupuncture', title: 'Acupuncture', group: 'Thérapies', blurb: 'Équilibre énergétique, douleurs, sommeil.' },
@@ -279,9 +276,10 @@ const soins = [
   { slug: 'sophrologie', title: 'Sophrologie', group: 'Thérapies', blurb: 'Respiration, relaxation, confiance en soi.' },
 ];
 const card = (s) => `<a class="related-card" href="soins/${s.slug}.html"><span class="related-cat">${s.group}</span><strong>${s.title}</strong><small>${s.blurb}</small></a>`;
-const grid = (list) => `<div class="related-grid">${list.map(card).join('')}</div>`;
+const grid = (list, extra = '') => `<div class="related-grid${extra}">${list.map(card).join('')}</div>`;
 
 const bienEtre = doc({
+  enFile: 'nos-soins-bien-etre.html',
   title: 'Nos soins Bien-être — Regeneratium · Rolle',
   desc: 'Tous les soins bien-être de Regeneratium à Rolle : massage, flottaison, cryothérapie, halothérapie.',
   body: `    <section class="page-head">
@@ -293,21 +291,34 @@ const bienEtre = doc({
     <section class="soin-related">${grid(soins.filter((s) => s.group === 'Bien-être'))}</section>`,
 });
 
-const santes = doc({
-  title: 'Nos soins Santé — Regeneratium · Rolle',
-  desc: 'Tous les soins médicaux et thérapeutiques de Regeneratium à Rolle, entre Genève et Lausanne.',
+const medical = doc({
+  enFile: 'nos-soins-medical.html',
+  title: 'Nos soins Médical — Regeneratium · Rolle',
+  desc: 'Les soins médicaux de Regeneratium à Rolle, entre Genève et Lausanne, assurés par des professionnels de santé.',
   body: `    <section class="page-head">
       <span class="section-tag">Nos soins</span>
-      <h1>Nos soins Santé</h1>
+      <h1>Nos soins Médical</h1>
       <p class="page-loc">À Rolle, entre Genève et Lausanne</p>
-      <p>Soins médicaux assurés par des professionnels de santé et thérapies douces complémentaires.</p>
+      <p>Soins médicaux assurés par des professionnels de santé.</p>
     </section>
     <section id="medical" class="soin-related">
       <span class="section-tag">Médical</span>
       <h2>Soins médicaux</h2>
-      ${grid(soins.filter((s) => s.group === 'Médical'))}
+      ${grid(soins.filter((s) => s.group === 'Médical'), ' grid-solo')}
+    </section>`,
+});
+
+const therapies = doc({
+  enFile: 'nos-soins-therapies.html',
+  title: 'Nos soins Thérapies — Regeneratium · Rolle',
+  desc: 'Toutes les thérapies de Regeneratium à Rolle, entre Genève et Lausanne : ostéopathie, acupuncture, cranio-sacrée, hypnothérapie, sophrologie…',
+  body: `    <section class="page-head">
+      <span class="section-tag">Nos soins</span>
+      <h1>Nos soins Thérapies</h1>
+      <p class="page-loc">À Rolle, entre Genève et Lausanne</p>
+      <p>Des approches manuelles et naturelles pour soulager, rééquilibrer et accompagner le changement.</p>
     </section>
-    <section id="therapies" class="soin-related" style="padding-top:0">
+    <section id="therapies" class="soin-related">
       <span class="section-tag">Thérapies</span>
       <h2>Soins thérapeutiques</h2>
       ${grid(soins.filter((s) => s.group === 'Thérapies'))}
@@ -351,6 +362,7 @@ const shopCards = sorted.map((p) => {
 const filters = ['Tous', ...catOrder].map((c, i) => `        <button type="button" class="shop-filter${i === 0 ? ' active' : ''}" data-filter="${c}">${c}</button>`).join('\n');
 
 const bonsCadeaux = doc({
+  enFile: 'bons-cadeaux.html',
   extraHead: '\n  <link rel="preconnect" href="https://images.sumup.com" />',
   title: 'Bons cadeaux & boutique — Regeneratium · Rolle',
   desc: 'La boutique Regeneratium : bons cadeaux, flottaison, massages, cryothérapie, chambre de sel, packs et offres — commande en ligne, réception par e-mail.',
@@ -409,5 +421,6 @@ await writeFile(join(root, 'a-propos.html'), aPropos, 'utf8');
 await writeFile(join(root, 'contact.html'), contact, 'utf8');
 await writeFile(join(root, 'mentions-legales.html'), legal, 'utf8');
 await writeFile(join(root, 'nos-soins-bien-etre.html'), bienEtre, 'utf8');
-await writeFile(join(root, 'nos-soins-santes.html'), santes, 'utf8');
-console.log('Pages générées : a-propos, contact, mentions-legales, nos-soins-bien-etre, nos-soins-santes');
+await writeFile(join(root, 'nos-soins-medical.html'), medical, 'utf8');
+await writeFile(join(root, 'nos-soins-therapies.html'), therapies, 'utf8');
+console.log('Pages générées : a-propos, contact, mentions-legales, nos-soins-bien-etre, nos-soins-medical, nos-soins-therapies');

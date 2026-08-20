@@ -1,0 +1,558 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Regeneratium — Therapy & Well-being · between Geneva and Lausanne</title>
+  <meta name="description" content="Therapy and wellness centre in Rolle, between Geneva and Lausanne. Medical care, gentle therapies and wellness experiences to support the self-regeneration of body and mind." />
+  <meta name="theme-color" content="#3B6979" />
+  <link rel="icon" type="image/svg+xml" href="../assets/favicon.svg" />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Kanit:ital,wght@0,500;0,600;0,700;0,800;1,600;1,700&family=Nunito:ital,wght@0,400;0,600;0,700;0,800;1,400&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../style.css" />
+</head>
+<body>
+  <!-- ===================== NAVIGATION ===================== -->
+  <nav id="navbar">
+    <a href="#" class="logo" aria-label="Regeneratium — home">
+      <img class="logo-img logo-light" src="../assets/logo-regeneratium.svg" alt="Regeneratium" />
+      <img class="logo-img logo-dark" src="../assets/logo-regeneratium-dark.svg" alt="" aria-hidden="true" />
+    </a>
+
+    <div class="nav-links" id="navLinks">
+      <div class="nav-item">
+        <button class="nav-trigger" aria-expanded="false" aria-haspopup="true">
+          Wellness
+          <svg viewBox="0 0 12 12" aria-hidden="true"><path d="M2.5 4.5 6 8l3.5-3.5" stroke="currentColor" stroke-width="1.6" fill="none" stroke-linecap="round" stroke-linejoin="round"/></svg>
+        </button>
+        <div class="nav-menu" role="menu" aria-label="Wellness treatments">
+          <a href="soins/massage.html" role="menuitem">Massage</a>
+          <a href="soins/flottaison.html" role="menuitem">Floatation</a>
+          <a href="soins/cryotherapie.html" role="menuitem">Cryotherapy</a>
+          <a href="soins/chambre-de-sel.html" role="menuitem">Salt room</a>
+        </div>
+      </div>
+
+      <div class="nav-item">
+        <button class="nav-trigger" aria-expanded="false" aria-haspopup="true">
+          Medical
+          <svg viewBox="0 0 12 12" aria-hidden="true"><path d="M2.5 4.5 6 8l3.5-3.5" stroke="currentColor" stroke-width="1.6" fill="none" stroke-linecap="round" stroke-linejoin="round"/></svg>
+        </button>
+        <div class="nav-menu" role="menu" aria-label="Medical care">
+          <a href="soins/dietetique.html" role="menuitem">Dietetics</a>
+        </div>
+      </div>
+
+      <div class="nav-item">
+        <button class="nav-trigger" aria-expanded="false" aria-haspopup="true">
+          Therapies
+          <svg viewBox="0 0 12 12" aria-hidden="true"><path d="M2.5 4.5 6 8l3.5-3.5" stroke="currentColor" stroke-width="1.6" fill="none" stroke-linecap="round" stroke-linejoin="round"/></svg>
+        </button>
+        <div class="nav-menu" role="menu" aria-label="Therapies">
+          <a href="soins/osteopathie.html" role="menuitem">Osteopathy</a>
+          <a href="soins/acupuncture.html" role="menuitem">Acupuncture</a>
+          <a href="soins/therapie-cranio-sacree.html" role="menuitem">Craniosacral</a>
+          <a href="soins/hypnose.html" role="menuitem">Hypnotherapy</a>
+        </div>
+      </div>
+
+      <a href="a-propos.html">About</a>
+      <a href="blog.html">Blog</a>
+      <a href="contact.html">Contact</a>
+      <a href="rendez-vous.html" class="nav-cta">Book an appointment</a>
+      <div class="lang-switch" aria-label="Langue / Language"><a href="../index.html" lang="fr" hreflang="fr">FR</a><span class="lang-active">EN</span></div>
+    </div>
+
+    <button class="nav-toggle" id="navToggle" aria-label="Open menu" aria-expanded="false">
+      <span></span><span></span><span></span>
+    </button>
+  </nav>
+
+  <!-- ===================== HERO ===================== -->
+  <header class="hero">
+    <span class="ambient ambient-one" aria-hidden="true"></span>
+    <span class="ambient ambient-two" aria-hidden="true"></span>
+
+    <div class="hero-content">
+      <span class="hero-badge reveal">Therapy &amp; wellness centre · Rolle</span>
+      <h1 class="reveal">Therapy &amp;<br><em>Well&#8209;being</em></h1>
+      <p class="hero-text reveal">
+        A place dedicated to balance, recovery and the natural self-regeneration
+        of body and mind — nestled in Rolle, between Geneva and Lausanne.
+      </p>
+      <div class="hero-buttons reveal">
+        <a href="rendez-vous.html" class="btn-primary">Book an appointment</a>
+        <a href="#bien-etre" class="btn-ghost">Discover our treatments</a>
+      </div>
+      <div class="hero-stats reveal">
+        <div class="stat">
+          <strong>3</strong>
+          <span>Areas · medical, therapies, wellness</span>
+        </div>
+        <div class="stat">
+          <strong>12+</strong>
+          <span>Treatments &amp; specialities</span>
+        </div>
+        <div class="stat">
+          <strong>Rolle</strong>
+          <span>Between Geneva &amp; Lausanne</span>
+        </div>
+      </div>
+    </div>
+
+    <div class="hero-visual reveal">
+      <img src="../assets/regeneratium-hero.jpg" alt="A soothing treatment space at the Regeneratium centre" width="1024" height="1536" fetchpriority="high" />
+      <div class="hero-card card-top">
+        <span>Floatation</span>
+        <strong>Deep relaxation</strong>
+      </div>
+      <div class="hero-card card-bottom">
+        <span>Cryotherapy</span>
+        <strong>Active recovery</strong>
+      </div>
+    </div>
+
+    <a href="#bien-etre" class="scroll-hint">Discover <span></span></a>
+  </header>
+
+  <main>
+
+    <!-- ===================== SOINS BIEN-ÊTRE & SANTÉ ===================== -->
+    <section id="bien-etre" class="services">
+      <div class="section-header reveal">
+        <span class="section-tag">Wellness &amp; Health</span>
+        <h2>Our Wellness &amp; Health treatments</h2>
+        <p>Experiences designed to release the body, calm the mind and support
+          recovery — in a peaceful, enveloping setting.</p>
+      </div>
+
+      <div class="services-grid grid-4">
+        <article class="service-card reveal">
+          <div class="service-icon" aria-hidden="true">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M3 9c3-2 5-2 6 0s4 2 6 0 4-2 6 0"/><path d="M3 14c3-2 5-2 6 0s4 2 6 0 4-2 6 0"/><path d="M3 19c3-2 5-2 6 0s4 2 6 0 4-2 6 0"/>
+            </svg>
+          </div>
+          <small>Weightlessness</small>
+          <h3><a href="soins/flottaison.html">Floatation</a></h3>
+          <p>Immersed in water saturated with Epsom salt, the body floats effortlessly.
+            The nervous system releases, the mind settles — a moment of deep calm.</p>
+          <a href="rendez-vous.html">Book an appointment</a>
+        </article>
+
+        <article class="service-card reveal">
+          <div class="service-icon" aria-hidden="true">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M12 3v18M4 8l16 8M20 8 4 16M5.5 5.5 12 9M18.5 5.5 12 9M5.5 18.5 12 15M18.5 18.5 12 15"/>
+            </svg>
+          </div>
+          <small>Intense cold</small>
+          <h3><a href="soins/cryotherapie.html">Cryotherapy</a></h3>
+          <p>Brief exposure to extreme cold to soothe inflammation,
+            relieve pain and speed up the body's recovery.</p>
+          <a href="rendez-vous.html">Book an appointment</a>
+        </article>
+
+        <article class="service-card reveal">
+          <div class="service-icon" aria-hidden="true">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M12 3l1.9 4.4L18.5 9l-4.6 1.6L12 15l-1.9-4.4L5.5 9l4.6-1.6z"/><circle cx="6" cy="18" r="1"/><circle cx="18" cy="18" r="1"/><circle cx="12" cy="20.5" r="1"/>
+            </svg>
+          </div>
+          <small>Salty air</small>
+          <h3><a href="soins/halotherapie.html">Halotherapy · Salt room</a></h3>
+          <p>A room lined with natural salt to support the airways and the skin,
+            in a cosy, regenerating atmosphere.</p>
+          <a href="rendez-vous.html">Book an appointment</a>
+        </article>
+
+        <article class="service-card reveal">
+          <div class="service-icon" aria-hidden="true">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M5 20c0-7 5-13 14-14 1 9-5 14-14 14Z"/><path d="M5 20c3-5 7-8 11-9.5"/>
+            </svg>
+          </div>
+          <small>Touch</small>
+          <h3><a href="soins/massage.html">Massage</a></h3>
+          <p>Tailor-made massages to release tension, boost circulation
+            and give the body a real moment of letting go.</p>
+          <a href="rendez-vous.html">Book an appointment</a>
+        </article>
+      </div>
+    </section>
+
+    <!-- ===================== SOINS MÉDICAUX ===================== -->
+    <section id="medical" class="services section-alt">
+      <div class="section-header reveal">
+        <span class="section-tag">Medical</span>
+        <h2>Our Medical care</h2>
+        <p>Care provided by health professionals, designed for your physical and
+          mental balance — with, depending on the treatment, insurance coverage.</p>
+      </div>
+
+      <div class="services-grid grid-solo">
+        <article class="service-card reveal">
+          <div class="service-icon" aria-hidden="true">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M5 10h14a7 7 0 0 1-14 0Z"/><path d="M12 10c0-3 1.5-5 4-5"/><path d="M12 10c0-2-1-3.6-3-4.2"/>
+            </svg>
+          </div>
+          <small>Nutrition</small>
+          <h3><a href="soins/dietetique.html">Dietetics</a></h3>
+          <p>Personalised nutritional support to change your eating habits
+            for good and support your health.</p>
+          <span class="coverage">Reimbursed · basic insurance (LaMal)</span>
+          <a href="rendez-vous.html">Book an appointment</a>
+        </article>
+      </div>
+    </section>
+
+    <!-- ===================== SOINS THÉRAPEUTIQUES ===================== -->
+    <section id="therapies" class="services">
+      <div class="section-header reveal">
+        <span class="section-tag">Therapies</span>
+        <h2>Our Therapies</h2>
+        <p>Gentle, hands-on therapies that complement medical care, supporting
+          the body's balance and its natural capacity to regenerate.</p>
+      </div>
+
+      <div class="services-grid">
+        <article class="service-card reveal">
+          <div class="service-icon" aria-hidden="true">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round">
+              <circle cx="12" cy="5" r="2"/><path d="M12 7v6M8 10l4-1 4 1M9 20l3-7 3 7"/>
+            </svg>
+          </div>
+          <small>Manual therapy</small>
+          <h3><a href="soins/osteopathie.html">Osteopathy</a></h3>
+          <p>A hands-on approach to release tension, improve mobility and
+            support the body's overall balance.</p>
+          <span class="coverage">According to supplementary insurance</span>
+          <a href="rendez-vous.html">Book an appointment</a>
+        </article>
+
+        <article class="service-card reveal">
+          <div class="service-icon" aria-hidden="true">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round">
+              <circle cx="12" cy="9" r="6"/><path d="M6 20c2-2 4-3 6-3s4 1 6 3"/>
+            </svg>
+          </div>
+          <small>Light touch</small>
+          <h3><a href="soins/therapie-cranio-sacree.html">Craniosacral</a></h3>
+          <p>Very light touch to release deep tension and support the
+            nervous system — soothing and regenerating.</p>
+          <span class="coverage">ASCA &amp; RME · according to supplementary insurance</span>
+          <a href="rendez-vous.html">Book an appointment</a>
+        </article>
+
+        <article class="service-card reveal">
+          <div class="service-icon" aria-hidden="true">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M12 21v-7"/><path d="M12 14c0-3-2-5-5-5 0 3 2 5 5 5Z"/><path d="M12 12c0-3 2-5 5-5 0 3-2 5-5 5Z"/>
+            </svg>
+          </div>
+          <small>Holistic approach</small>
+          <h3><a href="soins/naturopathie-micro-nutrition.html">Naturopathy &amp; micronutrition</a></h3>
+          <p>A holistic approach combining natural methods, nutrition and
+            micronutrients to optimise your vitality.</p>
+          <span class="coverage">According to supplementary insurance</span>
+          <a href="rendez-vous.html">Book an appointment</a>
+        </article>
+
+        <article class="service-card reveal">
+          <div class="service-icon" aria-hidden="true">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round">
+              <circle cx="9" cy="9" r="3.2"/><circle cx="16" cy="13" r="3.2"/><circle cx="8.5" cy="16.5" r="2"/>
+            </svg>
+          </div>
+          <small>Suction</small>
+          <h3><a href="soins/ventouse-cupping.html">Cupping</a></h3>
+          <p>A traditional suction technique to boost circulation,
+            release tension and promote recovery.</p>
+          <span class="coverage">According to supplementary insurance</span>
+          <a href="rendez-vous.html">Book an appointment</a>
+        </article>
+
+        <article class="service-card reveal">
+          <div class="service-icon" aria-hidden="true">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M20 4 10 14"/><path d="M16 4h4v4"/><path d="M4 20l5-5"/>
+            </svg>
+          </div>
+          <small>Chinese medicine</small>
+          <h3><a href="soins/acupuncture.html">Acupuncture</a></h3>
+          <p>Rooted in traditional Chinese medicine, it supports energetic
+            balance, sleep and pain management.</p>
+          <span class="coverage">According to supplementary insurance</span>
+          <a href="rendez-vous.html">Book an appointment</a>
+        </article>
+
+        <article class="service-card reveal">
+          <div class="service-icon" aria-hidden="true">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M14 12a2 2 0 1 1-2-2 4 4 0 1 1 4 4 6 6 0 1 1-6-6"/>
+            </svg>
+          </div>
+          <small>Modified state</small>
+          <h3><a href="soins/hypnose.html">Hypnotherapy</a></h3>
+          <p>A modified state of consciousness to mobilise your inner
+            resources and gently support change.</p>
+          <span class="coverage">ASCA · according to supplementary insurance</span>
+          <a href="rendez-vous.html">Book an appointment</a>
+        </article>
+
+        <article class="service-card reveal">
+          <div class="service-icon" aria-hidden="true">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M12 20c0-4 1.5-7 4-9 .8 3-.5 6.5-4 9M12 20c0-4-1.5-7-4-9-.8 3 .5 6.5 4 9M12 20c-3.5 0-6-1.5-7-4 3-.5 5.5.5 7 4M12 20c3.5 0 6-1.5 7-4-3-.5-5.5.5-7 4"/>
+            </svg>
+          </div>
+          <small>Relaxation</small>
+          <h3><a href="soins/sophrologie.html">Sophrology</a></h3>
+          <p>Breathing, relaxation and positive visualisation to calm the mind,
+            sleep better and build self-confidence.</p>
+          <span class="coverage">ASCA · according to supplementary insurance</span>
+          <a href="rendez-vous.html">Book an appointment</a>
+        </article>
+      </div>
+    </section>
+
+    <!-- ===================== LE CENTRE + GALERIE ===================== -->
+    <section id="centre" class="centre section-alt">
+      <div class="section-header reveal">
+        <span class="section-tag">The centre</span>
+        <h2>A place designed for your regeneration</h2>
+        <p>In Rolle, between Geneva and Lausanne, Regeneratium brings together medical
+          care, gentle therapies and wellness experiences in a calm, bright and
+          soothing setting.</p>
+      </div>
+
+      <figure class="centre-banner reveal">
+        <img src="../assets/home-1.jpg" alt="The bright, natural atmosphere of the Regeneratium centre" loading="lazy" />
+      </figure>
+
+      <div class="spaces">
+        <figure class="space-card reveal">
+          <img src="../assets/home-3.jpg" alt="The reception area of the Regeneratium centre" loading="lazy" />
+          <figcaption>
+            <span>Space 01</span>
+            <h3>Reception</h3>
+            <p>A warm welcome to guide you towards the treatment that suits you.</p>
+          </figcaption>
+        </figure>
+
+        <figure class="space-card reveal">
+          <img src="../assets/home-6.jpg" alt="The floatation space at the Regeneratium centre" loading="lazy" />
+          <figcaption>
+            <span>Space 02</span>
+            <h3>Floatation</h3>
+            <p>The weightlessness pod, for deep relaxation of body and mind.</p>
+          </figcaption>
+        </figure>
+
+        <figure class="space-card reveal">
+          <img src="../assets/home-5.jpg" alt="The relaxation area of the Regeneratium centre" loading="lazy" />
+          <figcaption>
+            <span>Space 03</span>
+            <h3>Relaxation zone</h3>
+            <p>A haven of calm between treatments, to breathe and prolong the well-being.</p>
+          </figcaption>
+        </figure>
+
+        <figure class="space-card reveal">
+          <img src="../assets/home-7.jpg" alt="A treatment space at the Regeneratium centre" loading="lazy" />
+          <figcaption>
+            <span>Space 04</span>
+            <h3>Treatment space</h3>
+            <p>Bright, soothing rooms dedicated to therapies and massages.</p>
+          </figcaption>
+        </figure>
+      </div>
+    </section>
+
+    <!-- ===================== TÉMOIGNAGES ===================== -->
+    <section id="avis" class="testimonials">
+      <div class="section-header reveal">
+        <span class="section-tag">Verified reviews</span>
+        <h2>What our visitors say</h2>
+        <p>The serenity of our spaces and the care of our team, reflected in the
+          reviews left by those who came to regenerate — rated 5/5 on
+          TripAdvisor.</p>
+      </div>
+
+      <div class="testimonials-grid grid-4">
+        <article class="testimonial-card reveal">
+          <div class="stars" aria-label="5 stars out of 5">★★★★★</div>
+          <p>A totally relaxing and energising massage — they're not Swiss champions
+            for nothing. I'll keep coming back. Highly recommended.</p>
+          <strong>patmossu1</strong>
+          <span>TripAdvisor review · Dec. 2025</span>
+        </article>
+
+        <article class="testimonial-card reveal">
+          <div class="stars" aria-label="5 stars out of 5">★★★★★</div>
+          <p>Fabulous. Floating in the salt-water pod brings incomparable relaxation.
+            And Michael's massages are moments out of time.</p>
+          <strong>marguerite g</strong>
+          <span>TripAdvisor review · Sept. 2024</span>
+        </article>
+
+        <article class="testimonial-card reveal">
+          <div class="stars" aria-label="5 stars out of 5">★★★★★</div>
+          <p>Timeless. A cosy, gentle place — you feel good the moment you walk in.
+            A very warm welcome and attentive, truly professional practitioners.</p>
+          <strong>mdamdam</strong>
+          <span>TripAdvisor review · May 2024</span>
+        </article>
+
+        <article class="testimonial-card reveal">
+          <div class="stars" aria-label="5 stars out of 5">★★★★★</div>
+          <p>A lovely discovery. Beautiful premises, great staff. Incredible massage —
+            Sarah was very attentive and very skilled! Very pleasant salt room.</p>
+          <strong>Alinesch55</strong>
+          <span>TripAdvisor review · May 2023</span>
+        </article>
+      </div>
+
+      <p class="testimonials-more reveal">
+        <a href="https://www.tripadvisor.fr/Attraction_Review-g1130703-d25547570-Reviews-Regeneratium-Rolle_Nyon_District_Canton_of_Vaud.html"
+          target="_blank" rel="noopener">See all reviews on TripAdvisor →</a>
+      </p>
+    </section>
+
+    <!-- ===================== FAQ ===================== -->
+    <section id="faq" class="section-alt">
+      <div class="faq">
+        <div class="faq-left reveal">
+          <span class="section-tag">FAQ</span>
+          <h2>Frequently asked questions</h2>
+          <p>Everything you need to know before your visit — reimbursements,
+            organisation and types of treatment. Still have a question? Write to us.</p>
+          <a class="btn-primary" href="contact.html">Ask a question</a>
+        </div>
+
+        <div class="faq-right reveal">
+          <p class="faq-cat">Insurance</p>
+          <details class="faq-item" open>
+            <summary>Are your treatments reimbursed by insurance?</summary>
+            <p>Several of our treatments are covered depending on your policy:
+              dietetics is reimbursed by basic insurance (LaMal), and many
+              therapies (craniosacral, acupuncture…) are covered by
+              supplementary insurance (ASCA &amp; RME).</p>
+          </details>
+          <details class="faq-item">
+            <summary>Are you ASCA and RME accredited?</summary>
+            <p>Yes, several of our therapists are ASCA and/or RME accredited, which
+              allows reimbursement by most supplementary insurance policies. The
+              details are confirmed when you book your appointment.</p>
+          </details>
+          <details class="faq-item">
+            <summary>How do I get reimbursed?</summary>
+            <p>You pay for the session, then send the invoice to your supplementary
+              insurance. We provide a receipt that meets ASCA / RME
+              requirements.</p>
+          </details>
+
+          <p class="faq-cat">General questions</p>
+          <details class="faq-item">
+            <summary>Where is the centre located?</summary>
+            <p>In the heart of Rolle, Rte de la Vallée 7, ideally placed between Geneva
+              and Lausanne, with easy access and parking nearby.</p>
+          </details>
+          <details class="faq-item">
+            <summary>How do I book an appointment?</summary>
+            <p>By phone on +41 21 826 00 88, by e-mail, or via the contact form.
+              Our team will guide you towards the treatment best suited to your needs.</p>
+          </details>
+          <details class="faq-item">
+            <summary>Do I need a prescription?</summary>
+            <p>Most of our wellness treatments and therapies are available without a
+              prescription. Some medical care may require one — we will advise you
+              case by case.</p>
+          </details>
+
+          <p class="faq-cat">Types of treatment</p>
+          <details class="faq-item">
+            <summary>What is the difference between medical care, therapies and wellness?</summary>
+            <p>Medical care is provided by health professionals
+              (dietetics…), therapies bring together manual and natural approaches
+              (osteopathy, acupuncture…), and wellness covers recovery and
+              relaxation experiences (floatation, cryotherapy…).</p>
+          </details>
+          <details class="faq-item">
+            <summary>Are the treatments suitable for everyone?</summary>
+            <p>Most of our treatments are suitable for a wide audience. Some practices
+              have contraindications (pregnancy, specific conditions); our team
+              always discusses them before the session.</p>
+          </details>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===================== PARTENAIRES ===================== -->
+    <section class="partners">
+      <h3 class="reveal">They trust us</h3>
+      <div class="partners-row reveal">
+        <span class="partner-logo"><img src="../assets/partners/swissquote.png" alt="Swissquote" loading="lazy" /></span>
+        <span class="partner-logo"><img src="../assets/partners/cabinet-medical-du-lac.png" alt="Centre Médical du Lac" loading="lazy" /></span>
+        <span class="partner-logo"><img src="../assets/partners/crossfit-essentia.png" alt="CrossFit Essentia" loading="lazy" /></span>
+        <span class="partner-logo"><img src="../assets/partners/les-psys.png" alt="les psys" loading="lazy" /></span>
+      </div>
+    </section>
+
+    <!-- ===================== BANNIÈRE CTA ===================== -->
+    <section>
+      <div class="cta-banner reveal">
+        <div>
+          <h2>Ready to take care of yourself?</h2>
+          <p>Book your first session — our team will guide you towards the perfect treatment.</p>
+        </div>
+        <a class="btn-primary btn-light" href="rendez-vous.html">Book an appointment</a>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- ===================== FOOTER ===================== -->
+  <footer>
+    <div class="footer-top">
+      <div>
+        <a href="#" class="logo footer-logo" aria-label="Regeneratium">
+          <img class="logo-img" src="../assets/logo-regeneratium.svg" alt="Regeneratium" />
+        </a>
+        <p>Therapy &amp; wellness centre in Rolle, between Geneva and Lausanne. Medical
+          care, gentle therapies and recovery experiences.</p>
+      </div>
+      <div>
+        <h3>Our treatments</h3>
+        <a href="nos-soins-bien-etre.html">Wellness &amp; Health</a>
+        <a href="nos-soins-medical.html#medical">Medical</a>
+        <a href="nos-soins-therapies.html#therapies">Therapies</a>
+      </div>
+      <div>
+        <h3>The centre</h3>
+        <a href="a-propos.html">About</a>
+        <a href="contact.html">Contact</a>
+        <a href="#faq">FAQ</a>
+      </div>
+      <div>
+        <h3>Shop &amp; contact</h3>
+        <a href="bons-cadeaux.html">Gift vouchers</a>
+        <a href="rendez-vous.html">Book an appointment</a>
+        <a href="tel:+41218260088">+41 21 826 00 88</a>
+      </div>
+    </div>
+
+    <div class="footer-bottom">
+      <span>© 2026 Regeneratium — Rte de la Vallée 7, 1180 Rolle, Switzerland</span>
+      <div>
+        <a href="mentions-legales.html">Legal notice</a>
+        <a href="mentions-legales.html">Privacy</a>
+      </div>
+    </div>
+  </footer>
+
+  <script src="../script.js"></script>
+</body>
+</html>

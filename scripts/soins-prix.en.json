@@ -1,0 +1,172 @@
+{
+  "massage": {
+    "groups": [
+      {
+        "title": "Our massages — Swiss champions*",
+        "subtitle": "With our Swiss massage champion therapists",
+        "items": [
+          { "name": "Swiss champion Regeneratium", "detail": "1 h session", "price": "CHF 140.00" },
+          { "name": "Swiss champion Regeneratium", "detail": "1 h 30 session", "price": "CHF 180.00" },
+          { "name": "Swiss champion relaxing massage", "detail": "1 h session", "price": "CHF 140.00" },
+          { "name": "Swiss champion relaxing massage", "detail": "1 h 30 session", "price": "CHF 180.00" },
+          { "name": "Swiss champion sports massage", "detail": "1 h session", "price": "CHF 140.00" },
+          { "name": "Swiss champion sports massage", "detail": "1 h 30 session", "price": "CHF 180.00" }
+        ]
+      },
+      {
+        "title": "Our massages",
+        "subtitle": "With our non-competing therapists",
+        "items": [
+          { "name": "Regeneratium Signature massage", "detail": "1 h session", "price": "CHF 120.00" },
+          { "name": "Regeneratium Signature massage", "detail": "1 h 30 session", "price": "CHF 160.00" },
+          { "name": "Regeneratium Signature massage", "detail": "2 h session", "price": "CHF 220.00" },
+          { "name": "Sports massage", "detail": "1 h session", "price": "CHF 120.00" },
+          { "name": "Relaxing massage", "detail": "1 h session", "price": "CHF 120.00" },
+          { "name": "Relaxing massage", "detail": "1 h 30 session", "price": "CHF 160.00" },
+          { "name": "Hawaiian Lomi-Lomi", "detail": "1 h 15 session", "price": "CHF 150.00" },
+          { "name": "Hot or cold stones", "detail": "1 h 30 session", "price": "CHF 180.00" },
+          { "name": "Ayurvedic marma-point massage", "detail": "1 h 30 session", "price": "CHF 190.00" },
+          { "name": "Anti-cellulite", "detail": "1 h session", "price": "CHF 130.00" }
+        ]
+      }
+    ],
+    "notes": [
+      "ASCA & RME — our massages are reimbursed according to your supplementary insurance.",
+      "Sunday prices are increased by CHF 30.—",
+      "*The \"Swiss champion\" massages are not included in the Beauty pass."
+    ]
+  },
+  "flottaison": {
+    "groups": [
+      {
+        "items": [
+          { "name": "Floatation", "detail": "1 h session", "price": "CHF 120.00" },
+          { "name": "Floatation", "detail": "1 h 30 session", "price": "CHF 150.00" }
+        ]
+      }
+    ],
+    "notes": ["ASCA & RME — reimbursed according to your supplementary insurance."]
+  },
+  "halotherapie": {
+    "groups": [
+      {
+        "items": [
+          { "name": "Salt room", "detail": "Per session (pack available)", "price": "CHF 65.00" },
+          { "name": "Salt room for children (under 15)", "detail": "Wednesday afternoons, per session", "price": "CHF 30.00" }
+        ]
+      }
+    ],
+    "notes": ["ASCA & RME — therapies reimbursed according to your supplementary insurance."]
+  },
+  "chambre-de-sel": {
+    "groups": [
+      {
+        "items": [
+          { "name": "Salt room", "detail": "Per session (pack available)", "price": "CHF 65.00" },
+          { "name": "Salt room for children (under 15)", "detail": "Wednesday afternoons, per session", "price": "CHF 30.00" }
+        ]
+      }
+    ],
+    "notes": ["ASCA & RME — therapies reimbursed according to your supplementary insurance."]
+  },
+  "cryotherapie": {
+    "groups": [
+      {
+        "items": [
+          { "name": "Cryotherapy", "detail": "Per session", "price": "CHF 65.00" }
+        ]
+      }
+    ],
+    "notes": ["ASCA & RME — therapies reimbursed according to your supplementary insurance."]
+  },
+  "osteopathie": {
+    "groups": [
+      {
+        "items": [
+          { "name": "Osteopathy", "detail": "Per session", "price": "CHF 130.00" }
+        ]
+      }
+    ],
+    "notes": []
+  },
+  "acupuncture": {
+    "groups": [
+      {
+        "items": [
+          { "name": "Acupuncture", "detail": "1 h 30 session", "price": "CHF 150.00" }
+        ]
+      }
+    ],
+    "notes": ["ASCA & RME — therapies reimbursed according to your supplementary insurance."]
+  },
+  "ventouse-cupping": {
+    "groups": [
+      {
+        "items": [
+          { "name": "Cupping", "detail": "50 min session", "price": "CHF 95.00" }
+        ]
+      }
+    ],
+    "notes": [
+      "ASCA & RME — reimbursed according to your supplementary insurance.",
+      "Sunday prices are increased by CHF 30.—"
+    ]
+  },
+  "therapie-cranio-sacree": {
+    "groups": [
+      {
+        "items": [
+          { "name": "Craniosacral therapy", "detail": "1 h 30 session", "price": "CHF 150.00" }
+        ]
+      }
+    ],
+    "notes": ["ASCA & RME — therapies reimbursed according to your supplementary insurance."]
+  },
+  "hypnose": {
+    "groups": [
+      {
+        "items": [
+          { "name": "Hypnotherapy", "detail": "90 min session", "price": "CHF 140.00" }
+        ]
+      }
+    ],
+    "notes": [
+      "ASCA — our sessions are reimbursed according to your supplementary insurance.",
+      "Sunday prices are increased by CHF 30.—"
+    ]
+  },
+  "naturopathie-micro-nutrition": {
+    "groups": [
+      {
+        "items": [
+          { "name": "Naturopathy", "detail": "Per session", "price": "CHF 120.00" },
+          { "name": "Naturopathy", "detail": "First session, 2 h", "price": "CHF 160.00" }
+        ]
+      }
+    ],
+    "notes": ["Sunday prices are increased by CHF 30.—"]
+  },
+  "sophrologie": {
+    "groups": [
+      {
+        "items": [
+          { "name": "Sophrology", "detail": "60 min session", "price": "CHF 130.00" }
+        ]
+      }
+    ],
+    "notes": [
+      "ASCA — our sessions are reimbursed according to your supplementary insurance.",
+      "Sunday prices are increased by CHF 30.—"
+    ]
+  },
+  "dietetique": {
+    "groups": [
+      {
+        "items": [
+          { "name": "Dietetics", "detail": "Per session", "price": "According to Tarmed" }
+        ]
+      }
+    ],
+    "notes": ["Reimbursed by basic insurance (LaMal)."]
+  }
+}

@@ -19,12 +19,10 @@ const esc = (s) => String(s)
   .replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;');
 
 // Ancre de la section correspondante sur la page d'accueil
-const sectionOf = { 'Médical': 'medical', 'Thérapies': 'therapies', 'Bien-être': 'bien-etre', 'Programme': 'stress' };
+const sectionOf = { 'Médical': 'medical', 'Thérapies': 'therapies', 'Bien-être': 'bien-etre' };
 
 // Icônes SVG (contenu interne, hérite de currentColor)
 const icons = {
-  psychologie: '<circle cx="12" cy="8" r="4"/><path d="M5.5 21a6.5 6.5 0 0 1 13 0"/>',
-  psychotherapie: '<path d="M3 6a2 2 0 0 1 2-2h8a2 2 0 0 1 2 2v4a2 2 0 0 1-2 2H7l-4 3z"/><path d="M9 14v1a2 2 0 0 0 2 2h6l3 2v-7a2 2 0 0 0-2-2h-1"/>',
   dietetique: '<path d="M5 10h14a7 7 0 0 1-14 0Z"/><path d="M12 10c0-3 1.5-5 4-5"/><path d="M12 10c0-2-1-3.6-3-4.2"/>',
   osteopathie: '<circle cx="12" cy="5" r="2"/><path d="M12 7v6M8 10l4-1 4 1M9 20l3-7 3 7"/>',
   acupuncture: '<path d="M20 4 10 14"/><path d="M16 4h4v4"/><path d="M4 20l5-5"/>',
@@ -37,14 +35,11 @@ const icons = {
   cryotherapie: '<path d="M12 3v18M4 8l16 8M20 8 4 16M5.5 5.5 12 9M18.5 5.5 12 9M5.5 18.5 12 15M18.5 18.5 12 15"/>',
   halotherapie: '<path d="M12 3l1.9 4.4L18.5 9l-4.6 1.6L12 15l-1.9-4.4L5.5 9l4.6-1.6z"/><circle cx="6" cy="18" r="1"/><circle cx="18" cy="18" r="1"/><circle cx="12" cy="20.5" r="1"/>',
   'chambre-de-sel': '<path d="M12 3l1.9 4.4L18.5 9l-4.6 1.6L12 15l-1.9-4.4L5.5 9l4.6-1.6z"/><circle cx="6" cy="18" r="1"/><circle cx="18" cy="18" r="1"/><circle cx="12" cy="20.5" r="1"/>',
-  'prise-en-charge-du-stress': '<path d="M12 21s-7-4.5-7-10a4 4 0 0 1 7-2.5A4 4 0 0 1 19 11c0 5.5-7 10-7 10Z"/>',
   sophrologie: '<path d="M12 20c0-4 1.5-7 4-9 .8 3-.5 6.5-4 9M12 20c0-4-1.5-7-4-9-.8 3 .5 6.5 4 9M12 20c-3.5 0-6-1.5-7-4 3-.5 5.5.5 7 4M12 20c3.5 0 6-1.5 7-4-3-.5-5.5.5-7 4"/>',
 };
 
 const services = [
-  { slug: 'psychotherapie', group: 'Médical', title: 'Psychothérapie', lead: 'Un accompagnement structuré pour comprendre les pensées, les émotions et les comportements, afin d’améliorer la santé mentale et le bien-être.', price: 'Selon Tarmed', coverage: 'ASCA & RME selon assurance complémentaire', benefits: ['Troubles de l’humeur', 'Troubles anxieux', 'Thérapie de couple', 'Croissance personnelle'] },
   { slug: 'dietetique', group: 'Médical', title: 'Diététique', lead: 'Un accompagnement nutritionnel personnalisé pour changer durablement les habitudes alimentaires et soutenir la santé physique.', price: 'Selon Tarmed', coverage: 'Remboursé par l’assurance de base (LaMal)', benefits: ['Gestion du poids', 'Prévention', 'Troubles digestifs', 'Équilibre alimentaire'] },
-  { slug: 'psychologie', group: 'Médical', title: 'Psychologie', lead: 'Une approche d’écoute et d’évaluation pour mieux comprendre les comportements, les émotions et les processus mentaux.', price: 'CHF 150.00', coverage: 'ASCA & RME selon assurance complémentaire', benefits: ['Évaluation psychologique', 'Thérapie de soutien', 'Développement personnel', 'Gestion du stress'] },
   { slug: 'osteopathie', group: 'Thérapies', title: 'Ostéopathie', lead: 'Une prise en charge manuelle pour améliorer la mobilité, soulager les douleurs et soutenir l’équilibre global du corps.', price: 'CHF 130.00 · par séance', coverage: 'Selon assurance complémentaire', benefits: ['Mobilité', 'Douleurs articulaires', 'Tensions', 'Équilibre corporel'] },
   { slug: 'acupuncture', group: 'Thérapies', title: 'Acupuncture', lead: 'Une pratique issue de la médecine traditionnelle chinoise visant à soutenir l’équilibre énergétique et les fonctions naturelles.', price: 'CHF 150.00 · séance de 1h30', coverage: 'ASCA & RME selon assurance complémentaire', benefits: ['Énergie', 'Douleurs', 'Stress', 'Sommeil'] },
   { slug: 'ventouse-cupping', group: 'Thérapies', title: 'Ventouse / Cupping', lead: 'Une technique traditionnelle par effet de succion pour favoriser la circulation, libérer les tensions et accompagner la récupération.', price: 'CHF 95.00 · séance de 50 min', coverage: 'ASCA & RME selon assurance complémentaire', benefits: ['Circulation', 'Tensions', 'Récupération', 'Drainage'] },
@@ -57,10 +52,9 @@ const services = [
   { slug: 'cryotherapie', group: 'Bien-être', title: 'Cryothérapie', lead: 'Une exposition courte au froid intense pour aider à réduire l’inflammation, soulager la douleur et stimuler la récupération.', price: 'CHF 65.00', coverage: 'ASCA & RME selon assurance complémentaire', benefits: ['Inflammation', 'Douleurs', 'Sport', 'Métabolisme'] },
   { slug: 'halotherapie', group: 'Bien-être', title: 'Halothérapie', lead: 'Une chambre de sel naturelle pour soutenir la respiration, la peau et offrir un environnement profondément apaisant.', price: 'CHF 65.00 · enfant CHF 30.00', coverage: 'ASCA & RME selon assurance complémentaire', benefits: ['Respiration', 'Allergies', 'Peau', 'Stress'] },
   { slug: 'chambre-de-sel', group: 'Bien-être', title: 'Chambre de sel', lead: 'Une expérience d’halothérapie en chambre de sel, pensée pour soutenir les voies respiratoires, la peau et l’apaisement.', price: 'CHF 65.00 · enfant CHF 30.00', coverage: 'ASCA & RME selon assurance complémentaire', benefits: ['Respiration', 'Peau', 'Relaxation', 'Sel naturel'] },
-  { slug: 'prise-en-charge-du-stress', group: 'Programme', title: 'Prise en charge du stress', lead: 'Une évaluation et un accompagnement personnalisés pour comprendre le niveau de stress et mettre en place un plan de soin adapté.', price: 'Selon programme', coverage: 'Selon prestations et assurance', benefits: ['Évaluation', 'Psychologie', 'Psychothérapie', 'Acupuncture'] },
 ];
 
-const navHtml = () => `
+const navHtml = (slug) => `
   <nav id="navbar">
     <a href="../index.html" class="logo" aria-label="Regeneratium — accueil">
       <img class="logo-img logo-light" src="../assets/logo-regeneratium.svg" alt="Regeneratium" />
@@ -83,7 +77,6 @@ const navHtml = () => `
           <svg viewBox="0 0 12 12" aria-hidden="true"><path d="M2.5 4.5 6 8l3.5-3.5" stroke="currentColor" stroke-width="1.6" fill="none" stroke-linecap="round" stroke-linejoin="round"/></svg>
         </button>
         <div class="nav-menu" role="menu" aria-label="Soins médicaux">
-          <a href="psychologie.html" role="menuitem">Psys</a>
           <a href="dietetique.html" role="menuitem">Diététique</a>
         </div>
       </div>
@@ -102,6 +95,7 @@ const navHtml = () => `
       <a href="../blog.html">Blog</a>
       <a href="../contact.html">Contact</a>
       <a href="../rendez-vous.html" class="nav-cta">Prendre rendez-vous</a>
+      <div class="lang-switch" aria-label="Langue / Language"><span class="lang-active">FR</span><a href="../en/soins/${slug}.html" lang="en" hreflang="en">EN</a></div>
     </div>
     <button class="nav-toggle" id="navToggle" aria-label="Ouvrir le menu" aria-expanded="false">
       <span></span><span></span><span></span>
@@ -121,8 +115,8 @@ const footerHtml = () => `
       <div>
         <h3>Nos soins</h3>
         <a href="../nos-soins-bien-etre.html">Bien-être &amp; Santé</a>
-        <a href="../nos-soins-santes.html#medical">Médical</a>
-        <a href="../nos-soins-santes.html#therapies">Thérapies</a>
+        <a href="../nos-soins-medical.html">Médical</a>
+        <a href="../nos-soins-therapies.html">Thérapies</a>
       </div>
       <div>
         <h3>Le centre</h3>
@@ -208,15 +202,15 @@ ${groupsHtml}${notes}
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>${esc(s.title)} — Regeneratium · Rolle</title>
   <meta name="description" content="${esc(s.title)} à Regeneratium, Rolle, entre Genève et Lausanne. ${esc(s.lead)}" />
-  <meta name="theme-color" content="#0a677b" />
+  <meta name="theme-color" content="#3B6979" />
   <link rel="icon" type="image/svg+xml" href="../assets/favicon.svg" />
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;700;800&family=Lato:wght@400;700&family=Lora:ital,wght@1,400&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Kanit:ital,wght@0,500;0,600;0,700;0,800;1,600;1,700&family=Nunito:ital,wght@0,400;0,600;0,700;0,800;1,400&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="../style.css" />
 </head>
 <body class="subpage">
-${navHtml()}
+${navHtml(s.slug)}
 
   <main class="soin-page">
     <section class="soin-hero">

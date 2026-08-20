@@ -1,0 +1,267 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Book an appointment — Regeneratium · Rolle</title>
+  <meta name="description" content="Book your treatment online at Regeneratium in Rolle, between Geneva and Lausanne. Choose your treatment and book via our OneDoc calendar." />
+  <meta name="theme-color" content="#3B6979" />
+  <link rel="icon" type="image/svg+xml" href="../assets/favicon.svg" />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Kanit:ital,wght@0,500;0,600;0,700;0,800;1,600;1,700&family=Nunito:ital,wght@0,400;0,600;0,700;0,800;1,400&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../style.css" />
+</head>
+<body class="subpage">
+
+  <nav id="navbar">
+    <a href="index.html" class="logo" aria-label="Regeneratium — home">
+      <img class="logo-img logo-light" src="../assets/logo-regeneratium.svg" alt="Regeneratium" />
+      <img class="logo-img logo-dark" src="../assets/logo-regeneratium-dark.svg" alt="" aria-hidden="true" />
+    </a>
+    <div class="nav-links" id="navLinks">
+      <div class="nav-item">
+        <button class="nav-trigger" aria-expanded="false" aria-haspopup="true">Wellness
+          <svg viewBox="0 0 12 12" aria-hidden="true"><path d="M2.5 4.5 6 8l3.5-3.5" stroke="currentColor" stroke-width="1.6" fill="none" stroke-linecap="round" stroke-linejoin="round"/></svg>
+        </button>
+        <div class="nav-menu" role="menu" aria-label="Wellness treatments">
+          <a href="soins/massage.html" role="menuitem">Massage</a>
+          <a href="soins/flottaison.html" role="menuitem">Floatation</a>
+          <a href="soins/cryotherapie.html" role="menuitem">Cryotherapy</a>
+          <a href="soins/chambre-de-sel.html" role="menuitem">Salt room</a>
+        </div>
+      </div>
+      <div class="nav-item">
+        <button class="nav-trigger" aria-expanded="false" aria-haspopup="true">Medical
+          <svg viewBox="0 0 12 12" aria-hidden="true"><path d="M2.5 4.5 6 8l3.5-3.5" stroke="currentColor" stroke-width="1.6" fill="none" stroke-linecap="round" stroke-linejoin="round"/></svg>
+        </button>
+        <div class="nav-menu" role="menu" aria-label="Medical care">
+          <a href="soins/dietetique.html" role="menuitem">Dietetics</a>
+        </div>
+      </div>
+      <div class="nav-item">
+        <button class="nav-trigger" aria-expanded="false" aria-haspopup="true">Therapies
+          <svg viewBox="0 0 12 12" aria-hidden="true"><path d="M2.5 4.5 6 8l3.5-3.5" stroke="currentColor" stroke-width="1.6" fill="none" stroke-linecap="round" stroke-linejoin="round"/></svg>
+        </button>
+        <div class="nav-menu" role="menu" aria-label="Therapies">
+          <a href="soins/osteopathie.html" role="menuitem">Osteopathy</a>
+          <a href="soins/acupuncture.html" role="menuitem">Acupuncture</a>
+          <a href="soins/therapie-cranio-sacree.html" role="menuitem">Craniosacral</a>
+          <a href="soins/hypnose.html" role="menuitem">Hypnotherapy</a>
+        </div>
+      </div>
+      <a href="a-propos.html">About</a>
+      <a href="blog.html">Blog</a>
+      <a href="contact.html">Contact</a>
+      <a href="#book" class="nav-cta">Book an appointment</a>
+      <div class="lang-switch" aria-label="Langue / Language"><a href="../rendez-vous.html" lang="fr" hreflang="fr">FR</a><span class="lang-active">EN</span></div>
+    </div>
+    <button class="nav-toggle" id="navToggle" aria-label="Open menu" aria-expanded="false">
+      <span></span><span></span><span></span>
+    </button>
+  </nav>
+
+  <main class="soin-page">
+    <section class="booking-intro">
+      <div class="section-header">
+        <span class="section-tag">Appointments</span>
+        <h1>Book an appointment</h1>
+        <p>Choose your treatment, then book your slot online — directly in our OneDoc
+          calendar, just like at the practice.</p>
+      </div>
+    </section>
+
+    <section class="booking" id="book">
+      <div class="booking-panel">
+        <h2>Book online</h2>
+        <p class="booking-sub">Find your treatment, then choose the service and time slot
+          that suit you, directly in our calendar.</p>
+
+        <!-- Sélecteur : barre de recherche + catégories déroulantes -->
+        <div class="booking-picker">
+          <label class="spec-label" for="specTrigger">Speciality</label>
+          <div class="spec-select">
+            <button type="button" class="spec-trigger" id="specTrigger" aria-expanded="false" aria-haspopup="true">
+              <span id="specValue">Select a speciality</span>
+              <svg viewBox="0 0 12 12" aria-hidden="true"><path d="M2.5 4.5 6 8l3.5-3.5" stroke="currentColor" stroke-width="1.6" fill="none" stroke-linecap="round" stroke-linejoin="round"/></svg>
+            </button>
+            <div class="spec-panel" id="specPanel" hidden>
+              <div class="search-box">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" aria-hidden="true"><circle cx="11" cy="11" r="7"/><path d="m20 20-3.2-3.2"/></svg>
+                <input type="search" id="soinSearch" placeholder="Search for a treatment…" aria-label="Search for a treatment" autocomplete="off" />
+          </div>
+
+          <div class="soin-accordion" id="soinAccordion">
+            <div class="soin-cat">
+              <button class="soin-cat-head" aria-expanded="false">Wellness
+                <svg viewBox="0 0 12 12" aria-hidden="true"><path d="M2.5 4.5 6 8l3.5-3.5" stroke="currentColor" stroke-width="1.6" fill="none" stroke-linecap="round" stroke-linejoin="round"/></svg>
+              </button>
+              <div class="soin-cat-list">
+                <a href="soins/massage.html">Massage</a>
+                <a href="soins/flottaison.html">Floatation</a>
+                <a href="soins/cryotherapie.html">Cryotherapy</a>
+                <a href="soins/chambre-de-sel.html">Salt room</a>
+              </div>
+            </div>
+
+            <div class="soin-cat">
+              <button class="soin-cat-head" aria-expanded="false">Medical
+                <svg viewBox="0 0 12 12" aria-hidden="true"><path d="M2.5 4.5 6 8l3.5-3.5" stroke="currentColor" stroke-width="1.6" fill="none" stroke-linecap="round" stroke-linejoin="round"/></svg>
+              </button>
+              <div class="soin-cat-list">
+                <a href="soins/dietetique.html">Dietetics</a>
+              </div>
+            </div>
+
+            <div class="soin-cat">
+              <button class="soin-cat-head" aria-expanded="false">Therapies
+                <svg viewBox="0 0 12 12" aria-hidden="true"><path d="M2.5 4.5 6 8l3.5-3.5" stroke="currentColor" stroke-width="1.6" fill="none" stroke-linecap="round" stroke-linejoin="round"/></svg>
+              </button>
+              <div class="soin-cat-list">
+                <a href="soins/osteopathie.html">Osteopathy</a>
+                <a href="soins/acupuncture.html">Acupuncture</a>
+                <a href="soins/therapie-cranio-sacree.html">Craniosacral</a>
+                <a href="soins/hypnose.html">Hypnotherapy</a>
+              </div>
+            </div>
+
+            <p class="soin-noresult" hidden>No treatment matches your search.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Réservation en ligne (widget OneDoc) -->
+        <div class="booking-widget">
+          <div class="od-embed">
+            <iframe class="od-widget" id="od-widget-8b7824506ca4883b5b1b63758da9866169bf94a9f6790aa344fbd192a2ff65fd" src="about:blank" data-src="https://www.onedoc.ch/en/widget/8b7824506ca4883b5b1b63758da9866169bf94a9f6790aa344fbd192a2ff65fd" frameborder="0" title="Online appointment booking — Regeneratium (OneDoc)"></iframe>
+          </div>
+          <a class="od-fallback" href="https://www.onedoc.ch/en/widget/8b7824506ca4883b5b1b63758da9866169bf94a9f6790aa344fbd192a2ff65fd" target="_blank" rel="noopener">Open the booking page in a new tab ↗</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===================== BONS CADEAUX ===================== -->
+    <section class="giftcard">
+      <div class="giftcard-inner reveal">
+        <div>
+          <span class="section-tag">Gift vouchers</span>
+          <h2>Rather give a gift?</h2>
+          <p>Floatation, massage, cryotherapy or any amount — give a moment of
+            regeneration with our gift vouchers.</p>
+        </div>
+        <a class="btn-primary" href="bons-cadeaux.html">Discover our gift vouchers</a>
+      </div>
+    </section>
+  </main>
+
+
+  <footer>
+    <div class="footer-top">
+      <div>
+        <a href="index.html" class="logo footer-logo" aria-label="Regeneratium">
+          <img class="logo-img" src="../assets/logo-regeneratium.svg" alt="Regeneratium" />
+        </a>
+        <p>Therapy &amp; wellness centre in Rolle, between Geneva and Lausanne. Medical
+          care, gentle therapies and recovery experiences.</p>
+      </div>
+      <div>
+        <h3>Our treatments</h3>
+        <a href="nos-soins-bien-etre.html">Wellness &amp; Health</a>
+        <a href="nos-soins-medical.html">Medical</a>
+        <a href="nos-soins-therapies.html">Therapies</a>
+      </div>
+      <div>
+        <h3>The centre</h3>
+        <a href="a-propos.html">About</a>
+        <a href="contact.html">Contact</a>
+        <a href="index.html#faq">FAQ</a>
+      </div>
+      <div>
+        <h3>Shop &amp; contact</h3>
+        <a href="bons-cadeaux.html">Gift vouchers</a>
+        <a href="#book">Book an appointment</a>
+        <a href="tel:+41218260088">+41 21 826 00 88</a>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <span>© 2026 Regeneratium — Rte de la Vallée 7, 1180 Rolle, Switzerland</span>
+      <div>
+        <a href="mentions-legales.html">Legal notice</a>
+        <a href="mentions-legales.html">Privacy</a>
+      </div>
+    </div>
+  </footer>
+
+  <script src="../script.js"></script>
+  <script>
+    // Widget OneDoc : activation + auto-hauteur (protocole postMessage du site officiel)
+    (function () {
+      var ID = '8b7824506ca4883b5b1b63758da9866169bf94a9f6790aa344fbd192a2ff65fd';
+      var f = document.getElementById('od-widget-' + ID);
+      if (f && f.dataset.src) f.src = f.dataset.src;
+      window.addEventListener('message', function (e) {
+        if (!e.data || e.data['od-widget-id'] !== ID) return;
+        if (e.data['od-widget-height']) f.style.height = e.data['od-widget-height'] + 'px';
+      });
+    })();
+
+    // Menu « Speciality » : ouvrir / fermer le panneau
+    (function () {
+      var trigger = document.getElementById('specTrigger');
+      var panel = document.getElementById('specPanel');
+      if (!trigger || !panel) return;
+      trigger.addEventListener('click', function () {
+        var willOpen = panel.hidden;
+        panel.hidden = !willOpen;
+        trigger.setAttribute('aria-expanded', String(willOpen));
+      });
+      document.addEventListener('click', function (e) {
+        if (!e.target.closest('.spec-select')) {
+          panel.hidden = true;
+          trigger.setAttribute('aria-expanded', 'false');
+        }
+      });
+    })();
+
+    // Sélecteur de soin : catégories déroulantes + recherche
+    (function () {
+      var cats = [].slice.call(document.querySelectorAll('.soin-cat'));
+      cats.forEach(function (cat) {
+        var head = cat.querySelector('.soin-cat-head');
+        head.addEventListener('click', function () {
+          var open = cat.classList.toggle('open');
+          head.setAttribute('aria-expanded', String(open));
+        });
+      });
+
+      var input = document.getElementById('soinSearch');
+      var noResult = document.querySelector('.soin-noresult');
+      input.addEventListener('input', function () {
+        var q = this.value.trim().toLowerCase();
+        var anyGlobal = false;
+        cats.forEach(function (cat) {
+          var head = cat.querySelector('.soin-cat-head');
+          var matches = 0;
+          [].slice.call(cat.querySelectorAll('.soin-cat-list a')).forEach(function (a) {
+            var hit = !q || a.textContent.toLowerCase().indexOf(q) !== -1;
+            a.hidden = !hit;
+            if (hit && q) matches++;
+          });
+          if (q) {
+            cat.hidden = matches === 0;
+            cat.classList.toggle('open', matches > 0);
+            head.setAttribute('aria-expanded', String(matches > 0));
+            if (matches > 0) anyGlobal = true;
+          } else {
+            cat.hidden = false;
+            cat.classList.remove('open');
+            head.setAttribute('aria-expanded', 'false');
+          }
+        });
+        if (noResult) noResult.hidden = !q || anyGlobal;
+      });
+    })();
+  </script>
+</body>
+</html>

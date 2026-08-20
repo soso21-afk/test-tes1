@@ -8,7 +8,7 @@ const root = join(dirname(fileURLToPath(import.meta.url)), '..');
 const content = JSON.parse(await readFile(join(root, 'scripts', 'blog-content.json'), 'utf8'));
 const esc = (s) => String(s).replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;');
 
-const nav = (b) => `
+const nav = (b, enHref) => `
   <nav id="navbar">
     <a href="${b}index.html" class="logo" aria-label="Regeneratium — accueil">
       <img class="logo-img logo-light" src="${b}assets/logo-regeneratium.svg" alt="Regeneratium" />
@@ -31,7 +31,6 @@ const nav = (b) => `
           <svg viewBox="0 0 12 12" aria-hidden="true"><path d="M2.5 4.5 6 8l3.5-3.5" stroke="currentColor" stroke-width="1.6" fill="none" stroke-linecap="round" stroke-linejoin="round"/></svg>
         </button>
         <div class="nav-menu" role="menu" aria-label="Soins médicaux">
-          <a href="${b}soins/psychologie.html" role="menuitem">Psys</a>
           <a href="${b}soins/dietetique.html" role="menuitem">Diététique</a>
         </div>
       </div>
@@ -50,6 +49,7 @@ const nav = (b) => `
       <a href="${b}blog.html">Blog</a>
       <a href="${b}contact.html">Contact</a>
       <a href="${b}rendez-vous.html" class="nav-cta">Prendre rendez-vous</a>
+      <div class="lang-switch" aria-label="Langue / Language"><span class="lang-active">FR</span><a href="${enHref}" lang="en" hreflang="en">EN</a></div>
     </div>
     <button class="nav-toggle" id="navToggle" aria-label="Ouvrir le menu" aria-expanded="false">
       <span></span><span></span><span></span>
@@ -69,8 +69,8 @@ const footer = (b) => `
       <div>
         <h3>Nos soins</h3>
         <a href="${b}nos-soins-bien-etre.html">Bien-être &amp; Santé</a>
-        <a href="${b}nos-soins-santes.html#medical">Médical</a>
-        <a href="${b}nos-soins-santes.html#therapies">Thérapies</a>
+        <a href="${b}nos-soins-medical.html">Médical</a>
+        <a href="${b}nos-soins-therapies.html">Thérapies</a>
       </div>
       <div>
         <h3>Le centre</h3>
@@ -94,22 +94,22 @@ const footer = (b) => `
     </div>
   </footer>`;
 
-const doc = ({ b, title, desc, body }) => `<!DOCTYPE html>
+const doc = ({ b, title, desc, body, enHref = 'en/index.html' }) => `<!DOCTYPE html>
 <html lang="fr">
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>${esc(title)}</title>
   <meta name="description" content="${esc(desc)}" />
-  <meta name="theme-color" content="#0a677b" />
+  <meta name="theme-color" content="#3B6979" />
   <link rel="icon" type="image/svg+xml" href="${b}assets/favicon.svg" />
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;700;800&family=Lato:wght@400;700&family=Lora:ital,wght@1,400&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Kanit:ital,wght@0,500;0,600;0,700;0,800;1,600;1,700&family=Nunito:ital,wght@0,400;0,600;0,700;0,800;1,400&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="${b}style.css" />
 </head>
 <body class="subpage">
-${nav(b)}
+${nav(b, enHref)}
 
   <main class="soin-page">
 ${body}

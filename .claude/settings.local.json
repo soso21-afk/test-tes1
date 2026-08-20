@@ -60,7 +60,28 @@
       "Bash(grep -oiE '\\(data-product[^>]{0,80}|\"price\"[^,}]{0,40}|CHF[^<]{0,20}\\)' sumup-prod2.html)",
       "Bash(git rm *)",
       "Bash(rm -f assets/regeneratium-hero.png)",
-      "Bash(awk '{print $1}')"
+      "Bash(awk '{print $1}')",
+      "Bash(sed -i '/soins\\\\/psychologie\\\\.html/d' blog/*.html)",
+      "Bash(sed -i '/href=\"psychologie\\\\.html\"/d' soins/hypnose.html)",
+      "Bash(rm blog/introduction-a-la-psychologie.html blog/les-bienfaits-de-la-psychotherapie.html)",
+      "Bash(sed -i '242,299d' scripts/soins-content.json)",
+      "Bash(node -e \"JSON.parse\\(require\\('fs'\\).readFileSync\\('scripts/soins-content.json','utf8'\\)\\); console.log\\('JSON valide'\\)\")",
+      "Bash(node -e \"JSON.parse\\(require\\('fs'\\).readFileSync\\('scripts/blog-content.json','utf8'\\)\\);JSON.parse\\(require\\('fs'\\).readFileSync\\('scripts/soins-content.json','utf8'\\)\\);console.log\\('JSON valides'\\)\")",
+      "WebFetch(domain:www.tripadvisor.fr)",
+      "Bash(node --check scripts/gen-pages.mjs)",
+      "Bash(node --check scripts/gen-soins.mjs)",
+      "Bash(node --check scripts/gen-blog.mjs)",
+      "Bash(node scripts/gen-en.mjs)",
+      "Bash(ls \"C:/Users/alexi/AppData/Local/Temp/claude/C--Users-alexi-OneDrive-Bureau-code-Site-site-Mom-regeneratium/1b065637-a58f-44ba-9e06-35057c67ce67/scratchpad/serve.mjs\" 2>/dev/null || echo MISSING)",
+      "Bash(grep -oiE '#[0-9a-f]{3,6}' assets/favicon.svg assets/logo-regeneratium.svg assets/logo-regeneratium-dark.svg)",
+      "PowerShell($f='C:\\\\Users\\\\alexi\\\\OneDrive\\\\Bureau\\\\code\\\\Site\\\\regeneratium\\\\regeneratium\\\\style.css'; $c=[System.IO.File]::ReadAllText\\($f\\); $c=$c.Replace\\('rgba\\(29, 89, 104','rgba\\(42, 74, 85'\\).Replace\\('rgba\\(29,89,104','rgba\\(42,74,85'\\).Replace\\('rgba\\(10, 103, 123','rgba\\(59, 105, 121'\\).Replace\\('rgba\\(143, 213, 255','rgba\\(116, 176, 197'\\); [System.IO.File]::WriteAllText\\($f,$c\\); \\(Select-String -Path $f -Pattern 'rgba\\\\\\(\\(42, 74|42,74|59, 105|116, 176\\)' | Measure-Object\\).Count)",
+      "PowerShell($p='C:\\\\Users\\\\alexi\\\\OneDrive\\\\Bureau\\\\code\\\\Site\\\\regeneratium\\\\regeneratium\\\\style.css'; $c=[System.IO.File]::ReadAllText\\($p\\); $c=$c.Replace\\('rgba\\(16, 24, 40,','rgba\\(12, 26, 31,'\\).Replace\\('rgba\\(16,24,40,','rgba\\(12,26,31,'\\); [System.IO.File]::WriteAllText\\($p,$c\\); Select-String -Path $p -Pattern 'rgba\\\\\\(16' | Measure-Object | Select-Object -ExpandProperty Count)",
+      "Bash(python -c ' *)",
+      "Bash(mkdir -p \"C:/Users/alexi/AppData/Local/Temp/claude/C--Users-alexi-OneDrive-Bureau-code-Site-regeneratium-regeneratium/7b1bcd24-b456-4333-81cc-47c64a51fd92/scratchpad/backup-stress/en-soins\")",
+      "Bash(cp soins/prise-en-charge-du-stress.html \"C:/Users/alexi/AppData/Local/Temp/claude/C--Users-alexi-OneDrive-Bureau-code-Site-regeneratium-regeneratium/7b1bcd24-b456-4333-81cc-47c64a51fd92/scratchpad/backup-stress/\")",
+      "Bash(cp en/soins/prise-en-charge-du-stress.html \"C:/Users/alexi/AppData/Local/Temp/claude/C--Users-alexi-OneDrive-Bureau-code-Site-regeneratium-regeneratium/7b1bcd24-b456-4333-81cc-47c64a51fd92/scratchpad/backup-stress/en-soins/\")",
+      "Bash(node rmkey.mjs)",
+      "Bash(node audit.mjs)"
     ]
   }
 }

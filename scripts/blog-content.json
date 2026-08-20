@@ -763,57 +763,6 @@
       }
     ]
   },
-  "introduction-a-la-psychologie": {
-    "title": "Introduction à la psychologie",
-    "subtitle": "Comprendre les bases de la psychologie moderne",
-    "excerpt": "La psychologie est l'étude scientifique du comportement et des processus mentaux. Elle explore comment les individus pensent, ressentent et agissent dans divers contextes. En tant ",
-    "blocks": [
-      {
-        "type": "h2",
-        "text": "Qu'est-ce que la psychologie?"
-      },
-      {
-        "type": "p",
-        "text": "La psychologie est l'étude scientifique du comportement et des processus mentaux. Elle explore comment les individus pensent, ressentent et agissent dans divers contextes. En tant que discipline, la psychologie a évolué au fil des ans, intégrant des approches variées allant de la psychanalyse à la psychologie cognitive."
-      },
-      {
-        "type": "h2",
-        "text": "Les branches de la psychologie"
-      },
-      {
-        "type": "p",
-        "text": "Il existe plusieurs branches de la psychologie, chacune se concentrant sur des aspects différents du comportement humain. Parmi les plus connues, on trouve :"
-      },
-      {
-        "type": "p",
-        "text": "Psychologie clinique : Cette branche se concentre sur le diagnostic et le traitement des troubles mentaux."
-      },
-      {
-        "type": "p",
-        "text": "Psychologie du développement : Elle étudie les changements comportementaux et cognitifs au cours de la vie."
-      },
-      {
-        "type": "p",
-        "text": "Psychologie sociale : Cette discipline examine comment les individus interagissent et sont influencés par leur environnement social."
-      },
-      {
-        "type": "h2",
-        "text": "Importance de la psychologie"
-      },
-      {
-        "type": "p",
-        "text": "La psychologie joue un rôle crucial dans notre compréhension des comportements humains. Elle aide à développer des interventions pour améliorer la santé mentale et le bien-être. De plus, elle est essentielle dans des domaines tels que l'éducation, le marketing et la gestion des ressources humaines."
-      },
-      {
-        "type": "h2",
-        "text": "Conclusion"
-      },
-      {
-        "type": "p",
-        "text": "En somme, la psychologie est une science fascinante qui nous aide à mieux comprendre nous-mêmes et les autres. En explorant les différentes branches de cette discipline, nous pouvons acquérir des outils précieux pour naviguer dans la complexité des relations humaines."
-      }
-    ]
-  },
   "les-bases-de-la-therapie": {
     "title": "Les bases de la thérapie",
     "subtitle": "Un aperçu des approches thérapeutiques",
@@ -862,49 +811,6 @@
       {
         "type": "p",
         "text": "En conclusion, la thérapie est un outil puissant pour ceux qui cherchent à améliorer leur bien-être mental. En choisissant l'approche qui leur convient le mieux, les individus peuvent trouver un chemin vers la guérison et la croissance personnelle."
-      }
-    ]
-  },
-  "les-bienfaits-de-la-psychotherapie": {
-    "title": "Les bienfaits de la psychothérapie",
-    "subtitle": "Comment la psychothérapie peut transformer des vies",
-    "excerpt": "La psychothérapie est un processus thérapeutique qui aide les individus à comprendre et à surmonter leurs problèmes émotionnels et psychologiques. Elle peut prendre plusieurs forme",
-    "blocks": [
-      {
-        "type": "h2",
-        "text": "Qu'est-ce que la psychothérapie?"
-      },
-      {
-        "type": "p",
-        "text": "La psychothérapie est un processus thérapeutique qui aide les individus à comprendre et à surmonter leurs problèmes émotionnels et psychologiques. Elle peut prendre plusieurs formes, y compris la thérapie individuelle, de couple ou de groupe."
-      },
-      {
-        "type": "h2",
-        "text": "Les avantages de la psychothérapie"
-      },
-      {
-        "type": "p",
-        "text": "La psychothérapie offre de nombreux avantages, notamment :"
-      },
-      {
-        "type": "p",
-        "text": "Amélioration de la santé mentale : Elle aide à traiter des troubles tels que l'anxiété et la dépression."
-      },
-      {
-        "type": "p",
-        "text": "Développement personnel : Les individus peuvent acquérir une meilleure compréhension d'eux-mêmes et de leurs comportements."
-      },
-      {
-        "type": "p",
-        "text": "Renforcement des relations : La psychothérapie peut améliorer la communication et la compréhension dans les relations interpersonnelles."
-      },
-      {
-        "type": "h2",
-        "text": "Conclusion"
-      },
-      {
-        "type": "p",
-        "text": "En somme, la psychothérapie est un outil précieux pour ceux qui cherchent à améliorer leur bien-être mental. En travaillant avec un professionnel, les individus peuvent trouver des solutions à leurs problèmes et mener une vie plus épanouissante."
       }
     ]
   },
@@ -1002,7 +908,7 @@
       },
       {
         "type": "p",
-        "text": "Vous détendre et vous libérer du stress : les massages, l'halothérapie et la psychothérapie vous offriront une parenthèse de sérénité."
+        "text": "Vous détendre et vous libérer du stress : les massages, l'halothérapie et la flottaison vous offriront une parenthèse de sérénité."
       },
       {
         "type": "p",
@@ -1038,7 +944,7 @@
       },
       {
         "type": "p",
-        "text": "L'équipe de Regeneratium est composée de thérapeutes qualifiés et expérimentés, chacun spécialisé dans son domaine : ostéopathes, naturopathes, psychologues, esthéticiennes... Ils travaillent en synergie pour vous offrir une prise en charge globale et personnalisée."
+        "text": "L'équipe de Regeneratium est composée de thérapeutes qualifiés et expérimentés, chacun spécialisé dans son domaine : ostéopathes, naturopathes, esthéticiennes... Ils travaillent en synergie pour vous offrir une prise en charge globale et personnalisée."
       },
       {
         "type": "p",
@@ -1051,10 +957,6 @@
       {
         "type": "p",
         "text": "Gaëlle , naturopathe et micro nutritionniste ASCA, vous guide vers une alimentation saine et équilibrée pour optimiser votre santé et votre bien-être."
-      },
-      {
-        "type": "p",
-        "text": "Laetitia, Benjamin et Andy , psychologues LAMAL, vous accompagnent dans la gestion du stress, des émotions et des difficultés personnelles."
       },
       {
         "type": "p",

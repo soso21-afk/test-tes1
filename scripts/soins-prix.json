@@ -159,26 +159,6 @@
       "Le prix du dimanche est majoré de CHF 30.—"
     ]
   },
-  "psychologie": {
-    "groups": [
-      {
-        "items": [
-          { "name": "Psychologie", "detail": "Par séance", "price": "CHF 150.00" }
-        ]
-      }
-    ],
-    "notes": ["ASCA & RME — thérapies remboursées selon votre assurance complémentaire."]
-  },
-  "psychotherapie": {
-    "groups": [
-      {
-        "items": [
-          { "name": "Psychothérapie", "detail": "Par séance", "price": "Selon Tarmed" }
-        ]
-      }
-    ],
-    "notes": ["Prise en charge selon votre assurance (Tarmed / complémentaire)."]
-  },
   "dietetique": {
     "groups": [
       {
@@ -188,15 +168,5 @@
       }
     ],
     "notes": ["Remboursée par l'assurance de base (LaMal)."]
-  },
-  "prise-en-charge-du-stress": {
-    "groups": [
-      {
-        "items": [
-          { "name": "Prise en charge personnalisée", "detail": "Bilan physiologique", "price": "CHF 200.00" }
-        ]
-      }
-    ],
-    "notes": ["Suivi et soins complémentaires selon le programme établi."]
   }
 }
