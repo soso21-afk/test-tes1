@@ -1,12 +1,6 @@
 *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
 :root {
-  /* ════════════════════════════════════════════════════════════
-     REGENERATIUM — charte Pantone officielle
-     PANTONE 7699 C (#3B6979) + PANTONE 7458 C (#74B0C5).
-     Les autres teintes sont des nuances de ces deux couleurs.
-     ════════════════════════════════════════════════════════════ */
 
-  /* Teals de marque — toutes les teintes partagent la teinte 195.5° des deux Pantone */
   --primary: #3b6979;        /* PANTONE 7699 C — CTA, boutons, liens */
   --primary-light: #74b0c5;  /* PANTONE 7458 C — survols, accents */
   --primary-dark: #2b4954;   /* 7699 assombri (L 25%) — sections sombres, base hero */
