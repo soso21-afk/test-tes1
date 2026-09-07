@@ -332,6 +332,8 @@ input, select, textarea { width: 100%; border: 1.5px solid rgba(15,34,41,.10); b
 textarea { min-height: 132px; resize: vertical; }
 input:focus, select:focus, textarea:focus { outline: 0; border-color: var(--primary); background: var(--white); box-shadow: 0 0 0 4px rgba(42,74,85,.09); }
 .contact-form .btn-primary { width: 100%; padding-block: 16px; }
+/* Piège à robots : hors écran plutôt que display:none, que certains bots détectent. */
+.hp-field { position: absolute; left: -9999px; top: auto; width: 1px; height: 1px; overflow: hidden; }
 footer { padding: 70px clamp(24px, 6vw, 86px) 34px; background: var(--dark); color: rgba(255,255,255,.58); }
 .footer-top { max-width: var(--max-w); margin: 0 auto 44px; display: grid; grid-template-columns: 2fr 1fr 1fr 1fr; gap: 44px; }
 .footer-top p { max-width: 300px; margin-top: 16px; }

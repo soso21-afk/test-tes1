@@ -2,3 +2,10 @@ node_modules/
 dist/
 .vite/
 *.log
+
+# Dépendances PHP (régénérées par « composer install »)
+vendor/
+composer.lock
+
+# Identifiants SMTP — ne JAMAIS committer
+config-mail.php

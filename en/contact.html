@@ -78,13 +78,18 @@
           <a class="contact-item" href="https://maps.google.com/?q=Rte+de+la+Vall%C3%A9e+7,+1180+Rolle" target="_blank" rel="noopener"><span>Address</span><strong>Rte de la Vallée 7, 1180 Rolle, Switzerland</strong></a>
           <a class="contact-item" href="rendez-vous.html"><span>Appointments</span><strong>Book online</strong></a>
         </div>
-        <form class="contact-form reveal">
+        <form class="contact-form reveal" action="/envoi.php" method="post">
+          <input type="hidden" name="lang" value="en">
           <div class="form-row">
-            <label>Name<input type="text" name="nom" placeholder="Your name" required></label>
-            <label>E-mail<input type="email" name="email" placeholder="you@email.com" required></label>
+            <label>Name<input type="text" name="nom" placeholder="Your name" autocomplete="name" maxlength="120" required></label>
+            <label>E-mail<input type="email" name="email" placeholder="you@email.com" autocomplete="email" required></label>
           </div>
-          <label>Phone<input type="tel" name="tel" placeholder="+41 …"></label>
-          <label>Message<textarea name="message" placeholder="Your message…"></textarea></label>
+          <label>Phone<input type="tel" name="tel" placeholder="+41 …" autocomplete="tel" maxlength="40"></label>
+          <label>Message<textarea name="message" placeholder="Your message…" maxlength="5000" required></textarea></label>
+          <!-- Bot trap: must stay empty, hidden via .hp-field -->
+          <div class="hp-field" aria-hidden="true">
+            <label>Leave empty<input type="text" name="site_web" tabindex="-1" autocomplete="off"></label>
+          </div>
           <button type="submit" class="btn-primary">Send</button>
         </form>
       </div>

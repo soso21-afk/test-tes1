@@ -1,0 +1,12 @@
+{
+  "name": "regeneratium/site",
+  "description": "Formulaire de contact Regeneratium — envoi SMTP Infomaniak",
+  "type": "project",
+  "require": {
+    "php": ">=7.4",
+    "phpmailer/phpmailer": "^6.9"
+  },
+  "config": {
+    "optimize-autoloader": true
+  }
+}

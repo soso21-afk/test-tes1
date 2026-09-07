@@ -81,7 +81,15 @@
       "Bash(cp soins/prise-en-charge-du-stress.html \"C:/Users/alexi/AppData/Local/Temp/claude/C--Users-alexi-OneDrive-Bureau-code-Site-regeneratium-regeneratium/7b1bcd24-b456-4333-81cc-47c64a51fd92/scratchpad/backup-stress/\")",
       "Bash(cp en/soins/prise-en-charge-du-stress.html \"C:/Users/alexi/AppData/Local/Temp/claude/C--Users-alexi-OneDrive-Bureau-code-Site-regeneratium-regeneratium/7b1bcd24-b456-4333-81cc-47c64a51fd92/scratchpad/backup-stress/en-soins/\")",
       "Bash(node rmkey.mjs)",
-      "Bash(node audit.mjs)"
+      "Bash(node audit.mjs)",
+      "WebFetch(domain:www.infomaniak.com)",
+      "WebSearch",
+      "Bash(git check-ignore *)",
+      "PowerShell(Resolve-DnsName -Name www.regeneratium.ch -Type CNAME -ErrorAction SilentlyContinue)",
+      "PowerShell(Resolve-DnsName -Name www.regeneratium.ch -Type A -ErrorAction SilentlyContinue)",
+      "PowerShell(Resolve-DnsName -Name regeneratium.ch -Type A -ErrorAction SilentlyContinue)",
+      "PowerShell(Write-Output \"=== MX regeneratium.ch ===\"; Resolve-DnsName -Name regeneratium.ch -Type MX -ErrorAction SilentlyContinue | Select-Object Name,NameExchange,Preference; Write-Output \"=== TXT / SPF ===\"; Resolve-DnsName -Name regeneratium.ch -Type TXT -ErrorAction SilentlyContinue | ForEach-Object { $_.Strings })",
+      "WebFetch(domain:help.brevo.com)"
     ]
   }
 }
