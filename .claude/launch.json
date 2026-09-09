@@ -3,8 +3,8 @@
   "configurations": [
     {
       "name": "static",
-      "runtimeExecutable": "node",
-      "runtimeArgs": ["C:\\Users\\alexi\\AppData\\Local\\Temp\\claude\\C--Users-alexi-OneDrive-Bureau-code-Site-regeneratium-regeneratium\\7b1bcd24-b456-4333-81cc-47c64a51fd92\\scratchpad\\serve.mjs"],
+      "runtimeExecutable": "python",
+      "runtimeArgs": ["-m", "http.server", "5173"],
       "port": 5173
     }
   ]
